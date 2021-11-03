@@ -16,7 +16,15 @@ https://www.youtube.com/watch?v=h-U1qtbRbiw&t=303s snow effect achieved 4 1 2020
 .clients .client-logo11:hover img {
   transform: scale(1.40);
 }
-
+@media all and (max-width: 1000px) and (min-width: 400px) {
+  .copyright {
+   margin-top: 140px;
+  }
+  .x23x{
+    text-align: center;
+    margin-right:130px;
+  }
+}
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
