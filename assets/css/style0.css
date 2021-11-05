@@ -15,15 +15,21 @@
 .clients .client-logo11:hover img {
   transform: scale(1.40);
 }
-@media all and (max-width: 1000px) and (min-width: 400px) {
+@media all and (max-width: 1000px) and (min-width: 100px) {
   .copyright {
    margin-top: 140px;
   }
   .x23x{
     text-align: center;
     margin-right:130px;
+    bottom:40px;
   }
+  .imgQR{}
 }
+.imgQR{position:absolute;
+width:190px;
+height:170px;
+bottom:10px;}
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/

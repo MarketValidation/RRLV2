@@ -13,12 +13,12 @@ from new
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+
+
 body {
   font-family: "Open Sans", sans-serif;
   color: #444444;
   background-color: #000000;
-
-
 }
 
 a {
@@ -1333,12 +1333,18 @@ margin-right: 30px;
   }
 }
 
-@media all and (max-width: 1000px) and (min-width: 400px) {
+@media all and (max-width: 1000px) and (min-width: 100px) {
   .copyright {
    margin-top: 140px;
   }
   .x23x{
     text-align: center;
     margin-right:130px;
+    bottom:40px;
   }
+  .imgQR{}
 }
+.imgQR{position:absolute;
+width:190px;
+height:170px;
+bottom:10px;}

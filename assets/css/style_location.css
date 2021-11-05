@@ -4,16 +4,23 @@
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
-@media all and (max-width: 1000px) and (min-width: 400px) {
+
+@media all and (max-width: 1000px) and (min-width: 100px) {
   .copyright {
    margin-top: 140px;
   }
-.popup_information_parent {margin-bottom: 150px;}
   .x23x{
     text-align: center;
     margin-right:130px;
+    bottom:40px;
   }
+  .imgQR{}
 }
+.imgQR{position:absolute;
+width:190px;
+height:170px;
+bottom:10px;}
+.popup_information_parent {margin-bottom: 150px;}
 .table-responsive {
   // Other values...
   overflow-x: auto;
@@ -1372,7 +1379,7 @@ margin-right: 30px;
   position: relative;
   z-index: 2;
   text-align: center;
-  padding: 80px 0;
+  padding: 30px 0;
 }
 
 #footer .footer-top h3 {
