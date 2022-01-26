@@ -13,6 +13,7 @@ const timeCount = document.querySelector(".timer .timer_sec");
 const titleDimension = document.querySelector(".titleDimension");
 let userAns;
 
+
 // if startQuiz button clicked
 start_btn.onclick = ()=>{
     info_box.classList.add("activeInfo"); //show info box

@@ -28,6 +28,9 @@
   <link href="assets/css/style_STSS.css" rel="stylesheet">
  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
 
+ <link rel="stylesheet" href="assets/newcss/animate.min.css">
+ <link rel="stylesheet" href="assets/newcss/custom-animation.css">
+ <link rel="stylesheet" href="assets/newcss/style.css">
   <!-- =======================================================
   * Template Name: Bocor - v2.0.0
   * Template URL: https://bootstrapmade.com/bocor-bootstrap-template-nice-animation/
@@ -37,7 +40,15 @@
 </head>
 
 <body data-aos="fade-in">
-
+  <div id="preloader">
+      <div id="loading-center">
+          <div id="loading-center-absolute">
+              <div class="object" id="object_one"></div>
+              <div class="object" id="object_two"></div>
+              <div class="object" id="object_three"></div>
+          </div>
+      </div>
+  </div>
   <!-- ======= Header ======= -->
   <header id="header">
     <div class="container d-flex" data-aos="fade-down">
@@ -167,7 +178,7 @@
                 <th scope="col" style="text-align: center; vertical-align: middle;">Your<br> answer</th>
                 <th scope="col" style="text-align: center; vertical-align: middle;">Weight <br> <em style=" font-weight:normal">(Social Startup)</th>
                 <th scope="col" style="text-align: center; vertical-align: middle;">Weighted<br> Score</th>
-                <th scope="col" style="text-align: center; vertical-align: middle;"><small><em>Time<br> taken (in seconds)</small></th>
+                <th scope="col" style="text-align: center; vertical-align: middle;"><small><em>Time taken<br>(seconds)</small></th>
               </tr>
             </thead>
             <tbody>
@@ -560,7 +571,11 @@ $(window).on('beforeunload', function() {
 });
 
 </script> -->
-
+<script>
+$(window).on("load",function(){
+        $('#preloader').fadeOut("slow");
+});
+</script>
 <script async>
   $("#centerz").click(function() {
   $('html, body').animate({
@@ -579,6 +594,7 @@ $(window).on('beforeunload', function() {
   scrollTop: $("#faq").offset().top
 },200);
   });
+
 </script>
 
 </body>
