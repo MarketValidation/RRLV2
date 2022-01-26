@@ -443,7 +443,7 @@
     <div class="buttons align-items-center">
         <button id="centerz1" class="btn btn-primary" type="button" data-toggle="modal" data-target="#myModal2" >Answer again</button>
         <button id="centerz2" class="btn btn-primary" type="button" data-toggle="modal" data-target="#myModal">Home</button>
-        <button class="btn btn-success">Download results</button>
+        <button id="centerz3" class="btn btn-success" type="button" data-toggle="modal" data-target="#myModal3">Download results</button>
     </div>
 
 
@@ -502,6 +502,32 @@
         </div>
       </div>
 
+      <!-- The Modal for download form-->
+      <div class="modal fade" id="myModal3">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h4 class="modal-title"><strong>Before you download...</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <!-- Modal body -->
+            <div class="modal-body" style=" font-weight:normal;">
+              We humbly ask for your time to answer a quick survey to assess our market validation tool.<br><em><small>(3-4 minute survey through google forms.)</small><br><br> <strong><small>Download results as:
+            </div>
+            <div style="text-align:center; margin-bottom:20px;"> <button type="button" class="btn btn-danger" ><i class='bx bxs-file-pdf'></i>  .PDF</button>
+            <button type="button" class="btn btn-danger" ><i class='bx bxs-file-image' ></i>  .PNG</button>
+           </div>
+            <!-- Modal footer -->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-sm border border-danger" data-dismiss="modal">Home</button>
+
+              <button type="button" class="btn btn-danger" onClick="window.location.href("x");" target="_blank">Take survey</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
 
   </div>
@@ -527,7 +553,7 @@
 
       <div class="copyright">
 
-      <center>  &copy; Copyright <strong><span>Team RRL</span></strong>. All Rights Reserved 2021 </center>
+      <center>  &copy; Copyright <strong><span>Team RRL</span></strong>. All Rights Reserved 2022 </center>
 
         <center>See the creative commons license and Terms of conditions <a href="https://docs.google.com/document/d/1Ctti8-iYKYjFtUf2VKqbn-E4t8SN6aRMVfvz5Uc7JrQ/edit?usp=sharing" target="_blank">here.</a></center>
 
@@ -595,6 +621,11 @@ $(window).on("load",function(){
 },200);
   });
 
+  $("#centerz3").click(function() {
+  $('html, body').animate({
+  scrollTop: $("#faq").offset().top
+  },200);
+  });
 </script>
 
 </body>
