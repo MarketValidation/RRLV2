@@ -12,7 +12,7 @@
 /* importing google fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 
-.prev_btn{height: 30px; width:100px; font-size: 12px;}
+.prev_btn, .clear_btn{height: 30px; width:100px; font-size: 12px;}
 .detailedquestion {font-size: 15px; font-weight: 400;}
 .ocl_text {font-size: 13px; font-weight: 400;}
 .scoring_note {font-size: 13px; font-weight: 400;}
@@ -26,10 +26,11 @@
     background: #007bff;
 }
 
+
+
 .start_btn,
 .info_box,
-.quiz_box,
-.result_box{
+.quiz_box{
     position: absolute;
     top: 40%;
     left: 50%;
@@ -38,14 +39,28 @@
                 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+
 .info_box.activeInfo,
-.quiz_box.activeQuiz,
-.result_box.activeResult{
+.quiz_box.activeQuiz{
+  margin-top: -20px;
     opacity: 1;
-    z-index: 5;
+margin-bottom: 20px;
     pointer-events: auto;
     transform: translate(-50%, -50%) scale(1);
+    display: flex;
+  flex-direction: column;
 }
+
+.result_box.activeResult{
+    opacity: 1;
+margin-top: 80px;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+    display: flex;
+  flex-direction: column;
+}
+
+
 
 .start_btn button{
     font-size: 25px;
@@ -60,7 +75,7 @@
 }
 
 .info_box{
-    width: 100%;
+    width: 80%;
     background: #fff;
     border-radius: 5px;
     transform: translate(-50%, -50%) scale(0.9);
@@ -96,7 +111,7 @@
 }
 .info_box .buttons{
     height: 60px;
-text-align: center;
+   text-align: center;
 
     padding: 10px 30px;
     border-top: 1px solid lightgrey;
@@ -117,7 +132,7 @@ text-align: center;
 }
 
 .quiz_box{
-    width: 100%;
+    width: 80%;
 
     background: #fff;
     border-radius: 5px;
@@ -163,6 +178,8 @@ text-align: center;
     font-weight: 400;
     font-size: 17px;
     user-select: none;
+    font-size: smaller;
+    font-style: italic;
 }
 
 .quiz_box header .timer .timer_sec{
@@ -254,8 +271,9 @@ section .option_list .option:hover{
 
 section .option_list .option.correct{
     color: #155724;
-    background: #d4edda;
-    border: 1px solid #c3e6cb;
+    background: #a6d5ff;
+    border: 2.5px solid #0087ff;
+border-style: dashed;
 }
 
 section .option_list .option.incorrect{
@@ -340,7 +358,7 @@ footer button.show{
     border-radius: 5px;
     display: flex;
     padding: 25px 30px;
-    width: 100%;
+    width: 80%;
     align-items: center;
     flex-direction: column;
     justify-content: center;
@@ -348,6 +366,14 @@ footer button.show{
     opacity: 0;
     pointer-events: none;
     transition: all 0.3s ease;
+
+    margin-top: 100px;
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+                  0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .result_box .icon{
@@ -361,40 +387,20 @@ footer button.show{
     font-weight: 500;
 }
 
-.result_box .score_text span{
+.result_box .score_text, .score_text1, .score_text2, .score_text3, .score_text4, .score_text5, .score_text6, .score_text7, .score_text8, .score_text9, .score_text10, .score_text11, .score_text12, .score_text13, .score_text14, .score_text15, .score_text16, .score_text17, .score_text18, .score_text19, .score_text20,
+.score_text21, .score_text22, .score_text23, .score_text24, .score_text25, .score_text26, .score_text27, .score_text28, .score_text29, .score_text30, .score_text31, .score_text32 span{
     display: flex;
-    margin: 10px 0;
-    font-size: 18px;
-    font-weight: 500;
-}
-.result_box .score_text1 span{
-    display: flex;
-    margin: 10px 0;
-    font-size: 18px;
-    font-weight: 500;
-}
 
-.result_box .score_text2 span{
-    display: flex;
-    margin: 10px 0;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 500;
 }
-
-.result_box .score_text3 span{
+.result_box .weight_text, .weight_text1, .weight_text2, .weight_text3, .weight_text4, .weight_text5, .weight_text6, .weight_text7, .weight_text8, .weight_text9, .weight_text10, .weight_text11, .weight_text12, .weight_text13, .weight_text14, .weight_text15, .weight_text16, .weight_text17, .weight_text18, .weight_text19, .weight_text20, .weight_text21,
+.weight_text22, .weight_text23, .weight_text24, .weight_text25, .weight_text26, .weight_text27, .weight_text28, .weight_text29, .weight_text30, .weight_text31, .weight_text32 span{
     display: flex;
-    margin: 10px 0;
-    font-size: 18px;
+
+    font-size: 14px;
     font-weight: 500;
 }
-
-.result_box .score_text4 span{
-    display: flex;
-    margin: 10px 0;
-    font-size: 18px;
-    font-weight: 500;
-}
-
 
 .result_box .score_text span p{
     padding: 0 4px;
@@ -404,6 +410,8 @@ footer button.show{
 .result_box .buttons{
     display: flex;
     margin: 20px 0;
+    display: flex;
+ justify-content: center;
 }
 
 .result_box .buttons button{
@@ -455,6 +463,7 @@ footer button.show{
     bottom:40px;
   }
   .imgQR{}
+    .result_box{width: 97%;}
 }
 .imgQR{position:absolute;
 width:190px;
@@ -467,6 +476,9 @@ bottom:10px;}
 .table > thead > tr {
      vertical-align: middle;
 }
+
+.table {overflow: auto;}
+.table-responsive{width: auto;}
 .alertzz {
   padding: 3px;
   background-color: #0045d9;
@@ -509,6 +521,12 @@ body {
   background-size: cover; /* Resize the background image to cover the entire container */
   background-size: 700px 500px;
   background-attachment: fixed;
+  position: relative;
+
+overflow-x: hidden;
+margin: 0;
+padding: 0;
+height: 100%;
 }
 
 a {
@@ -1522,7 +1540,7 @@ margin-right: 30px;
 /*--------------------------------------------------------------
 # Frequently Asked Questions
 --------------------------------------------------------------*/
-.faq {   padding-bottom: 600px; }
+.faq {   height: 800px; }
 .faq .faq-item {
   margin: 20px 0;
   padding: 20px 0;
@@ -1687,12 +1705,26 @@ margin-right: 30px;
 # Footer
 --------------------------------------------------------------*/
 #footer {
-  background: url("../img/footer-bg.jpg") center center no-repeat;
+  background: rgba(26, 46, 64, .98);
   color: #fff;
   font-size: 14px;
-  position: relative;
+
   bottom: 0;
+   clear:both;
+
+
+position: relative;
 }
+
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#content-wrap {
+  padding-bottom: 4.5rem;    /* Footer height */
+}
+
 
 #footer::before {
   content: "";
@@ -1818,6 +1850,6 @@ margin-right: 30px;
   #footer .copyright, #footer .credits {
     padding: 5px;
     float: none;
-    text-align: ceneter;
+    text-align: center;
   }
 }

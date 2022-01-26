@@ -26,6 +26,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
   <!-- Template Main CSS File -->
   <link href="assets/css/style_STSS.css" rel="stylesheet">
+ <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
 
   <!-- =======================================================
   * Template Name: Bocor - v2.0.0
@@ -44,33 +45,32 @@
       <div class="logo mr-auto">
         <!--   <h1 class="text-light"><a href="index.html">Students<span style="color:#00d5ff"> Connect</span><span>.</span></a></h1>-->
         <!-- Uncomment below if you prefer to use an image logo -->
-         <a href="index.html"><img src="assets/img/Logo.png" alt="" class="img-fluid" data-aos="fade-down" data-aos-delay="100"></a>
+         <a><img src="assets/img/Logo.png" alt="" class="img-fluid" data-aos="fade-down" data-aos-delay="100" type="button" data-toggle="modal" data-target="#myModal" ></a>
       </div>
 
       <nav class="nav-menu d-none d-lg-block">
             <ul>
-            <li><a href="index.html#about" data-aos="fade-down" data-aos-delay="200">About RRL</a></li>
-            <li><a href="index.html#Resource" data-aos="fade-down" data-aos-delay="300">Resources</a></li>
+            <li><a type="button" data-toggle="modal" data-target="#myModal"  data-aos="fade-down" data-aos-delay="200">About RRL</a></li>
+            <li><a type="button" data-toggle="modal" data-target="#myModal"  data-aos="fade-down" data-aos-delay="300">Resources</a></li>
             <li class="drop-down" data-aos="fade-down" data-aos-delay="400"><a href="">Themes</a>
             <ul>
-              <li><a href="indexDMode.html"><small>[Home]</small> Dark Mode </a></li>
-              <li><a href="indexCT.html"><small>[Home]</small> Christmas Theme</a></li>
-              <li><a href="index.html"><small>[Home]</small> Default <i class="icofont-check"></i></a> </li>
+              <li><a type="button" data-toggle="modal" data-target="#myModal" ><small>[Home]</small> Dark Mode </a></li>
+              <li><a type="button" data-toggle="modal" data-target="#myModal" ><small>[Home]</small> Christmas Theme</a></li>
+              <li><a type="button" data-toggle="modal" data-target="#myModal" ><small>[Home]</small> Default <i class="icofont-check"></i></a> </li>
             </ul>
           </li>
 
-          <li class="get-started" data-aos="fade-down" data-aos-delay="500"><a href="index.html">Home</a></li>
+          <li class="get-started" data-aos="fade-down" data-aos-delay="500"><a type="button" data-toggle="modal" data-target="#myModal" >Home</a></li>
         </ul>
       </nav><!-- .nav-menu -->
 
     </div>
   </header><!-- End Header -->
-  <div>
-<br><br><br><br>
-  </div>
 
-  <main id="main">
 
+
+    <div id="page-container">
+      <div id="content-wrap">
 
     <section id="faq" class="faq section-bg">
 
@@ -83,7 +83,7 @@
 <!-- start Quiz button -->
 
 
-<div class="start_btn"><button>Start Assesment</button></div>
+<div class="start_btn"><button id = "centerz">Start Assessment</button></div>
 
 <!-- Info Box -->
 <div class="info_box">
@@ -108,17 +108,17 @@
     <header>
         <div class="titleDimension"> </div>
         <div class="timer">
-            <div class="time_left_txt">Time Left</div>
-            <div class="timer_sec">15</div>
+            <div class="time_left_txt">Time taken</div>
+            <div class="timer_sec">0</div>
         </div>
         <div class="time_line"></div>
     </header>
     <section>
-        <div class="que_text">
+        <div class="que_text" >
             <!-- Here I've inserted question from JavaScript -->
 
         </div>
-        <div class="option_list">
+        <div class="option_list" style="overflow-x:auto;">
 
             <!-- Here I've inserted options from JavaScript -->
 
@@ -149,38 +149,294 @@
 
         <th width="33%"><button class="prev_btn" >Previous</button> </th>
         <th width="33%"><center><button class="next_btn" >Next Question</button></th>
-        <th width="33%"></th></tr>
+        <th width="33%"><button class="clear_btn" style="float:right;">Clear choice</button> </th></tr>
         </table>
     </footer>
 </div>
 
 <!-- Result Box -->
 <div class="result_box">
-    <div class="icon">
-        <i class="fas fa-crown"></i>
-    </div>
-    <div class="complete_text">You've completed the assessment! <br> <center><strong>Analysis: </div>
 
-    <div class="score_text">
-        <!-- Here I've inserted Score Result from JavaScript -->
+    <div class="complete_text">You've completed the assessment! <br> <center><strong>Analysis: </strong> </div>
+        <div class=""> <center><strong>Detailed Analysis: </strong></div>
+          <table class="table-responsive table-sm table-striped table-bordered justify-cotent-center">
+
+            <thead>
+              <tr>
+                <th scope="col" style="text-align: center; vertical-align: middle;">Questions</th>
+                <th scope="col" style="text-align: center; vertical-align: middle;">Your<br> answer</th>
+                <th scope="col" style="text-align: center; vertical-align: middle;">Weight <br> <em style=" font-weight:normal">(Social Startup)</th>
+                <th scope="col" style="text-align: center; vertical-align: middle;">Weighted<br> Score</th>
+                <th scope="col" style="text-align: center; vertical-align: middle;"><small><em>Time<br> taken (in seconds)</small></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1.</th>
+                <td><div class="score_text"></div></td>
+                <td><div class="weight_text"></div></td>
+                <td><div class="weight_score"></div></td>
+                <td><div class="time_score"></div></td>
+              </tr>
+              <tr>
+                <th scope="row">2.</th>
+                <td><div class="score_text1"></div></td>
+                <td><div class="weight_text1"></div></td>
+                <td><div class="weight_score1"></div></td>
+                  <td><div class="time_score1"></div></td>
+              </tr>
+              <tr>
+                <th scope="row">3.</th>
+                <td><div class="score_text2"></div></td>
+                <td><div class="weight_text2"></div></td>
+                <td><div class="weight_score2"></div></td>
+                  <td><div class="time_score2"></div></td>
+              </tr>
+              <tr>
+                <th scope="row">4.</th>
+                <td><div class="score_text3"></div></td>
+                <td><div class="weight_text3"></div></td>
+                <td><div class="weight_score3"></div></td>
+                  <td><div class="time_score3"></div></td>
+              </tr>
+              <tr>
+                <th scope="row">5.</th>
+                <td><div class="score_text4"></div></td>
+                <td><div class="weight_text4"></div></td>
+                <td><div class="weight_score4"></div></td>
+                  <td><div class="time_score4"></div></td>
+              </tr>
+              <tr>
+                <th scope="row">6.</th>
+                <td><div class="score_text5"></div></td>
+                <td><div class="weight_text5"></div></td>
+                <td><div class="weight_score5"></div></td>
+                  <td><div class="time_score5"></div></td>
+              </tr>
+              <tr>
+                <th scope="row">7.</th>
+                <td><div class="score_text6"></div></td>
+                <td><div class="weight_text6"></div></td>
+                <td><div class="weight_score6"></div></td>
+                  <td><div class="time_score6"></div></td>
+              </tr>
+              <tr>
+                <th scope="row">8.</th>
+                <td><div class="score_text7"></div></td>
+                <td><div class="weight_text7"></div></td>
+                <td><div class="weight_score7"></div></td>
+                  <td><div class="time_score7"></div></td>
+              </tr>
+              <tr>
+                <th scope="row">9.</th>
+                <td><div class="score_text8"></div></td>
+                <td><div class="weight_text8"></div></td>
+                <td><div class="weight_score8"></div></td>
+                  <td><div class="time_score8"></div></td>
+              </tr>
+              <tr>
+                <th scope="row">10.</th>
+                <td><div class="score_text9"></div></td>
+                <td><div class="weight_text9"></div></td>
+                <td><div class="weight_score9"></div></td>
+                  <td><div class="time_score9"></div></td>
+              </tr>
+              <tr>
+                <th scope="row">11.</th>
+                <td><div class="score_text10"></div></td>
+                <td><div class="weight_text10"></div></td>
+                <td><div class="weight_score10"></div></td>
+                  <td><div class="time_score10"></div></td>
+              </tr>
+              <tr class="table-success">
+                <th scope="row" style=" font-weight:normal" ><small><strong>Customer<br> Dimension</small></strong></th>
+                <td  colspan="2" ><div class="" style=" font-weight:normal" ><small><strong>Weighted Opportunity Confidence Level:</small></strong></div></td>
+                <td><div class="weightOCL_Customer"></div></td>
+                  <td><div class="time_scoreCustomer"></div></td>
+              </tr>
+              <tr>
+                <th scope="row">12.</th>
+                <td><div class="score_text11"></div></td>
+                <td><div class="weight_text11"></div></td>
+                <td><div class="weight_score11"></div></td>
+                  <td><div class="time_score11"></div></td>
+              </tr>
+              <tr>
+                <th scope="row">13.</th>
+                <td><div class="score_text12"></div></td>
+                <td><div class="weight_text12"></div></td>
+                <td><div class="weight_score12"></div></td>
+                  <td><div class="time_score12"></div></td>
+              </tr>
+              <tr>
+                <th scope="row">14.</th>
+                <td><div class="score_text13"></div></td>
+                <td><div class="weight_text13"></div></td>
+                <td><div class="weight_score13"></div></td>
+                  <td><div class="time_score13"></div></td>
+              </tr>
+              <tr>
+                <th scope="row">15.</th>
+                <td><div class="score_text14"></div></td>
+                <td><div class="weight_text14"></div></td>
+                <td><div class="weight_score14"></div></td>
+                  <td><div class="time_score14"></div></td>
+              </tr>
+              <tr>
+                <th scope="row">16.</th>
+                <td><div class="score_text15"></div></td>
+                <td><div class="weight_text15"></div></td>
+                <td><div class="weight_score15"></div></td>
+                  <td><div class="time_score15"></div></td>
+              </tr>
+              <tr>
+                <th scope="row">17.</th>
+                <td><div class="score_text16"></div></td>
+                <td><div class="weight_text16"></div></td>
+                <td><div class="weight_score16"></div></td>
+                  <td><div class="time_score16"></div></td>
+              </tr>
+              <tr>
+                <th scope="row">18.</th>
+                <td><div class="score_text17"></div></td>
+                <td><div class="weight_text17"></div></td>
+                <td><div class="weight_score17"></div></td>
+                  <td><div class="time_score17"></div></td>
+              </tr>
+              <tr class="table-success">
+                <th scope="row" style=" font-weight:normal" > <small><strong>Market<br> Dimension</small></strong></th>
+                <td  colspan="2" ><div class="" style=" font-weight:normal" > <small><strong>Weighted Opportunity Confidence Level:</small></strong></div></td>
+                <td><div class="weightOCL_Market"></div></td>
+                  <td><div class="time_scoreMarket"></div></td>
+              </tr>
+              <tr>
+                <th scope="row">19.</th>
+                <td><div class="score_text18"></div></td>
+                <td><div class="weight_text18"></div></td>
+                <td><div class="weight_score18"></div></td>
+                  <td><div class="time_score18"></div></td>
+              </tr>
+              <tr>
+                <th scope="row">20.</th>
+                <td><div class="score_text19"></div></td>
+                <td><div class="weight_text19"></div></td>
+                <td><div class="weight_score19"></div></td>
+                  <td><div class="time_score19"></div></td>
+              </tr>
+              <tr>
+                <th scope="row">21.</th>
+                <td><div class="score_text20"></div></td>
+                <td><div class="weight_text20"></div></td>
+                <td><div class="weight_score20"></div></td>
+                  <td><div class="time_score20"></div></td>
+              </tr>
+              <tr>
+                <th scope="row">22.</th>
+                <td><div class="score_text21"></div></td>
+                <td><div class="weight_text21"></div></td>
+                <td><div class="weight_score21"></div></td>
+                  <td><div class="time_score21"></div></td>
+              </tr>
+              <tr>
+                <th scope="row">23.</th>
+                <td><div class="score_text22"></div></td>
+                <td><div class="weight_text22"></div></td>
+                <td><div class="weight_score22"></div></td>
+                  <td><div class="time_score22"></div></td>
+              </tr>
+              <tr>
+                <th scope="row">24.</th>
+                <td><div class="score_text23"></div></td>
+                <td><div class="weight_text23"></div></td>
+                <td><div class="weight_score23"></div></td>
+                  <td><div class="time_score23"></div></td>
+              </tr>
+              <tr>
+                <th scope="row">25.</th>
+                <td><div class="score_text24"></div></td>
+                <td><div class="weight_text24"></div></td>
+                <td><div class="weight_score24"></div></td>
+                  <td><div class="time_score24"></div></td>
+              </tr>
+              <tr class="table-success">
+                <th scope="row" style=" font-weight:normal" ><small><strong>Product<br> Dimension</small></strong></th>
+                <td  colspan="2" ><div class="" style=" font-weight:normal" ><small><strong>Weighted Opportunity Confidence Level:</small></strong></div></td>
+                <td><div class="weightOCL_Product"></div></td>
+                  <td><div class="time_scoreProduct"></div></td>
+              </tr>
+              <tr>
+                <th scope="row">26.</th>
+                <td><div class="score_text25"></div></td>
+                <td><div class="weight_text25"></div></td>
+                <td><div class="weight_score25"></div></td>
+                  <td><div class="time_score25"></div></td>
+              </tr>
+              <tr>
+                <th scope="row">27.</th>
+                <td><div class="score_text26"></div></td>
+                <td><div class="weight_text26"></div></td>
+                <td><div class="weight_score26"></div></td>
+                  <td><div class="time_score26"></div></td>
+              </tr>
+              <tr>
+                <th scope="row">28.</th>
+                <td><div class="score_text27"></div></td>
+                <td><div class="weight_text27"></div></td>
+                <td><div class="weight_score27"></div></td>
+                  <td><div class="time_score27"></div></td>
+              </tr>
+              <tr>
+                <th scope="row">29.</th>
+                <td><div class="score_text28"></div></td>
+                <td><div class="weight_text28"></div></td>
+                <td><div class="weight_score28"></div></td>
+                  <td><div class="time_score28"></div></td>
+              </tr>
+              <tr>
+                <th scope="row">30.</th>
+                <td><div class="score_text29"></div></td>
+                <td><div class="weight_text29"></div></td>
+                <td><div class="weight_score29"></div></td>
+                  <td><div class="time_score29"></div></td>
+              </tr>
+              <tr>
+                <th scope="row">31.</th>
+                <td><div class="score_text30"></div></td>
+                <td><div class="weight_text30"></div></td>
+                <td><div class="weight_score30"></div></td>
+                  <td><div class="time_score30"></div></td>
+              </tr>
+              <tr>
+                <th scope="row">32.</th>
+                <td><div class="score_text31"></div></td>
+                <td><div class="weight_text31"></div></td>
+                <td><div class="weight_score31"></div></td>
+                  <td><div class="time_score31"></div></td>
+              </tr>
+              <tr class="table-success">
+                <th scope="row" style=" font-weight:normal" ><small><strong>Business<br> Dimension</small></strong></th>
+                <td  colspan="2" ><div class="" style=" font-weight:normal" ><small><strong>Weighted Opportunity Confidence Level:</small></strong></div></td>
+                <td><div class="weightOCL_Business"></div></td>
+                  <td><div class="time_scoreBusiness"></div></td>
+              </tr>
+              <tr class="table-success">
+                <th scope="row" style=" font-weight:normal" ><strong>Overall:</th>
+                <td  colspan="2" ><div class="" style=" font-weight:normal" > (still coding)</div></td>
+                <td><div class="weightOCL_Overall"></div></td>
+                  <td><div class="time_scoreOverall"></div></td>
+              </tr>
+            </tbody>
+          </table>
+
+
+    <div class="buttons align-items-center">
+        <button id="centerz1" class="btn btn-primary" type="button" data-toggle="modal" data-target="#myModal2" >Answer again</button>
+        <button id="centerz2" class="btn btn-primary" type="button" data-toggle="modal" data-target="#myModal">Home</button>
+        <button class="btn btn-success">Download results</button>
     </div>
-    <div class="score_text1">
-        <!-- Here I've inserted Score Result from JavaScript -->
-    </div>
-    <div class="score_text2">
-        <!-- Here I've inserted Score Result from JavaScript -->
-    </div>
-    <div class="score_text3">
-        <!-- Here I've inserted Score Result from JavaScript -->
-    </div>
-    <div class="score_text4">
-        <!-- Here I've inserted Score Result from JavaScript -->
-    </div>
-    <div class="buttons">
-        <button class="restart">Answer again</button>
-        <button class="quit">Home</button>
-        <button class="quit">Download results</button>
-    </div>
+
+
+
 </div>
 
 <!--   end mainsz-->
@@ -188,7 +444,57 @@
 
     </section>
 
-  </main><!-- End #main -->
+    <div class="container" style="display: block;">
+    <!-- Button to Open the Modal -->
+
+      <!-- The Modal for home -->
+      <div class="modal fade" id="myModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h4 class="modal-title"><strong>Return Home</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <!-- Modal body -->
+            <div class="modal-body" style=" font-weight:normal">
+              Are you sure? You might loose all your progress.
+            </div>
+            <!-- Modal footer -->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Back</button>
+              <button type="button" class="btn border border-danger" onclick="location.href='https://marketvalidation.github.io/RRLV2/index.html';" >Continue</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- The Modal for restart-->
+      <div class="modal fade" id="myModal2">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h4 class="modal-title"><strong>Restart Assessment</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <!-- Modal body -->
+            <div class="modal-body" style=" font-weight:normal">
+              Are you sure? Download results first! You might loose all your progress.
+            </div>
+            <!-- Modal footer -->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Back</button>
+              <button type="button" class="btn border border-danger" onClick="window.location.reload(true);" >Continue</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
   <!-- ======= Footer ======= -->
   <footer id="footer">
 
@@ -198,8 +504,8 @@
 
         <div class="row justify-content-center">
           <div class="col-lg-6">
-             <a href="index.html"><img src="assets/img/Logo.png" alt="" class="img-fluid" style="width:150px;height:50px;"></a>
-            <p>A feature assessment tool for developing economies.</p>
+             <a><img src="assets/img/Logo.png" alt="" class="img-fluid" style="width:150px;height:50px;" type="button" data-toggle="modal" data-target="#myModal"></a>
+            <p>Automated market validation assessment tool for developing economies.</p>
           </div>
         </div>
 
@@ -222,8 +528,11 @@
     </div>
 
   </footer><!-- End Footer -->
-
+</div>
   <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+
+
 
   <!-- Inside this JavaScript file I've inserted Questions and Options only -->
   <script src="js/questions.js"></script>
@@ -242,12 +551,36 @@
 
 
 <script src="assets/js/main_noAnimSTSS.js"></script>
-<script>
+<!--<script type="text/javascript" defer>
 $(window).on('beforeunload', function() {
   $('body').hide();
   $(window).scrollTop(0);
+
+
 });
+
+</script> -->
+
+<script async>
+  $("#centerz").click(function() {
+  $('html, body').animate({
+  scrollTop: $("#faq").offset().top
+},200);
+  });
+
+  $("#centerz1").click(function() {
+  $('html, body').animate({
+  scrollTop: $("#faq").offset().top
+},200);
+  });
+
+  $("#centerz2").click(function() {
+  $('html, body').animate({
+  scrollTop: $("#faq").offset().top
+},200);
+  });
 </script>
+
 </body>
 
 </html>
