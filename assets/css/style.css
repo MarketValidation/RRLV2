@@ -34,7 +34,20 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Raleway", sans-serif;
 }
 
+.intro {
+ margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+  width: 100%;
+background: #000000;
 
+}
+
+.intro video {
+  height: 100%;
+  width: 100%;
+height:100vh;
+}
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
@@ -102,7 +115,7 @@ h1, h2, h3, h4, h5, h6 {
 #header .logo img {
   padding: 0;
   margin: 0;
-  max-height: 40px;
+  max-height: 60px;
 }
 
 /*--------------------------------------------------------------
@@ -489,7 +502,7 @@ section {
   padding: 0;
 }
 
-.xnxx {
+.automargin {
 margin-left: auto;
 margin-right: auto;
 
