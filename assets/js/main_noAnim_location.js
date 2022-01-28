@@ -1,9 +1,4 @@
-/**
-* Template Name: Bocor - v2.0.0
-* Template URL: https://bootstrapmade.com/bocor-bootstrap-template-nice-animation/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+
 var zx=0;
 /////////////////////////////////////////////////////////////////////////////////////
 // Iligan City center 8.2275709812194, 124.24418764142114
