@@ -47,7 +47,7 @@ var protec;
 
 const ansArr = new Array(31); //2=3
 //3=3 this is 32 below
-for (var i = 0; i < 1; i++) {
+for (var i = 0; i < 32; i++) {
     ansArr[i] = 0;
 }
 

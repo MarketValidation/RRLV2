@@ -1,67 +1,34 @@
-/**
-* Template Name: Bocor - v2.0.0
-* Template URL: https://bootstrapmade.com/bocor-bootstrap-template-nice-animation/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 
 //END SECTION
 const section = document.querySelector("section");
 const end = section.querySelector("h1");
-
-
 const intro = document.querySelector(".intro");
 const video = intro.querySelector("video");
 const text = intro.querySelector("h1");
 //SCROLLMAGIC
 const controller = new ScrollMagic.Controller();
-
 //Scenes
 let scene = new ScrollMagic.Scene({
   duration: 2500,
   triggerElement: intro,
-  triggerHook: 0
-})
+  triggerHook: 0})
 // .addIndicators() //remove to remove indicators
   .setPin(intro)
   .addTo(controller);
-
-//Text Animation
-//const textAnim = TweenMax.fromTo(text, 3, { opacity: 1 }, { opacity: 0 });
-
-//let scene2 = new ScrollMagic.Scene({
-//  duration: 3000,
-//  triggerElement: intro,
-//  triggerHook: 0
-//})
-//  .setTween(textAnim)
-//  .addTo(controller);
-
 //Video Animation
 let accelamount = 0.1;
 let scrollpos = 0;
 let delay = 0;
-
 scene.on("update", e => {
-  scrollpos = e.scrollPos / 1000;
-});
-
+  scrollpos = e.scrollPos / 1000;});
 setInterval(() => {
   delay += (scrollpos - delay) * accelamount;
   console.log(scrollpos, delay);
-
   video.currentTime = delay;
 }, 41.66666666666667);
-/////////////////////////////////////////////////////////////////////////////////////
-
-////////////////////////////////////////////////////////////////////////////////////
-
-
-////////////////////////////////////////////////////////////////////////////////////
-
+//////////
 !(function($) {
   "use strict";
-
   // WOW active
   function wowanimation() {
   	var wow = new WOW({
@@ -70,77 +37,40 @@ setInterval(() => {
   		offset: 0,
   		mobile: false,
   		live: true
-  	});
-  	wow.init();
-  }
+  	});wow.init();}
   // preloader
-  function preloader() {
-  	$('#preloader').delay(0).fadeOut();
-  };
-
-  $(window).on('load', function () {
-  	preloader(),
-  		wowanimation();
-  });
-
-
+  function preloader() {$('#preloader').delay(0).fadeOut(); };
+  $(window).on('load', function () {preloader(),wowanimation();});
   // data - background
   $("[data-background]").each(function () {
-  	$(this).css("background-image", "url(" + $(this).attr("data-background") + ")")
-  })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  	$(this).css("background-image", "url(" + $(this).attr("data-background") + ")")})
   // Smooth scroll for the navigation menu and links with .scrollto classes
   $(document).on('click', '.nav-menu a, .nav-menu2 a, .mobile-nav a, .scrollto', function(e) {
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
       e.preventDefault();
       var target = $(this.hash);
       if (target.length) {
-
         var scrollto = target.offset().top;
-
         $('html, body').animate({
           scrollTop: scrollto
         }, 1500, 'easeInOutExpo');
-
         if ($(this).parents('.nav-menu, .mobile-nav').length) {
           $('.nav-menu .active, .mobile-nav .active').removeClass('active');
           $(this).closest('li').addClass('active');
         }
-
         if ($('body').hasClass('mobile-nav-active')) {
           $('body').removeClass('mobile-nav-active');
           $('.mobile-nav-toggle i').toggleClass('icofont-navigation-menu icofont-close');
           $('.mobile-nav-overly').fadeOut();
         }
-        return false;
-      }
-    }
-  });
-
+        return false;}}});
   // Mobile Navigation
   if ($('.nav-menu').length) {
     var $mobile_nav = $('.nav-menu').clone().prop({
-      class: 'mobile-nav d-lg-none'
-    });
+      class: 'mobile-nav d-lg-none'});
     $('body').append($mobile_nav);
     $('body').prepend('<button type="button" class="mobile-nav-toggle d-lg-none"><i class="icofont-navigation-menu"></i></button>');
     $('body').append('<div class="mobile-nav-overly"></div>');
-
     $(document).on('click', '.mobile-nav-toggle', function(e) {
       $('body').toggleClass('mobile-nav-active');
       $('.mobile-nav-toggle i').toggleClass('icofont-navigation-menu icofont-close');
@@ -150,9 +80,7 @@ setInterval(() => {
     $(document).on('click', '.mobile-nav .drop-down > a', function(e) {
       e.preventDefault();
       $(this).next().slideToggle(300);
-      $(this).parent().toggleClass('active');
-    });
-
+      $(this).parent().toggleClass('active');});
     $(document).click(function(e) {
       var container = $(".mobile-nav, .mobile-nav-toggle");
       if (!container.is(e.target) && container.has(e.target).length === 0) {
@@ -164,51 +92,25 @@ setInterval(() => {
       }
     });
   } else if ($(".mobile-nav, .mobile-nav-toggle").length) {
-    $(".mobile-nav, .mobile-nav-toggle").hide();
-  }
-
+    $(".mobile-nav, .mobile-nav-toggle").hide();}
   // Back to top button
   $(window).scroll(function() {
     if ($(this).scrollTop() > 100) {
       $('.back-to-top').fadeIn('slow');
     } else {
-      $('.back-to-top').fadeOut('slow');
-    }
+      $('.back-to-top').fadeOut('slow');}
   });
-
   $('.back-to-top').click(function() {
     $('html, body').animate({
       scrollTop: 0
     }, 1500, 'easeInOutExpo');
     return false;
   });
-
   // Porfolio isotope and filter
-  $(window).on('load', function() {
-    var portfolioIsotope = $('.portfolio-container').isotope({
-      itemSelector: '.portfolio-item',
-      layoutMode: 'fitRows'
-    });
 
-    $('#portfolio-flters li').on('click', function() {
-      $("#portfolio-flters li").removeClass('filter-active');
-      $(this).addClass('filter-active');
-
-      portfolioIsotope.isotope({
-        filter: $(this).data('filter')
-      });
-    });
-
-    // Initiate venobox (lightbox feature used in portofilo)
-    $(document).ready(function() {
-      $('.venobox').venobox();
-    });
-  });
 
   // Initi AOS
   AOS.init({
     duration: 800,
     easing: "ease-in-out"
-  });
-
-})(jQuery);
+  });})(jQuery);
