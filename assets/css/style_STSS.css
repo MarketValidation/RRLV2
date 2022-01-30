@@ -390,17 +390,29 @@ footer button.show{
 .result_box .score_text, .score_text1, .score_text2, .score_text3, .score_text4, .score_text5, .score_text6, .score_text7, .score_text8, .score_text9, .score_text10, .score_text11, .score_text12, .score_text13, .score_text14, .score_text15, .score_text16, .score_text17, .score_text18, .score_text19, .score_text20,
 .score_text21, .score_text22, .score_text23, .score_text24, .score_text25, .score_text26, .score_text27, .score_text28, .score_text29, .score_text30, .score_text31, .score_text32 span{
     display: flex;
-
     font-size: 14px;
     font-weight: 500;
 }
 .result_box .weight_text, .weight_text1, .weight_text2, .weight_text3, .weight_text4, .weight_text5, .weight_text6, .weight_text7, .weight_text8, .weight_text9, .weight_text10, .weight_text11, .weight_text12, .weight_text13, .weight_text14, .weight_text15, .weight_text16, .weight_text17, .weight_text18, .weight_text19, .weight_text20, .weight_text21,
 .weight_text22, .weight_text23, .weight_text24, .weight_text25, .weight_text26, .weight_text27, .weight_text28, .weight_text29, .weight_text30, .weight_text31, .weight_text32 span{
     display: flex;
-
     font-size: 14px;
     font-weight: 500;
 }
+
+.result_box .weight_score, .weight_score1, .weight_score2, .weight_score3, .weight_score4, .weight_score5, .weight_score6, .weight_score7, .weight_score8, .weight_score9, .weight_score10, .weight_score11, .weight_score12, .weight_score13, .weight_score14, .weight_score15, .weight_score16, .weight_score17, .weight_score18, .weight_score19, .weight_score20, .weight_score21, .weight_score22, .weight_score23,
+.weight_score24, .weight_score25, .weight_score26, .weight_score27, .weight_score28, .weight_score29, .weight_score30, .weight_score31, .weight_score32 span{
+display: flex;
+font-size: 14px;
+font-weight: 500;
+}
+
+.result_box .time_score, .time_score1, .time_score2, .time_score3, .time_score4, .time_score5, .time_score6, .time_score7, .time_score8, .time_score9, .time_score10, .time_score11, .time_score12, .time_score13, .time_score14, .time_score15, .time_score16, .time_score17, .time_score18, .time_score19, .time_score20, .time_score21, .time_score22, .time_score23,
+ .time_score24, .time_score25, .time_score26, .time_score27, .time_score28, .time_score29, .time_score30, .time_score31, .time_score32 span{
+   display: flex;
+   font-size: 14px;
+   font-weight: 500;
+   }
 
 .result_box .score_text span p{
     padding: 0 4px;
@@ -1410,6 +1422,7 @@ margin-right: 30px;
 .pricing .row {
   padding-top: 40px;
 }
+
 
 .pricing .box {
   padding: 40px;

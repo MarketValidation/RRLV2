@@ -190,7 +190,7 @@ prev_btn.onclick = ()=>{
     //    clearInterval(counterLine); //clear counterLine (running time display)
     //    startTimer(timeValue); //calling startTimer function 15s start
     //    startTimerLine(widthValue); //calling startTimerLine function 0s start line
-        timeText.textContent = "Time Left"; //change the timeText to Time Left
+        startTimer(0);
 
         next_btn.classList.add("show"); //show the next button
         prev_btn.classList.add("show"); //show the next button
@@ -266,7 +266,7 @@ console.log(que_count);  }
 
 
 function showResult(){
-  document.getElementById('faq').style.height = '1700px';
+  document.getElementById('faq').style.height = '2900px';
     info_box.classList.remove("activeInfo"); //hide info box
     quiz_box.classList.remove("activeQuiz"); //hide quiz box
     result_box.classList.add("activeResult"); //show result box
@@ -733,83 +733,249 @@ timeQues[10] )+'</span>';
       scoreWTag = '<span>'+ (questions[31].answer * ansArr[31]).toFixed(2) +'</span>';
         weightScore31.innerHTML = scoreWTag;
 
-
-  let weightOCLTag_Customer = '<span>'+
-  (((questions[0].answer * ansArr[0])
-  +(questions[1].answer * ansArr[1])
-  +(questions[2].answer * ansArr[2])
-  +(questions[3].answer * ansArr[3])
-  +(questions[4].answer * ansArr[4])
-  +(questions[5].answer * ansArr[5])
-  +(questions[6].answer * ansArr[6])
-  +(questions[7].answer * ansArr[7])
-  +(questions[8].answer * ansArr[8])
-  +(questions[9].answer * ansArr[9])
-  +(questions[10].answer * ansArr[10]))/11).toFixed(2) +'</span>';
+var customerLoop = 0;
+        for(var i=0; i < 11; i++){
+            customerLoop += parseInt(questions[i].answer * ansArr[i]); }
+var finalcustomerLoop = (customerLoop/11).toFixed(2);
+  let weightOCLTag_Customer = '<span>'+ finalcustomerLoop +'</span>';
   weightOCL_Customer.innerHTML = weightOCLTag_Customer;
 
-  let weightOCLTag_Market = '<span>'+
-  (((questions[11].answer * ansArr[11])
-  +(questions[12].answer * ansArr[12])
-  +(questions[13].answer * ansArr[13])
-  +(questions[14].answer * ansArr[14])
-  +(questions[15].answer * ansArr[15])
-  +(questions[16].answer * ansArr[16])
-  +(questions[17].answer * ansArr[17]))/7).toFixed(2) +'</span>';
+var marketLoop = 0;
+          for(var i=11; i < 18; i++){
+             marketLoop += parseInt(questions[i].answer * ansArr[i]); }
+var finalmarketLoop = (marketLoop/7).toFixed(2);
+  let weightOCLTag_Market = '<span>'+ finalmarketLoop +'</span>';
   weightOCL_Market.innerHTML = weightOCLTag_Market;
 
-  let weightOCLTag_Product = '<span>'+
-  (((questions[18].answer * ansArr[18])
-  +(questions[19].answer * ansArr[19])
-  +(questions[20].answer * ansArr[20])
-  +(questions[21].answer * ansArr[21])
-  +(questions[22].answer * ansArr[22])
-  +(questions[23].answer * ansArr[23])
-  +(questions[24].answer * ansArr[24]))/7).toFixed(2) +'</span>';
+var productLoop = 0;
+          for(var i=18; i < 25; i++){
+            productLoop += parseInt(questions[i].answer * ansArr[i]); }
+var finalproductLoop = (productLoop/7).toFixed(2);
+  let weightOCLTag_Product = '<span>'+ finalproductLoop +'</span>';
   weightOCL_Product.innerHTML = weightOCLTag_Product;
 
-  let weightOCLTag_Business = '<span>'+
-  (((questions[25].answer * ansArr[25])
-  +(questions[26].answer * ansArr[26])
-  +(questions[27].answer * ansArr[27])
-  +(questions[28].answer * ansArr[28])
-  +(questions[29].answer * ansArr[29])
-  +(questions[30].answer * ansArr[30])
-  +(questions[31].answer * ansArr[31]))/7).toFixed(2) +'</span>';
+var businessLoop = 0;
+            for(var i=25; i < 32; i++){
+                  businessLoop += parseInt(questions[i].answer * ansArr[i]); }
+var finalbusinessLoop = (businessLoop/7).toFixed(2);
+  let weightOCLTag_Business = '<span>'+finalbusinessLoop +'</span>';
   weightOCL_Business.innerHTML = weightOCLTag_Business;
 
-  const weightOCL_Overall = result_box.querySelector(".weightOCL_Overall");
-let weightOCLTag_Overall = '<span>'+   (((((questions[25].answer * ansArr[25])
-  +(questions[26].answer * ansArr[26])
-  +(questions[27].answer * ansArr[27])
-  +(questions[28].answer * ansArr[28])
-  +(questions[29].answer * ansArr[29])
-  +(questions[30].answer * ansArr[30])
-  +(questions[31].answer * ansArr[31]))/7) + (((questions[18].answer * ansArr[18])
-  +(questions[19].answer * ansArr[19])
-  +(questions[20].answer * ansArr[20])
-  +(questions[21].answer * ansArr[21])
-  +(questions[22].answer * ansArr[22])
-  +(questions[23].answer * ansArr[23])
-  +(questions[24].answer * ansArr[24]))/7)  + (((questions[11].answer * ansArr[11])
-  +(questions[12].answer * ansArr[12])
-  +(questions[13].answer * ansArr[13])
-  +(questions[14].answer * ansArr[14])
-  +(questions[15].answer * ansArr[15])
-  +(questions[16].answer * ansArr[16])
-  +(questions[17].answer * ansArr[17]))/7)  + (((questions[0].answer * ansArr[0])
-  +(questions[1].answer * ansArr[1])
-  +(questions[2].answer * ansArr[2])
-  +(questions[3].answer * ansArr[3])
-  +(questions[4].answer * ansArr[4])
-  +(questions[5].answer * ansArr[5])
-  +(questions[6].answer * ansArr[6])
-  +(questions[7].answer * ansArr[7])
-  +(questions[8].answer * ansArr[8])
-  +(questions[9].answer * ansArr[9])
-  +(questions[10].answer * ansArr[10]))/11))/4).toFixed(2) +'</span>';
+var overallScore = (((businessLoop/7)+(productLoop/7)+(marketLoop/7)+(customerLoop/11))/4).toFixed(2); //attempted to modify by adding all (finalmarketLoop+finalbusinessLoop+finalproductLoop+)/4 but the answer is NaN ??
+
+const weightOCL_Overall = result_box.querySelector(".weightOCL_Overall");
+let weightOCLTag_Overall = '<span>'+ overallScore +'</span>';
 weightOCL_Overall.innerHTML = weightOCLTag_Overall;
 
+google.charts.load('current', {'packages':['corechart']});
+
+     // Set a callback to run when the Google Visualization API is loaded.
+     google.charts.setOnLoadCallback(drawChart);
+
+     // Callback that creates and populates a data table,
+     // instantiates the pie chart, passes in the data and
+     // draws it.
+     function drawChart() {
+
+       // Create the data table.
+       var data = google.visualization.arrayToDataTable([
+        ["Element", "Weight", { role: "style" } ],
+        ["Customer", parseFloat(finalcustomerLoop), 'stroke-color: #36a2eb; stroke-opacity: 1; stroke-width: 1; fill-color: #36a2eb; fill-opacity: 0.2'],
+        ["Market", parseFloat(finalmarketLoop), 'stroke-color: #4bc0c0; stroke-opacity: 1; stroke-width: 1; fill-color: #4bc0c0; fill-opacity: 0.2'],
+        ["Product", parseFloat(finalproductLoop), 'stroke-color: #ffcd56; stroke-opacity: 1; stroke-width: 1; fill-color: #ffcd56; fill-opacity: 0.2'],
+        ["Business", parseFloat(finalbusinessLoop), 'stroke-color: #ff6384; stroke-opacity: 1; stroke-width: 1; fill-color: #ff6384; fill-opacity: 0.2']
+      ]);
+
+       // Set chart options
+       var options = {
+        width: 400,
+        height: 300,
+        bar: {groupWidth: "75%"},
+        legend: { position: "none" },
+        titlePosition: 'none',
+        chartArea: {top:60},
+        animation: {startup:true, easing:"out",duration:1200},
+      };
+
+       // Instantiate and draw our chart, passing in some options.
+       var chart = new google.visualization.ColumnChart(document.getElementById("chart_div"));
+       chart.draw(data, options);
+     }
+
+const dataz = {
+     labels: [
+       'Customer',
+       'Market',
+       'Product',
+       'Business'
+     ],
+     datasets: [{
+       label: 'My First Dataset',
+       data: [parseFloat(finalcustomerLoop), parseFloat(finalmarketLoop),  parseFloat(finalproductLoop), parseFloat(finalbusinessLoop)],
+       backgroundColor: [
+         'rgb(75, 192, 192, 0.2)',
+         'rgb(255, 99, 132, 0.2)',
+         'rgb(255, 205, 86, 0.2)',
+         'rgb(54, 162, 235, 0.2)'
+       ],
+            borderColor: [
+              'rgb(75, 192, 192, 1)',
+              'rgb(255, 99, 132, 1)',
+              'rgb(255, 205, 86, 1)',
+              'rgb(54, 162, 235, 1)'
+            ],
+            borderWidth: 1
+     }]
+   };
+   var customerOCLTextguide; //higest or high or medium or low or lowest
+   var marketOCLTextguide;
+   var productOCLTextguide;
+   var businessOCLTextguide;
+   var customerOCLText; //actual paragraph with link
+   var marketOCLText;
+   var productOCLText;
+   var businessOCLText;
+
+//CUSTOMER
+   if (parseFloat(finalcustomerLoop) > 8) { //9,10
+   customerOCLTextguide = "Highest";
+   customerOCLText = "your score in customer is Highest! i revise pa kutong larlar didto sa spreadsheet ugma kay daghan pag INCONSISTENCIES  sa english syntax legit";
+   }
+   else if (parseFloat(finalcustomerLoop) > 6 && parseFloat(finalcustomerLoop) < 9) { //8,7
+    customerOCLTextguide = "High";
+    customerOCLText = "your score in customer is High! i revise pa kutong larlar didto sa spreadsheet ugma kay daghan pag INCONSISTENCIES  sa english syntax legit";
+   }
+   else if (parseFloat(finalcustomerLoop) > 4 && parseFloat(finalcustomerLoop) < 7 ) { //5,6
+  customerOCLTextguide = "Medium";
+  customerOCLText = "your score in customer is Medium! i revise pa kutong larlar didto sa spreadsheet ugma kay daghan pag INCONSISTENCIES  sa english syntax legit";
+   }
+   else if (parseFloat(finalcustomerLoop) > 2 && parseFloat(finalcustomerLoop) < 5 )  { //3,4
+   customerOCLTextguide = "Low";
+   customerOCLText = "your score in customer is Low! i revise pa kutong larlar didto sa spreadsheet ugma kay daghan pag INCONSISTENCIES  sa english syntax legit";
+   }
+   else if (parseFloat(finalcustomerLoop) < 3) { // 2,1
+  customerOCLTextguide = "Lowest";
+  customerOCLText = "your score in customer is Lowest! i revise pa kutong larlar didto sa spreadsheet ugma kay daghan pag INCONSISTENCIES  sa english syntax legit";
+   }
+//MARKET
+   if (parseFloat(finalmarketLoop) > 8) { //9,10
+   marketOCLTextguide = "Highest";
+  marketOCLText = "your score in market is Highest! i revise pa kutong larlar didto sa spreadsheet ugma kay daghan pag INCONSISTENCIES  sa english syntax legit";
+   }
+   else if (parseFloat(finalmarketLoop) > 6 && parseFloat(finalmarketLoop) < 9) { //8,7
+    marketOCLTextguide = "High";
+    marketOCLText = "your score in market is High! i revise pa kutong larlar didto sa spreadsheet ugma kay daghan pag INCONSISTENCIES  sa english syntax legit";
+   }
+   else if (parseFloat(finalmarketLoop) > 4 && parseFloat(finalmarketLoop) < 7 ) { //5,6
+  marketOCLTextguide = "Medium";
+marketOCLText = "your score in market is Medium! i revise pa kutong larlar didto sa spreadsheet ugma kay daghan pag INCONSISTENCIES  sa english syntax legit";
+   }
+   else if (parseFloat(finalmarketLoop)> 2 && parseFloat(finalmarketLoop) < 5 )  { //3,4
+   marketOCLTextguide = "Low";
+marketOCLText= "your score in market is Low! i revise pa kutong larlar didto sa spreadsheet ugma kay daghan pag INCONSISTENCIES  sa english syntax legit";
+   }
+   else if (parseFloat(finalmarketLoop) < 3) { // 2,1
+  marketOCLTextguide = "Lowest";
+marketOCLText = "your score in market is Lowest! i revise pa kutong larlar didto sa spreadsheet ugma kay daghan pag INCONSISTENCIES  sa english syntax legit";
+   }
+//PRODUCT
+   if (parseFloat(finalproductLoop) > 8) { //9,10
+   productOCLTextguide = "Highest";
+   productOCLText = "your score in product is Highest! i revise pa kutong larlar didto sa spreadsheet ugma kay daghan pag INCONSISTENCIES  sa english syntax legit";
+   }
+   else if (parseFloat(finalproductLoop) > 6 && parseFloat(finalcustomerLoop) < 9) { //8,7
+    productOCLTextguide = "High";
+    productOCLText = "your score in product is High! i revise pa kutong larlar didto sa spreadsheet ugma kay daghan pag INCONSISTENCIES  sa english syntax legit";
+   }
+   else if (parseFloat(finalproductLoop) > 4 && parseFloat(finalproductLoop) < 7 ) { //5,6
+productOCLTextguide = "Medium";
+productOCLText = "your score in product is Medium! i revise pa kutong larlar didto sa spreadsheet ugma kay daghan pag INCONSISTENCIES  sa english syntax legit";
+   }
+   else if (parseFloat(finalproductLoop) > 2 && parseFloat(finalproductLoop) < 5 )  { //3,4
+   productOCLTextguide = "Low";
+   productOCLText = "your score in product is Low! i revise pa kutong larlar didto sa spreadsheet ugma kay daghan pag INCONSISTENCIES  sa english syntax legit";
+   }
+   else if (parseFloat(finalproductLoop) < 3) { // 2,1
+  productOCLTextguide = "Lowest";
+productOCLText = "your score in product is Lowest! i revise pa kutong larlar didto sa spreadsheet ugma kay daghan pag INCONSISTENCIES  sa english syntax legit";
+   }
+//BUSINESS
+   if (parseFloat(finalbusinessLoop) > 8) { //9,10
+   businessOCLTextguide = "Highest";
+  businessOCLText = "your score in business is Highest! i revise pa kutong larlar didto sa spreadsheet ugma kay daghan pag INCONSISTENCIES  sa english syntax legit";
+   }
+   else if (parseFloat(finalbusinessLoop) > 6 && parseFloat(finalbusinessLoop) < 9) { //8,7
+    businessOCLTextguide = "High";
+  businessOCLText = "your score in business is High! i revise pa kutong larlar didto sa spreadsheet ugma kay daghan pag INCONSISTENCIES  sa english syntax legit";
+   }
+   else if (parseFloat(finalbusinessLoop) > 4 && parseFloat(finalbusinessLoop) < 7 ) { //5,6
+  businessOCLTextguide = "Medium";
+businessOCLText = "your score in business is Medium! i revise pa kutong larlar didto sa spreadsheet ugma kay daghan pag INCONSISTENCIES  sa english syntax legit";
+   }
+   else if (parseFloat(finalbusinessLoop) > 2 && parseFloat(finalbusinessLoop) < 5 )  { //3,4
+   businessOCLTextguide = "Low";
+businessOCLText= "your score in business is Low! i revise pa kutong larlar didto sa spreadsheet ugma kay daghan pag INCONSISTENCIES  sa english syntax legit";
+   }
+   else if (parseFloat(finalbusinessLoop) < 3) { // 2,1
+  businessOCLTextguide = "Lowest";
+businessOCLText = "your score in business is Lowest! i revise pa kutong larlar didto sa spreadsheet ugma kay daghan pag INCONSISTENCIES  sa english syntax legit";
+   }
+
+   const customerOCLTextguideTag = result_box.querySelector(".customerOCLTextguide"); //higest or high or medium or low or lowest
+   const marketOCLTextguideTag = result_box.querySelector(".marketOCLTextguide");
+   const productOCLTextguideTag = result_box.querySelector(".productOCLTextguide");
+   const businessOCLTextguideTag = result_box.querySelector(".businessOCLTextguide");
+   const customerOCLTextTag = result_box.querySelector(".customerOCLText"); //actual paragraph with link
+   const marketOCLTextTag = result_box.querySelector(".marketOCLText");
+   const productOCLTextTag =  result_box.querySelector(".productOCLText");
+   const businessOCLTextTag = result_box.querySelector(".businessOCLText");
+
+  customerOCLTextguideTag.innerHTML = customerOCLTextguide;
+  marketOCLTextguideTag.innerHTML = marketOCLTextguide;
+  productOCLTextguideTag.innerHTML = productOCLTextguide;
+  businessOCLTextguideTag.innerHTML = businessOCLTextguide;
+  customerOCLTextTag.innerHTML = customerOCLText;
+  marketOCLTextTag.innerHTML = marketOCLText;
+  productOCLTextTag.innerHTML = productOCLText;
+  businessOCLTextTag.innerHTML = businessOCLText;
+
+
+   const config = {
+  type: 'polarArea',
+  data: dataz,
+  options: { scales: {
+    r: {
+      beginAtZero: true, ticks: {
+        callback: function(value,index){
+          if (this.getLabelForValue(value) > 8) { //9,10
+            return 'Highest';
+          }
+          else if (this.getLabelForValue(value) > 6 && this.getLabelForValue(value) < 9) { //8,7
+            return 'High';
+          }
+          else if (this.getLabelForValue(value) > 4 && this.getLabelForValue(value) < 7 ) { //5,6
+            return 'Medium';
+          }
+          else if (this.getLabelForValue(value) > 2 && this.getLabelForValue(value) < 5 )  { //3,4
+            return 'Low';
+          }
+          else if (this.getLabelForValue(value) < 3) { // 2,1
+            return 'Lowest';
+          }
+
+        }
+      }
+    }
+  }
+
+
+  }
+};
+
+const myChart = new Chart(
+  document.getElementById('myChart'),
+  config
+);
 
 }
 
