@@ -171,16 +171,16 @@
 
     <div class="complete_text">You've completed the assessment! <br> <center><strong>Result analysis: </strong> </div>
 
-      <table class="table text-center table-responsive">
+      <table class="table text-center table-responsive table-borderless">
       <thead>
         <tr>
           <th scope="col" class="align-items-top" colspan="2">
             <span><small> <strong>
                     <center>Opportunity confidence level<br> per dimension </center>
                   </strong></small> </span>
-            <div style="height:300px; width:300px;" class="justify-content-center">
+            <div style="height:300px; width:300px; margin: 0 auto; left: 25%; top: 25%;" class="justify-content-center">
 
-              <canvas id="myChart" class="justify-content-center"></canvas>
+              <canvas id="myChart" class="justify-content-center" style="margin: 0 auto; left: 25%; top: 25%;"></canvas>
             </div>
           </th>
           <th scope="col" colspan="2">
@@ -203,24 +203,36 @@
                 </strong></small> </span></td>
         </tr>
         <tr>
-          <th scope="row" style="background-color:rgb(75, 192, 192, 0.2);"><div class="customerOCLTextguide"style="display: flex; font-size: 14px;"></div></th>
-          <td style="background-color:rgb(75, 192, 192, 0.1);"><div class="customerOCLText" style="display: flex; font-size: 14px;"></div></td>
-          <td style="background-color:rgb(255, 205, 86, 0.2);"><div class="productOCLTextguide" style="font-weight: bold; display: flex; font-size: 14px;"></div></td>
-          <td style="background-color:rgb(255, 205, 86, 0.1);"><div class="productOCLText"style="display: flex; font-size: 14px;"></div></td>
+          <th scope="row" style="background-color:rgb(75, 192, 192, 0.2);" class="align-middle"><div class="customerOCLTextguide align-middle"style="display: flex; font-size: 14px;"></div></th>
+          <td style="background-color:rgb(75, 192, 192, 0.1);" class="align-middle"><div class="customerOCLText align-middle" style="display: flex; font-size: 14px;"></div></td>
+          <td style="background-color:rgb(255, 205, 86, 0.2);" class="align-middle"><div class="productOCLTextguide align-middle" style="font-weight: bold; display: flex; font-size: 14px;"></div></td>
+          <td style="background-color:rgb(255, 205, 86, 0.1);" class="align-middle"><div class="productOCLText align-middle"style="display: flex; font-size: 14px;"></div></td>
         </tr>
         <tr>
-          <th scope="row" colspan="2" style="background-color:rgb(255, 99, 132, 0.2);"><span><small> <strong>
+          <th scope="row" style="background-color:rgb(75, 192, 192, 0.2);" class="align-middle"><div class="align-middle"style="display: flex; font-size: 14px;"></div></th>
+          <td style="background-color:rgb(75, 192, 192, 0.1);" class="align-middle justify-content-center"><div class="customersource align-middle" style="display: flex; font-size: 14px;"></div></td>
+          <td style="background-color:rgb(255, 205, 86, 0.2);" class="align-middle"><div class="align-middle" style="font-weight: bold; display: flex; font-size: 14px;"></div></td>
+          <td style="background-color:rgb(255, 205, 86, 0.1);" class="align-middle justify-content-center"><div class="marketsource align-middle"style="display: flex; font-size: 14px;"></div></td>
+        </tr>
+        <tr>
+          <th scope="row" colspan="2" style="background-color:rgb(255, 99, 132, 0.2);" class="align-middle"><span><small> <strong>
                   <center>Market dimension </center>
                 </strong></small> </span></th>
-          <td colspan="2" style="background-color:rgb(54, 162, 235, 0.2);"><span><small> <strong>
+          <td colspan="2" style="background-color:rgb(54, 162, 235, 0.2);" class="align-middle"><span><small> <strong>
                   <center>Business dimension </center>
                 </strong></small> </span></td>
         </tr>
         <tr>
-          <th scope="row" style="background-color:rgb(255, 99, 132, 0.2);"><div class="marketOCLTextguide"style="display: flex; font-size: 14px;"></div></th>
-          <td style="background-color:rgb(255, 99, 132, 0.1);"><div class="marketOCLText" style="display: flex; font-size: 14px;"></div></td>
-          <td style="background-color:rgb(54, 162, 235, 0.2);"><div class="businessOCLTextguide" style="font-weight: bold; display: flex; font-size: 14px;"></div></td>
-          <td  style="background-color:rgb(54, 162, 235, 0.1);"><div class="businessOCLText"style="display: flex; font-size: 14px;"></div></td>
+          <th scope="row" style="background-color:rgb(255, 99, 132, 0.2);" class="align-middle"><div class="marketOCLTextguide align-middle"style="display: flex; font-size: 14px;"></div></th>
+          <td style="background-color:rgb(255, 99, 132, 0.1);" class="align-middle"><div class="marketOCLText align-middle" style="display: flex; font-size: 14px;"></div></td>
+          <td style="background-color:rgb(54, 162, 235, 0.2);" class="align-middle"><div class="businessOCLTextguide align-middle" style="font-weight: bold; display: flex; font-size: 14px;"></div></td>
+          <td  style="background-color:rgb(54, 162, 235, 0.1);" class="align-middle"> <div class="businessOCLText align-middle"style="display: flex; font-size: 14px;"></div></td>
+        </tr>
+        <tr>
+          <th scope="row" style="background-color:rgb(255, 99, 132, 0.2);" class="align-middle"><div class="align-middle"style="display: flex; font-size: 14px;"></div></th>
+          <td style="background-color:rgb(255, 99, 132, 0.1);" class="align-middle justify-content-center"><div class="productsource align-middle" style="display: flex; font-size: 14px;"></div></td>
+          <td style="background-color:rgb(54, 162, 235, 0.2);" class="align-middle"><div class="align-middle" style="font-weight: bold; display: flex; font-size: 14px;"></div></td>
+          <td  style="background-color:rgb(54, 162, 235, 0.1);" class="align-middle justify-content-center"> <div class="businesssource align-middle"style="display: flex; font-size: 14px;"></div></td>
         </tr>
       </tbody>
     </table>
@@ -233,7 +245,7 @@
           <table class="table-responsive table-sm table-bordered justify-cotent-center">
 
             <thead>
-              <tr>
+              <tr style="  line-height: 95%;">
                 <th scope="col" style="text-align: center; vertical-align: middle;">Questions</th>
                 <th scope="col" style="text-align: center; vertical-align: middle;">Your<br> answer</th>
                 <th scope="col" style="text-align: center; vertical-align: middle;">Weight <br> <em style=" font-weight:normal"><small>(Social Startup)</small></th>
@@ -323,7 +335,8 @@
                   <td><div class="time_score10"></div></td>
               </tr>
               <tr style="background-color:rgb(75, 192, 192, 0.2);">
-              <td  colspan="3" ><div class="" style=" font-weight:normal" ><small><strong>Weighted Opportunity Confidence Level:</small></strong></div></td>
+              <td  colspan="2" ><div class="" style=" font-weight:normal" ><small><strong>Weighted Opportunity<br> Confidence Level:</small></strong></div></td>
+              <td><div class="customerOCLTextguide1"></div></td>
                 <td><div class="weightOCL_Customer"></div></td>
                   <td><div class="time_scoreCustomer"></div></td>
               </tr>
@@ -380,7 +393,8 @@
                   <td><div class="time_score17"></div></td>
               </tr>
               <tr style="background-color:rgb(255, 99, 132, 0.2);">
-                <td  colspan="3" ><div class="" style=" font-weight:normal" > <small><strong>Weighted Opportunity Confidence Level:</small></strong></div></td>
+                <td  colspan="2" ><div class="" style=" font-weight:normal" > <small><strong>Weighted Opportunity <br>Confidence Level:</small></strong></div></td>
+                <td><div class="marketOCLTextguide1"></div></td>
                 <td><div class="weightOCL_Market"></div></td>
                   <td><div class="time_scoreMarket"></div></td>
               </tr>
@@ -438,7 +452,8 @@
               </tr>
               <tr style="background-color:rgb(255, 205, 86, 0.2);">
 
-                <td  colspan="3" ><div class="" style=" font-weight:normal" ><small><strong>Weighted Opportunity Confidence Level:</small></strong></div></td>
+                <td  colspan="2" ><div class="" style=" font-weight:normal" ><small><strong>Weighted Opportunity <br>Confidence Level:</small></strong></div></td>
+                <td><div class="productOCLTextguide1"></div></td>
                 <td><div class="weightOCL_Product"></div></td>
                   <td><div class="time_scoreProduct"></div></td>
               </tr>
@@ -495,10 +510,12 @@
                   <td><div class="time_score31"></div></td>
               </tr>
               <tr style="background-color:rgb(54, 162, 235, 0.2);">
-              <td  colspan="3" ><div class="" style=" font-weight:normal" ><small><strong>Weighted Opportunity Confidence Level:</small></strong></div></td>
+              <td  colspan="2" ><div class="" style=" font-weight:normal" ><small><strong>Weighted Opportunity <br>Confidence Level:</small></strong></div></td>
+                <td><div class="businessOCLTextguide1"></div></td>
                 <td><div class="weightOCL_Business"></div></td>
                   <td><div class="time_scoreBusiness"></div></td>
               </tr>
+
               <tr class="table-success">
                 <th scope="row" style=" font-weight:normal" ><strong>Overall:</th>
                 <td  colspan="2" ><div class="" style=" font-weight:normal" > </div></td>
@@ -584,8 +601,8 @@
             <div class="modal-body" style=" font-weight:normal;">
               We humbly ask for your time to answer a quick survey to assess our market validation tool.<br><em><small>(3-4 minute survey through google forms.)</small><br><br> <strong><small>Download results as:
             </div>
-            <div style="text-align:center; margin-bottom:20px;"> <button type="button" class="btn btn-danger" ><i class='bx bxs-file-pdf'></i>  .PDF</button>
-            <button type="button" class="btn btn-danger" ><i class='bx bxs-file-image' ></i>  .PNG</button>
+            <div style="text-align:center; margin-bottom:20px;">
+            <button type="button" class="btn btn-danger" ><i class='bx bxs-file-pdf'></i>  .PDF</button>
            </div>
             <!-- Modal footer -->
             <div class="modal-footer">
