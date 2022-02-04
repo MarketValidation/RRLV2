@@ -158,16 +158,16 @@ function showQuetions(index){
         option[i].setAttribute("onclick", "optionSelected(this)");
     }
 
-    if (que_numb < 2){ // if user scored more than 3
+    if (que_numb < 12){ // if user scored more than 3
         //creating a new span tag and passing the user score number and total question number
         let dimensionTag = '<span><p>Customer Dimension</p></span>';
         titleDimension.innerHTML = dimensionTag;  //adding new span tag inside score_Text
     }
-    else if((que_numb > 1) && (que_numb < 3)){ // if user scored more than 1
+    else if((que_numb > 11) && (que_numb < 19)){ // if user scored more than 1
           let dimensionTag = '<span><p>Market Dimension</p></span>';
       titleDimension.innerHTML = dimensionTag;  //adding new span tag inside score_Text
     }
-    else if((que_numb > 3) && (que_numb < 5)) { // if user scored less than 1
+    else if((que_numb > 18) && (que_numb < 26)) { // if user scored less than 1
            let dimensionTag = '<span><p>Product Dimension</p></span>';
       titleDimension.innerHTML = dimensionTag;  //adding new span tag inside score_Text
     } else {   let dimensionTag = '<span><p>Business Dimension</p></span>';
@@ -261,12 +261,9 @@ console.log(que_count);  }
     clear_btn.classList.add("show"); //show the next button
 }
 
-
-
-
-
 function showResult(){
   document.getElementById('faq').style.height = '3000px';
+
     info_box.classList.remove("activeInfo"); //hide info box
     quiz_box.classList.remove("activeQuiz"); //hide quiz box
     result_box.classList.add("activeResult"); //show result box
@@ -842,112 +839,110 @@ const dataz = {
 
 
 //CUSTOMER
-   if (parseFloat(finalcustomerLoop) > 8) { //9,10
-   customerOCLTextguide = "Highest";
-   customerOCLText = "You have high opportunity to your potential customers! According to product marketing alliance, having a high anticipation rate concludes that your target customers is highly likely to return to purchase your products or services on more than one occasion which is great for startups. This is because you might have provided them with significant and exceptional product/service delivery or satisfactory customer service and approaches. When customer retention rates and anticipation are high, this bodes against customer churn. This result means that there are no futher enhancement needed for your startup.";
-   customersource = "<center><small><em><strong>Additional resources:</strong>  <a href=\" https://productmarketingalliance.com/what-it-means-to-have-a-high-customer-retention-rate/\" target=\"_blank\"> Customer retention rates</a></em></small></center>";
-   }
-   else if (parseFloat(finalcustomerLoop) > 6 && parseFloat(finalcustomerLoop) < 9) { //8,7
-    customerOCLTextguide = "High";
-    customerOCLText = "You have high opportunity to your potential customers! According to product marketing alliance, having a high anticipation rate concludes that your target customers is highly likely to return to purchase your products or services on more than one occasion which is great for startups. This is because you might have provided them with significant and exceptional product/service delivery or satisfactory customer service and approaches. When customer retention rates and anticipation are high, this bodes against customer churn. This result means that there are no futher enhancement needed for your startup.";
-    customersource = "<center><small><em><strong>Additional resources:</strong>  <a href=\" https://productmarketingalliance.com/what-it-means-to-have-a-high-customer-retention-rate/\" target=\"_blank\"> Customer retention rates</a></em></small></center>";
- }
-   else if (parseFloat(finalcustomerLoop) > 4 && parseFloat(finalcustomerLoop) < 7 ) { //5,6
-  customerOCLTextguide = "Medium";
-  customerOCLText = "Your score is average. Based on a study by harvard business review, It is important and recommended to know your customers churn rate for acquiring new customers. As a startup, knowing why your customers leave at the first place makes you well-informed about the problem with your product/service or whether you have failed to satify your target customer needs. Ideally, conducting acticvities with customer participation through surveys or questionnaires related to your product/service can help you better understand your target customers behaviour. ";
-  customersource = "<center><small><em><strong>Additional resources:</strong>  <a href=\"https://hbr.org/2014/10/the-value-of-keeping-the-right-customers\" target=\"_blank\"> The value of keeping the right customers</a></em></small></center>";
-   }
-   else if (parseFloat(finalcustomerLoop) > 2 && parseFloat(finalcustomerLoop) < 5 )  { //3,4
-   customerOCLTextguide = "Low";
-   customerOCLText = "Your score is weak. There could be a problem of your understanding to your target customers. It is recommended to study problem recognition or evaluating the consumer’s perspective by considering the basic questions like: What kinds of needs or problems or efforts arise, What brought them about, and How it led the consumer towards the particular product. By identifying the effectivity of your product/service to attract your target customers, conducting thorough acticvities with customer participation through surveys or questionnaires can help you better understand your target customers behaviour. As saying goes that customers are always right means that  in customer discovery. Great startup founders should be flexible enough to different prespectives or point of views as to how they want their product/service to be produced or delivered.  ";
-  customersource = "<center><small><em><strong>Additional resources:</strong>  <a href=\"https://info.hurree.co/en/marketing-strategy-essential-guide\" target=\"_blank\"> Marketing Strategies </a> <a href=\"https://www.tutorialspoint.com/consumer_behavior/consumer_behavior_problem_recognition.htm\" target=\"_blank\">Customer Behaviour & Problem recognition</a></em></small></center>";
-   }
-   else if (parseFloat(finalcustomerLoop) < 3) { // 2,1
+    if (parseFloat(finalcustomerLoop) < 3) { // 2,1
   customerOCLTextguide = "Lowest";
   customerOCLText = "Your score is weak. There could be a problem of your understanding to your target customers. It is recommended to study problem recognition or evaluating the consumer’s perspective by considering the basic questions like: What kinds of needs or problems or efforts arise, What brought them about, and How it led the consumer towards the particular product. By identifying the effectivity of your product/service to attract your target customers, conducting thorough acticvities with customer participation through surveys or questionnaires can help you better understand your target customers behaviour. As saying goes that customers are always right means that  in customer discovery. Great startup founders should be flexible enough to different prespectives or point of views as to how they want their product/service to be produced or delivered.  ";
  customersource = "<center><small><em><strong>Additional resources:</strong>  <a href=\"https://info.hurree.co/en/marketing-strategy-essential-guide\" target=\"_blank\"> Marketing Strategies </a> <a href=\"https://www.tutorialspoint.com/consumer_behavior/consumer_behavior_problem_recognition.htm\" target=\"_blank\">Customer Behaviour & Problem recognition</a></em></small></center>";
  }
+ else if (parseFloat(finalcustomerLoop) > 2 && parseFloat(finalcustomerLoop) < 5 )  { //3,4
+ customerOCLTextguide = "Low";
+ customerOCLText = "Your score is weak. There could be a problem of your understanding to your target customers. It is recommended to study problem recognition or evaluating the consumer’s perspective by considering the basic questions like: What kinds of needs or problems or efforts arise, What brought them about, and How it led the consumer towards the particular product. By identifying the effectivity of your product/service to attract your target customers, conducting thorough acticvities with customer participation through surveys or questionnaires can help you better understand your target customers behaviour. As saying goes that customers are always right means that  in customer discovery. Great startup founders should be flexible enough to different prespectives or point of views as to how they want their product/service to be produced or delivered.  ";
+customersource = "<center><small><em><strong>Additional resources:</strong>  <a href=\"https://info.hurree.co/en/marketing-strategy-essential-guide\" target=\"_blank\"> Marketing Strategies </a> <a href=\"https://www.tutorialspoint.com/consumer_behavior/consumer_behavior_problem_recognition.htm\" target=\"_blank\">Customer Behaviour & Problem recognition</a></em></small></center>";
+ }
+ else if (parseFloat(finalcustomerLoop) > 4 && parseFloat(finalcustomerLoop) < 7 ) { //5,6
+customerOCLTextguide = "Medium";
+customerOCLText = "Your score is average. Based on a study by harvard business review, It is important and recommended to know your customers churn rate for acquiring new customers. As a startup, knowing why your customers leave at the first place makes you well-informed about the problem with your product/service or whether you have failed to satify your target customer needs. Ideally, conducting acticvities with customer participation through surveys or questionnaires related to your product/service can help you better understand your target customers behaviour. ";
+customersource = "<center><small><em><strong>Additional resources:</strong>  <a href=\"https://hbr.org/2014/10/the-value-of-keeping-the-right-customers\" target=\"_blank\"> The value of keeping the right customers</a></em></small></center>";
+ }
+ else if (parseFloat(finalcustomerLoop) > 6 && parseFloat(finalcustomerLoop) < 9) { //8,7
+  customerOCLTextguide = "High";
+  customerOCLText = "You have high opportunity to your potential customers! According to product marketing alliance, having a high anticipation rate concludes that your target customers is highly likely to return to purchase your products or services on more than one occasion which is great for startups. This is because you might have provided them with significant and exceptional product/service delivery or satisfactory customer service and approaches. When customer retention rates and anticipation are high, this bodes against customer churn. This result means that there are no futher enhancement needed for your startup.";
+  customersource = "<center><small><em><strong>Additional resources:</strong>  <a href=\" https://productmarketingalliance.com/what-it-means-to-have-a-high-customer-retention-rate/\" target=\"_blank\"> Customer retention rates</a></em></small></center>";
+}
+else if (parseFloat(finalcustomerLoop) > 8) { //9,10
+customerOCLTextguide = "Highest";
+customerOCLText = "You have high opportunity to your potential customers! According to product marketing alliance, having a high anticipation rate concludes that your target customers is highly likely to return to purchase your products or services on more than one occasion which is great for startups. This is because you might have provided them with significant and exceptional product/service delivery or satisfactory customer service and approaches. When customer retention rates and anticipation are high, this bodes against customer churn. This result means that there are no futher enhancement needed for your startup.";
+customersource = "<center><small><em><strong>Additional resources:</strong>  <a href=\" https://productmarketingalliance.com/what-it-means-to-have-a-high-customer-retention-rate/\" target=\"_blank\"> Customer retention rates</a></em></small></center>";
+}
+
 //MARKET
-   if (parseFloat(finalmarketLoop) > 8) { //9,10
-   marketOCLTextguide = "Highest";
-  marketOCLText = "Your marketability score here is high! According to the balance small business, market reach is important as it makes you determine crucial factors that could minimize the risks inherent to your business and helps in planning and decision making processes of your startup. Having a high score in market dimension means that you have attained the best practices in marketing your product/service concept and hence, the suggested recommendation is to be constant and consistent of what you are doing and focus on other dimensions that needs your attention.";
-marketsource = "<center><small><em><strong>Additional resources:</strong>  <a href=\"https://www.thebalancesmb.com/what-is-market-reach-2295559\" target=\"_blank\"> Market Reach</a></em></small></center>";
-   }
-   else if (parseFloat(finalmarketLoop) > 6 && parseFloat(finalmarketLoop) < 9) { //8,7
-    marketOCLTextguide = "High";
-    marketOCLText = "Your marketability score here is high! According to the balance small business, market reach is important as it makes you determine crucial factors that could minimize the risks inherent to your business and helps in planning and decision making processes of your startup. Having a high score in market dimension means that you have attained the best practices in marketing your product/service concept and hence, the suggested recommendation is to be constant and consistent of what you are doing and focus on other dimensions that needs your attention.";
-  marketsource = "<center><small><em><strong>Additional resources:</strong>  <a href=\"https://www.thebalancesmb.com/what-is-market-reach-2295559\" target=\"_blank\"> Market Reach</a></em></small></center>";
-     }
-   else if (parseFloat(finalmarketLoop) > 4 && parseFloat(finalmarketLoop) < 7 ) { //5,6
-  marketOCLTextguide = "Medium";
-marketOCLText = "Your score is average. You may have a stable market reach but stability alone is not always enough since change and innovation is imminent from your competitors and other looming startups in the market landscape. To further enhance your market reach, these techniques are suggested: Trying new tweaks and developing variants for your product/service and offering free trials or samples to your target customers, using different form of digital marketing platforms to further enhance your market reach, target multiple audience, know your competitors and increase your partnership and networks with other people that could help your startup.";
-marketsource = "<center><small><em><strong>Additional resources:</strong>  <a href=\"https://customerthink.com/7-simple-marketing-techniques-that-will-increase-your-customer-reach/\" target=\"_blank\"> Marketing Techniques</a></em></small></center>";
-   }
-   else if (parseFloat(finalmarketLoop)> 2 && parseFloat(finalmarketLoop) < 5 )  { //3,4
-   marketOCLTextguide = "Low";
-marketOCLText= "You score here is weak. Which means that you still have to learn more about the marketing methods and market dynamics in your community. It is suggested that you improve your branding first,uderstand your target customers better, measure the effectivess of your marketing plans, identify new oppurtunities, and get a thorough insights of your product features from customers. Remember that marketing is the process of exploring, creating, and delivering value to meet the needs of a target market in terms of goods and services.";
-marketsource = "<center><small><em><strong>Additional resources:</strong>  <a href=\"https://www.bdc.ca/en/articles-tools/blog/5-ways-improve-business-market-research\" target=\"_blank\"> Market Research</a></em></small></center>";
-   }
-   else if (parseFloat(finalmarketLoop) < 3) { // 2,1
+ if (parseFloat(finalmarketLoop) < 3) { // 2,1
   marketOCLTextguide = "Lowest";
   marketOCLText= "You score here is weak. Which means that you still have to learn more about the marketing methods and market dynamics in your community. It is suggested that you improve your branding first,uderstand your target customers better, measure the effectivess of your marketing plans, identify new oppurtunities, and get a thorough insights of your product features from customers. Remember that marketing is the process of exploring, creating, and delivering value to meet the needs of a target market in terms of goods and services.";
   marketsource = "<center><small><em><strong>Additional resources:</strong>  <a href=\"https://www.bdc.ca/en/articles-tools/blog/5-ways-improve-business-market-research\" target=\"_blank\"> Market Research</a></em></small></center>";
     }
-//PRODUCT
-   if (parseFloat(finalproductLoop) > 8) { //9,10
-   productOCLTextguide = "Highest";
-   productOCLText = "Your product/service concept is great! You seem to have a great minimum viable product (MVP) concept and innovation type. The startup team should be able to measure the feasibility of implementing and developing the product concept with ease and determine its adoption rate. It is ideal to continue researching about the product such as: Seeking cost advantages over the competition, Re-innovating – making changes to designs after their first introduction and then quickly introducing them to the market, Developing a reputation for product quality, procedures and standards for more efficient and economic production of the product or optimizing the process of the service, and learning from users and customers about their experience to continue making your product/service great. ";
-productsource = "<center><small><em><strong>Additional resources:</strong>  <a href=\"https://www.viima.com/blog/types-of-innovation\" target=\"_blank\"> Types of Innovation</a></em></small></center>";
-   }
-   else if (parseFloat(finalproductLoop) > 6 && parseFloat(finalcustomerLoop) < 9) { //8,7
-    productOCLTextguide = "High";
-    productOCLText = "Your product/service concept is great! You seem to have a great minimum viable product (MVP) concept and innovation type. The startup team should be able to measure the feasibility of implementing and developing the product concept with ease and determine its adoption rate. It is ideal to continue researching about the product such as: Seeking cost advantages over the competition, Re-innovating – making changes to designs after their first introduction and then quickly introducing them to the market, Developing a reputation for product quality, procedures and standards for more efficient and economic production of the product or optimizing the process of the service, and learning from users and customers about their experience to continue making your product/service great. ";
-  productsource = "<center><small><em><strong>Additional resources:</strong>  <a href=\"https://www.viima.com/blog/types-of-innovation\" target=\"_blank\"> Types of Innovation</a></em></small></center>";
+    else if (parseFloat(finalmarketLoop)> 2 && parseFloat(finalmarketLoop) < 5 )  { //3,4
+    marketOCLTextguide = "Low";
+ marketOCLText= "You score here is weak. Which means that you still have to learn more about the marketing methods and market dynamics in your community. It is suggested that you improve your branding first,uderstand your target customers better, measure the effectivess of your marketing plans, identify new oppurtunities, and get a thorough insights of your product features from customers. Remember that marketing is the process of exploring, creating, and delivering value to meet the needs of a target market in terms of goods and services.";
+ marketsource = "<center><small><em><strong>Additional resources:</strong>  <a href=\"https://www.bdc.ca/en/articles-tools/blog/5-ways-improve-business-market-research\" target=\"_blank\"> Market Research</a></em></small></center>";
     }
-   else if (parseFloat(finalproductLoop) > 4 && parseFloat(finalproductLoop) < 7 ) { //5,6
-productOCLTextguide = "Medium";
-productOCLText = "Your product is on average opportunity confidence level. Your product should be in a better position and decide what important features of your new product/service concept you should focus on streamlining, as well as the categories of possible early adopters and the projected adoption rate should be taken into consideration. Plan your traditional product release, and learn how to build the simplest feasible feature to assist both your startup team and your potential target customers (or testers) in understanding the issue that they're attempting to answer. The learnings gained from these can greatly help fine tune your product/service concept that is tailored for your target customers. ";
-productsource = "<center><small><em><strong>Additional resources:</strong>  <a href=\"https://www.jigsawacademy.com/blogs/product-management/product-positioning-strategy/\" target=\"_blank\"> Product Management</a></em></small></center>";
+    else if (parseFloat(finalmarketLoop) > 4 && parseFloat(finalmarketLoop) < 7 ) { //5,6
+   marketOCLTextguide = "Medium";
+ marketOCLText = "Your score is average. You may have a stable market reach but stability alone is not always enough since change and innovation is imminent from your competitors and other looming startups in the market landscape. To further enhance your market reach, these techniques are suggested: Trying new tweaks and developing variants for your product/service and offering free trials or samples to your target customers, using different form of digital marketing platforms to further enhance your market reach, target multiple audience, know your competitors and increase your partnership and networks with other people that could help your startup.";
+ marketsource = "<center><small><em><strong>Additional resources:</strong>  <a href=\"https://customerthink.com/7-simple-marketing-techniques-that-will-increase-your-customer-reach/\" target=\"_blank\"> Marketing Techniques</a></em></small></center>";
+    }
+    else if (parseFloat(finalmarketLoop) > 6 && parseFloat(finalmarketLoop) < 9) { //8,7
+     marketOCLTextguide = "High";
+     marketOCLText = "Your marketability score here is high! According to the balance small business, market reach is important as it makes you determine crucial factors that could minimize the risks inherent to your business and helps in planning and decision making processes of your startup. Having a high score in market dimension means that you have attained the best practices in marketing your product/service concept and hence, the suggested recommendation is to be constant and consistent of what you are doing and focus on other dimensions that needs your attention.";
+   marketsource = "<center><small><em><strong>Additional resources:</strong>  <a href=\"https://www.thebalancesmb.com/what-is-market-reach-2295559\" target=\"_blank\"> Market Reach</a></em></small></center>";
+      }
+    else if (parseFloat(finalmarketLoop) > 8) { //9,10
+      marketOCLTextguide = "Highest";
+     marketOCLText = "Your marketability score here is high! According to the balance small business, market reach is important as it makes you determine crucial factors that could minimize the risks inherent to your business and helps in planning and decision making processes of your startup. Having a high score in market dimension means that you have attained the best practices in marketing your product/service concept and hence, the suggested recommendation is to be constant and consistent of what you are doing and focus on other dimensions that needs your attention.";
+   marketsource = "<center><small><em><strong>Additional resources:</strong>  <a href=\"https://www.thebalancesmb.com/what-is-market-reach-2295559\" target=\"_blank\"> Market Reach</a></em></small></center>";
+      }
+//PRODUCT
+ if (parseFloat(finalproductLoop) < 3) { // 2,1
+  productOCLTextguide = "Lowest";
+  productOCLText = "Your score here is Low! Your product/service concept have low opportunity confidence level. Startup teams should be able to decide whether to pivot to another product/service venture or modify and improve your existing minimum viable product (MVP). Take in mind that whe introducing your product, startup teams are advised to follow with modern product development methodologies. Ex. Lean Canvas. According to Steve Blank, traditional product development is not enough to penetrate your product into the market or choosing market. It is ideal to refine your product/service concept such that imortant factors are aligned with your goals such as taking into cosideration the environemntal impact, resources cost, well defined plans of the processes related to the product or service, and its contribution to the problem that its' actually trying to solve.";
+  productsource = "<center><small><em><strong>Additional resources:</strong>  <a href=\"https://slidebazaar.com/items/traditional-product-development-process/\" target=\"_blank\"> Product Development Process</a></em></small></center>";
    }
    else if (parseFloat(finalproductLoop) > 2 && parseFloat(finalproductLoop) < 5 )  { //3,4
    productOCLTextguide = "Low";
    productOCLText = "Your score here is Low! Your product/service concept have low opportunity confidence level. Startup teams should be able to decide whether to pivot to another product/service venture or modify and improve your existing minimum viable product (MVP). Take in mind that whe introducing your product, startup teams are advised to follow with modern product development methodologies. Ex. Lean Canvas. According to Steve Blank, traditional product development is not enough to penetrate your product into the market or choosing market. It is ideal to refine your product/service concept such that imortant factors are aligned with your goals such as taking into cosideration the environemntal impact, resources cost, well defined plans of the processes related to the product or service, and its contribution to the problem that its' actually trying to solve.";
    productsource = "<center><small><em><strong>Additional resources:</strong>  <a href=\"https://slidebazaar.com/items/traditional-product-development-process/\" target=\"_blank\"> Product Development Process</a></em></small></center>";
    }
-   else if (parseFloat(finalproductLoop) < 3) { // 2,1
-  productOCLTextguide = "Lowest";
-  productOCLText = "Your score here is Low! Your product/service concept have low opportunity confidence level. Startup teams should be able to decide whether to pivot to another product/service venture or modify and improve your existing minimum viable product (MVP). Take in mind that whe introducing your product, startup teams are advised to follow with modern product development methodologies. Ex. Lean Canvas. According to Steve Blank, traditional product development is not enough to penetrate your product into the market or choosing market. It is ideal to refine your product/service concept such that imortant factors are aligned with your goals such as taking into cosideration the environemntal impact, resources cost, well defined plans of the processes related to the product or service, and its contribution to the problem that its' actually trying to solve.";
-  productsource = "<center><small><em><strong>Additional resources:</strong>  <a href=\"https://slidebazaar.com/items/traditional-product-development-process/\" target=\"_blank\"> Product Development Process</a></em></small></center>";
+   else if (parseFloat(finalproductLoop) > 4 && parseFloat(finalproductLoop) < 7 ) { //5,6
+productOCLTextguide = "Medium";
+productOCLText = "Your product is on average opportunity confidence level. Your product should be in a better position and decide what important features of your new product/service concept you should focus on streamlining, as well as the categories of possible early adopters and the projected adoption rate should be taken into consideration. Plan your traditional product release, and learn how to build the simplest feasible feature to assist both your startup team and your potential target customers (or testers) in understanding the issue that they're attempting to answer. The learnings gained from these can greatly help fine tune your product/service concept that is tailored for your target customers. ";
+productsource = "<center><small><em><strong>Additional resources:</strong>  <a href=\"https://www.jigsawacademy.com/blogs/product-management/product-positioning-strategy/\" target=\"_blank\"> Product Management</a></em></small></center>";
    }
+   else if (parseFloat(finalproductLoop) > 6 && parseFloat(finalcustomerLoop) < 9) { //8,7
+    productOCLTextguide = "High";
+    productOCLText = "Your product/service concept is great! You seem to have a great minimum viable product (MVP) concept and innovation type. The startup team should be able to measure the feasibility of implementing and developing the product concept with ease and determine its adoption rate. It is ideal to continue researching about the product such as: Seeking cost advantages over the competition, Re-innovating – making changes to designs after their first introduction and then quickly introducing them to the market, Developing a reputation for product quality, procedures and standards for more efficient and economic production of the product or optimizing the process of the service, and learning from users and customers about their experience to continue making your product/service great. ";
+  productsource = "<center><small><em><strong>Additional resources:</strong>  <a href=\"https://www.viima.com/blog/types-of-innovation\" target=\"_blank\"> Types of Innovation</a></em></small></center>";
+    }
+  else if (parseFloat(finalproductLoop) > 8) { //9,10
+    productOCLTextguide = "Highest";
+    productOCLText = "Your product/service concept is great! You seem to have a great minimum viable product (MVP) concept and innovation type. The startup team should be able to measure the feasibility of implementing and developing the product concept with ease and determine its adoption rate. It is ideal to continue researching about the product such as: Seeking cost advantages over the competition, Re-innovating – making changes to designs after their first introduction and then quickly introducing them to the market, Developing a reputation for product quality, procedures and standards for more efficient and economic production of the product or optimizing the process of the service, and learning from users and customers about their experience to continue making your product/service great. ";
+ productsource = "<center><small><em><strong>Additional resources:</strong>  <a href=\"https://www.viima.com/blog/types-of-innovation\" target=\"_blank\"> Types of Innovation</a></em></small></center>";
+    }
 //BUSINESS
-   if (parseFloat(finalbusinessLoop) > 8) { //9,10
-   businessOCLTextguide = "Highest";
-  businessOCLText = "Your score here is High! Which means that you have satisfied most important internal factors that are needed in securing the sustainability of your startup in terms of business dimension including a great business model, legal, technical, financial and Intellectual property of your aspiring startup plans, thus defending your competitive space. Additional resources are included below. ";
-businesssource = "<center><small><em><strong>Additional resources:</strong>  <a href=\"https://www.wipo.int/sme/en/\" target=\"_blank\"> IP assessment tool</a></em></small></center>";
-   }
-   else if (parseFloat(finalbusinessLoop) > 6 && parseFloat(finalbusinessLoop) < 9) { //8,7
-    businessOCLTextguide = "High";
-    businessOCLText = "Your score here is High! Which means that you have satisfied most important internal factors that are needed in securing the sustainability of your startup in terms of business dimension including a great business model, legal, technical, financial and Intellectual property of your aspiring startup plans, thus defending your competitive space. Additional resources are included below. ";
-  businesssource = "<center><small><em><strong>Additional resources:</strong>  <a href=\"https://www.wipo.int/sme/en/\" target=\"_blank\"> IP assessment tool</a></em></small></center>";
-      }
-   else if (parseFloat(finalbusinessLoop) > 4 && parseFloat(finalbusinessLoop) < 7 ) { //5,6
-  businessOCLTextguide = "Medium";
-businessOCLText = "Your score here is Medium! It is advised to use a risk management tool and reconstruct business model in order to prevent any unprecedented situation that your startup could might face. A risk assessment of the components of the business model will enable any prospective organisation to evaluate the robustness of the existing business model and identify the events that could impact the efficiency and effectiveness of delivery to the customer offerings. The assessment should also identify opportunities for improving operational and compliance efficiency. ";
-businesssource = "<center><small><em><strong>Additional resources:</strong>  <a href=\"https://www.theirm.org/media/6879/0925-irm-risk-management-and-business-11-10-17-v3.pdf\" target=\"_blank\"> Risk management and the business model</a></em></small></center>";
-
-   }
-   else if (parseFloat(finalbusinessLoop) > 2 && parseFloat(finalbusinessLoop) < 5 )  { //3,4
-   businessOCLTextguide = "Low";
-businessOCLText= "Your score here is Low!  With a low score in business dimension, it is advised to have a clear plan on how you would commercialize your product or service concept in the market by having a clear business model that revolves around your startup. A successful business creates something of value. The world is filled with opportunities to fulfill people’s wants and needs, and your job as an entrepreneur is to find a way to capitalize on these opportunities. At its heart, a business generates value for its customers. A business model is a specific method used to create and deliver this value. ";
-usinesssource = "<center><small><em><strong>Additional resources:</strong>  <a href=\"https://online.hbs.edu/blog/post/types-of-business-models\" target=\"_blank\"> Business models and the value they deliver</a></em></small></center>";
-
-   }
-   else if (parseFloat(finalbusinessLoop) < 3) { // 2,1
+ if (parseFloat(finalbusinessLoop) < 3) { // 2,1
   businessOCLTextguide = "Lowest";
   businessOCLText= "Your score here is Low!  With a low score in business dimension, it is advised to have a clear plan on how you would commercialize your product or service concept in the market by having a clear business model that revolves around your startup. A successful business creates something of value. The world is filled with opportunities to fulfill people’s wants and needs, and your job as an entrepreneur is to find a way to capitalize on these opportunities. At its heart, a business generates value for its customers. A business model is a specific method used to create and deliver this value. ";
-  usinesssource = "<center><small><em><strong>Additional resources:</strong>  <a href=\"https://online.hbs.edu/blog/post/types-of-business-models\" target=\"_blank\"> Business models and the value they deliver</a></em></small></center>";
+  businesssource = "<center><small><em><strong>Additional resources:</strong>  <a href=\"https://online.hbs.edu/blog/post/types-of-business-models\" target=\"_blank\"> Business models and the value they deliver</a></em></small></center>";
  }
-
+ else if (parseFloat(finalbusinessLoop) > 2 && parseFloat(finalbusinessLoop) < 5 )  { //3,4
+ businessOCLTextguide = "Low";
+businessOCLText= "Your score here is Low!  With a low score in business dimension, it is advised to have a clear plan on how you would commercialize your product or service concept in the market by having a clear business model that revolves around your startup. A successful business creates something of value. The world is filled with opportunities to fulfill people’s wants and needs, and your job as an entrepreneur is to find a way to capitalize on these opportunities. At its heart, a business generates value for its customers. A business model is a specific method used to create and deliver this value. ";
+businesssource = "<center><small><em><strong>Additional resources:</strong>  <a href=\"https://online.hbs.edu/blog/post/types-of-business-models\" target=\"_blank\"> Business models and the value they deliver</a></em></small></center>";
+ }
+ else if (parseFloat(finalbusinessLoop) > 4 && parseFloat(finalbusinessLoop) < 7 ) { //5,6
+businessOCLTextguide = "Medium";
+businessOCLText = "Your score here is Medium! It is advised to use a risk management tool and reconstruct business model in order to prevent any unprecedented situation that your startup could might face. A risk assessment of the components of the business model will enable any prospective organisation to evaluate the robustness of the existing business model and identify the events that could impact the efficiency and effectiveness of delivery to the customer offerings. The assessment should also identify opportunities for improving operational and compliance efficiency. ";
+businesssource = "<center><small><em><strong>Additional resources:</strong>  <a href=\"https://www.theirm.org/media/6879/0925-irm-risk-management-and-business-11-10-17-v3.pdf\" target=\"_blank\"> Risk management and the business model</a></em></small></center>";
+ }
+ else if (parseFloat(finalbusinessLoop) > 6 && parseFloat(finalbusinessLoop) < 9) { //8,7
+  businessOCLTextguide = "High";
+  businessOCLText = "Your score here is High! Which means that you have satisfied most important internal factors that are needed in securing the sustainability of your startup in terms of business dimension including a great business model, legal, technical, financial and Intellectual property of your aspiring startup plans, thus defending your competitive space. Additional resources are included below. ";
+businesssource = "<center><small><em><strong>Additional resources:</strong>  <a href=\"https://www.wipo.int/sme/en/\" target=\"_blank\"> IP assessment tool</a></em></small></center>";
+    }
+  else if (parseFloat(finalbusinessLoop) > 8) { //9,10
+    businessOCLTextguide = "Highest";
+   businessOCLText = "Your score here is High! Which means that you have satisfied most important internal factors that are needed in securing the sustainability of your startup in terms of business dimension including a great business model, legal, technical, financial and Intellectual property of your aspiring startup plans, thus defending your competitive space. Additional resources are included below. ";
+ businesssource = "<center><small><em><strong>Additional resources:</strong>  <a href=\"https://www.wipo.int/sme/en/\" target=\"_blank\"> IP assessment tool</a></em></small></center>";
+    }
    const customerOCLTextguideTag = result_box.querySelector(".customerOCLTextguide"); //higest or high or medium or low or lowest
    const marketOCLTextguideTag = result_box.querySelector(".marketOCLTextguide");
    const productOCLTextguideTag = result_box.querySelector(".productOCLTextguide");
@@ -988,20 +983,20 @@ businesssourceTag.innerHTML = businesssource;
     r: {
       beginAtZero: true, ticks: {
         callback: function(value,index){
-          if (this.getLabelForValue(value) > 8) { //9,10
-            return 'Highest';
+          if (this.getLabelForValue(value) < 3) { //9,10
+            return 'Lowest';
           }
-          else if (this.getLabelForValue(value) > 6 && this.getLabelForValue(value) < 9) { //8,7
-            return 'High';
+          else if (this.getLabelForValue(value) > 2 && this.getLabelForValue(value) < 5) { //8,7
+            return 'Low';
           }
           else if (this.getLabelForValue(value) > 4 && this.getLabelForValue(value) < 7 ) { //5,6
             return 'Medium';
           }
-          else if (this.getLabelForValue(value) > 2 && this.getLabelForValue(value) < 5 )  { //3,4
-            return 'Low';
+          else if (this.getLabelForValue(value) > 6 && this.getLabelForValue(value) < 9 )  { //3,4
+            return 'High';
           }
-          else if (this.getLabelForValue(value) < 3) { // 2,1
-            return 'Lowest';
+          else if (this.getLabelForValue(value) > 8) { // 2,1
+            return 'Highest';
           }
         }
       }
@@ -1027,4 +1022,21 @@ function queCounter(index){
     //creating a new span tag and passing the question number and total question
     let totalQueCounTag = '<span><p>'+ index +'</p> of <p>'+ questions.length +'</p> Questions</span>';
     bottom_ques_counter.innerHTML = totalQueCounTag;  //adding new span tag inside bottom_ques_counter
+}
+
+window.onload = function () {
+    document.getElementById("download")
+        .addEventListener("click", () => {
+            const result_box = this.document.getElementById("result_box");
+            console.log(result_box);
+            console.log(window);
+            var opt = {
+                margin:       .8,
+                filename:     'My_Athena_Assessment_Report.pdf',
+                image:        { type: 'jpeg', quality: 0.98 },
+                html2canvas:  { scale: 2 },
+                jsPDF:        { unit: 'in', format: 'letter', orientation: 'landscape' }
+              };
+            html2pdf().from(result_box).set(opt).save();
+        })
 }
