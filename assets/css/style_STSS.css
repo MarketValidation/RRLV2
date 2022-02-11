@@ -26,7 +26,16 @@
     background: #007bff;
 }
 
-
+.aa{  --animate-duration: 0.1s;  }
+.bb{  --animate-duration: 0.2s;  }
+.cc{  --animate-duration: 0.3s;  }
+.dd{  --animate-duration: 0.4s;  }
+.ee{  --animate-duration: 0.5s;  }
+.ff{  --animate-duration: 0.6s;  }
+.gg{  --animate-duration: 0.7s;  }
+.hh{  --animate-duration: 0.8s;  }
+.ii{  --animate-duration: 0.9s;  }
+.jj{  --animate-duration: 1s;  }
 
 .start_btn,
 .info_box,

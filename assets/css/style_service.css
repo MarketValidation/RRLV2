@@ -61,13 +61,6 @@ body {
   font-family: "Open Sans", sans-serif;
   color: #444444;
 
-
-
-  background-position: left bottom; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: cover; /* Resize the background image to cover the entire container */
-  background-size: 700px 500px;
-  background-attachment: fixed;
 }
 
 a {
@@ -140,6 +133,12 @@ height:100vh;
   background: #213b52;
   position: fixed;
   width: 100%;
+}
+
+.modal_footer {
+
+  text-align: center;
+  justify-content: center;
 }
 
 #header .logo h1 {
