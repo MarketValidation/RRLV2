@@ -1034,7 +1034,12 @@ window.onload = function () {
                 margin:       .8,
                 filename:     'My_Athena_Assessment_Report.pdf',
                 image:        { type: 'jpeg', quality: 0.98 },
-                html2canvas:  { scale: 2 },
+                html2canvas:  {
+                                scale: 2,
+dpi: 300,
+letterRendering: true,
+useCORS: true
+},
                 jsPDF:        { unit: 'in', format: 'letter', orientation: 'landscape' }
               };
             html2pdf().from(result_box).set(opt).save();
