@@ -262,7 +262,7 @@ console.log(que_count);  }
 }
 
 function showResult(){
-  document.getElementById('faq').style.height = '3000px';
+  document.getElementById('faq').style.height = '3500px';
 
     info_box.classList.remove("activeInfo"); //hide info box
     quiz_box.classList.remove("activeQuiz"); //hide quiz box
