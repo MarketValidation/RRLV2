@@ -5,14 +5,14 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Athena - Small startup</title>
+  <title>Athena - Scalable startup</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
-  <link rel="shortcut icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="shortcut icon" type="image/png" href="https://ucarecdn.com/55a6a418-1273-41ba-a13e-aeb9494448dc/favicon.png">
 
   <!-- Favicons -->
 
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="https://ucarecdn.com/12f3d75d-b0d5-4bcc-b65b-47b3708fbf44/appletouchicon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -28,7 +28,7 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style_STSS.css" rel="stylesheet">
  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
  <link rel="stylesheet" href="assets/newcss/animate.min.css">
  <link rel="stylesheet" href="assets/newcss/custom-animation.css">
  <link rel="stylesheet" href="assets/newcss/style.css">
@@ -57,12 +57,12 @@
       <div class="logo mr-auto">
         <!--   <h1 class="text-light"><a href="index.html">Students<span style="color:#00d5ff"> Connect</span><span>.</span></a></h1>-->
         <!-- Uncomment below if you prefer to use an image logo -->
-         <a><img src="assets/img/Logo.png" alt="" class="img-fluid" data-aos="fade-down" data-aos-delay="100" type="button" data-toggle="modal" data-target="#myModal" ></a>
+         <a><img src="https://ucarecdn.com/a012691a-6bcb-40c7-b164-679ee182743d/LogoTry.png" alt="" class="img-fluid" data-aos="fade-down" data-aos-delay="100" type="button" data-toggle="modal" data-target="#myModal" ></a>
       </div>
 
       <nav class="nav-menu d-none d-lg-block">
             <ul>
-            <li><a type="button" data-toggle="modal" data-target="#myModal"  data-aos="fade-down" data-aos-delay="200">About RRL</a></li>
+            <li><a type="button" data-toggle="modal" data-target="#myModal"  data-aos="fade-down" data-aos-delay="200">About Athena</a></li>
             <li><a type="button" data-toggle="modal" data-target="#myModal"  data-aos="fade-down" data-aos-delay="300">Resources</a></li>
             <li class="drop-down" data-aos="fade-down" data-aos-delay="400"><a href="">Themes</a>
             <ul>
@@ -168,269 +168,387 @@
 
 <!-- Result Box -->
 <div class="result_box">
+<div id="result_box">
+  <div class="icon justify-content-center">
+    <center>   <img src="https://ucarecdn.com/a012691a-6bcb-40c7-b164-679ee182743d/LogoTry.png" alt="" class="img-fluid" style="width:300px;height:90px;">
+  </div>
+  <center>  <div class="complete_text">Hooray! You've completed the assessment! <br> <center><strong>Result analysis: </strong> </div>
 
-    <div class="complete_text">You've completed the assessment! <br> <center><strong>Analysis: </strong> </div>
-        <div class=""> <center><strong>Detailed Analysis: </strong></div>
-          <table class="table-responsive table-sm table-striped table-bordered justify-cotent-center">
+      <table class="table text-center table-responsive table-borderless" style="margin: 0 auto;">
+      <thead>
+        <tr>
+          <th scope="row" colspan="4" ><span> <strong>
+                  <center></center>
+                </strong> </span></th>
+        </tr>
+        <tr>
+          <th scope="row" colspan="4" style="background-color: #dbdbdb;"><span> <strong>
+                  <center>Comparison of the 4 dimensions</center>
+                </strong> </span></th>
+        </tr>
+        <tr>
+          <th scope="col" class="align-items-top" colspan="2">
+            <span><small> <strong>
+                    <center>Opportunity confidence level<br> per dimension </center>
+                  </strong></small> </span>
+            <div style="height:300px; width:300px; margin: 0 auto; left: 25%; top: 25%;" class="justify-content-center">
+
+              <canvas id="myChart" class="justify-content-center" style="margin: 0 auto; left: 25%; top: 25%;"></canvas>
+            </div>
+          </th>
+          <th scope="col" colspan="2">
+
+            <div><span><small> <strong>
+                    <center>Weighted opportunity confidence<br> score per dimension </center>
+                  </strong></small> </span>
+              <center><div id="chart_div"  class="justify-content-center"> </div></center>
+            </div>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row" colspan="4" ><span> <strong>
+                  <center></center>
+                </strong> </span></th>
+        </tr>
+        <tr>
+          <th scope="row" colspan="4" style="background-color: #dbdbdb;"><span> <strong>
+                  <center>Opportunity Confidence level indicators and recommendations</center>
+                </strong> </span></th>
+        </tr>
+        <tr>
+          <th scope="row" colspan="2" style="background-color:rgb(75, 192, 192, 0.2);"><span><small> <strong>
+                  <center>Customer dimension </center>
+                </strong></small> </span></th>
+          <td colspan="2" style="background-color:rgb(255, 205, 86, 0.2);"><span><small> <strong>
+                  <center>Product dimension </center>
+                </strong></small> </span></td>
+        </tr>
+        <tr>
+          <th scope="row" style="background-color:rgb(75, 192, 192, 0.2);" class="align-middle"><div class="customerOCLTextguide align-middle"style="display: flex; font-size: 14px;"></div></th>
+          <td style="background-color:rgb(75, 192, 192, 0.1);" class="align-middle"><div class="customerOCLText align-middle" style="display: flex; font-size: 14px;"></div></td>
+          <td style="background-color:rgb(255, 205, 86, 0.2);" class="align-middle"><div class="productOCLTextguide align-middle" style="font-weight: bold; display: flex; font-size: 14px;"></div></td>
+          <td style="background-color:rgb(255, 205, 86, 0.1);" class="align-middle"><div class="productOCLText align-middle"style="display: flex; font-size: 14px;"></div></td>
+        </tr>
+        <tr>
+          <th scope="row" style="background-color:rgb(75, 192, 192, 0.2);" class="align-middle"><div class="align-middle"style="display: flex; font-size: 14px;"></div></th>
+          <td style="background-color:rgb(75, 192, 192, 0.1);" class="align-middle justify-content-center"><div class="customersource align-middle" style="display: flex; font-size: 14px;"></div></td>
+          <td style="background-color:rgb(255, 205, 86, 0.2);" class="align-middle"><div class="align-middle" style="font-weight: bold; display: flex; font-size: 14px;"></div></td>
+          <td style="background-color:rgb(255, 205, 86, 0.1);" class="align-middle justify-content-center"><div class="marketsource align-middle"style="display: flex; font-size: 14px;"></div></td>
+        </tr>
+        <tr>
+          <th scope="row" colspan="2" style="background-color:rgb(255, 99, 132, 0.2);" class="align-middle"><span><small> <strong>
+                  <center>Market dimension </center>
+                </strong></small> </span></th>
+          <td colspan="2" style="background-color:rgb(54, 162, 235, 0.2);" class="align-middle"><span><small> <strong>
+                  <center>Business dimension </center>
+                </strong></small> </span></td>
+        </tr>
+        <tr>
+          <th scope="row" style="background-color:rgb(255, 99, 132, 0.2);" class="align-middle"><div class="marketOCLTextguide align-middle"style="display: flex; font-size: 14px;"></div></th>
+          <td style="background-color:rgb(255, 99, 132, 0.1);" class="align-middle"><div class="marketOCLText align-middle" style="display: flex; font-size: 14px;"></div></td>
+          <td style="background-color:rgb(54, 162, 235, 0.2);" class="align-middle"><div class="businessOCLTextguide align-middle" style="font-weight: bold; display: flex; font-size: 14px;"></div></td>
+          <td  style="background-color:rgb(54, 162, 235, 0.1);" class="align-middle"> <div class="businessOCLText align-middle"style="display: flex; font-size: 14px;"></div></td>
+        </tr>
+        <tr>
+          <th scope="row" style="background-color:rgb(255, 99, 132, 0.2);" class="align-middle"><div class="align-middle"style="display: flex; font-size: 14px;"></div></th>
+          <td style="background-color:rgb(255, 99, 132, 0.1);" class="align-middle justify-content-center"><div class="productsource align-middle" style="display: flex; font-size: 14px;"></div></td>
+          <td style="background-color:rgb(54, 162, 235, 0.2);" class="align-middle"><div class="align-middle" style="font-weight: bold; display: flex; font-size: 14px;"></div></td>
+          <td  style="background-color:rgb(54, 162, 235, 0.1);" class="align-middle justify-content-center"> <div class="businesssource align-middle"style="display: flex; font-size: 14px;"></div></td>
+        </tr>
+        <tr>
+          <th scope="row" colspan="4" ><span> <strong>
+                  <center></center>
+                </strong> </span></th>
+        </tr>
+        <tr>
+          <th scope="row" colspan="4" style="background-color: #dbdbdb;"><span> <strong>
+                  <center>Assessment statistics</center>
+                </strong> </span></th>
+        </tr>
+      </tbody>
+    </table>
+
+    <!--<div class="buttons align-items-center">
+        <button class="btn btn-primary" type="button" data-toggle="" data-target="" >Show/Hide assessment statistics below</button>
+    </div>
+
+        <div class=""> <center><strong>Assessment statistics: </strong></div>-->
+          <table class="table-responsive table-sm table-bordered justify-cotent-center" style="height:1520px; width:425px; margin: 0 auto; left: 25%; top: 25%;">
 
             <thead>
-              <tr>
+              <tr style="  line-height: 95%;">
                 <th scope="col" style="text-align: center; vertical-align: middle;">Questions</th>
                 <th scope="col" style="text-align: center; vertical-align: middle;">Your<br> answer</th>
-                <th scope="col" style="text-align: center; vertical-align: middle;">Weight <br> <em style=" font-weight:normal">(Scalable Startup)</th>
+                <th scope="col" style="text-align: center; vertical-align: middle;">Weight <br> <em style=" font-weight:normal"><small>(Social Startup)</small></th>
                 <th scope="col" style="text-align: center; vertical-align: middle;">Weighted<br> Score</th>
                 <th scope="col" style="text-align: center; vertical-align: middle;"><small><em>Time taken<br>(seconds)</small></th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <th scope="row">1.</th>
+                <td colspan="5" style="background-color:rgb(75, 192, 192, 0.2);"><center><small><strong>Customer Dimension</strong></small></center>     </td>
+              </tr>
+              <tr>
+                <th scope="row" style="display: flex; font-size: 14px; font-weight: bold;">1.</th>
                 <td><div class="score_text"></div></td>
                 <td><div class="weight_text"></div></td>
                 <td><div class="weight_score"></div></td>
                 <td><div class="time_score"></div></td>
               </tr>
-              <tr>
-                <th scope="row">2.</th>
+              <tr style="background-color:rgb(75, 192, 192, 0.1);">
+                <th scope="row" style="display: flex; font-size: 14px; font-weight: bold;">2.</th>
                 <td><div class="score_text1"></div></td>
                 <td><div class="weight_text1"></div></td>
                 <td><div class="weight_score1"></div></td>
                   <td><div class="time_score1"></div></td>
               </tr>
               <tr>
-                <th scope="row">3.</th>
+                <th scope="row" style="display: flex; font-size: 14px; font-weight: bold;">3.</th>
                 <td><div class="score_text2"></div></td>
                 <td><div class="weight_text2"></div></td>
                 <td><div class="weight_score2"></div></td>
                   <td><div class="time_score2"></div></td>
               </tr>
-              <tr>
-                <th scope="row">4.</th>
+              <tr style="background-color:rgb(75, 192, 192, 0.1);">
+                <th scope="row" style="display: flex; font-size: 14px; font-weight: bold;">4.</th>
                 <td><div class="score_text3"></div></td>
                 <td><div class="weight_text3"></div></td>
                 <td><div class="weight_score3"></div></td>
                   <td><div class="time_score3"></div></td>
               </tr>
               <tr>
-                <th scope="row">5.</th>
+                <th scope="row" style="display: flex; font-size: 14px; font-weight: bold;">5.</th>
                 <td><div class="score_text4"></div></td>
                 <td><div class="weight_text4"></div></td>
                 <td><div class="weight_score4"></div></td>
                   <td><div class="time_score4"></div></td>
               </tr>
-              <tr>
-                <th scope="row">6.</th>
+              <tr style="background-color:rgb(75, 192, 192, 0.1);">
+                <th scope="row" style="display: flex; font-size: 14px; font-weight: bold;">6.</th>
                 <td><div class="score_text5"></div></td>
                 <td><div class="weight_text5"></div></td>
                 <td><div class="weight_score5"></div></td>
                   <td><div class="time_score5"></div></td>
               </tr>
               <tr>
-                <th scope="row">7.</th>
+                <th scope="row" style="display: flex; font-size: 14px; font-weight: bold;">7.</th>
                 <td><div class="score_text6"></div></td>
                 <td><div class="weight_text6"></div></td>
                 <td><div class="weight_score6"></div></td>
                   <td><div class="time_score6"></div></td>
               </tr>
-              <tr>
-                <th scope="row">8.</th>
+              <tr style="background-color:rgb(75, 192, 192, 0.1);">
+                <th scope="row" style="display: flex; font-size: 14px; font-weight: bold;">8.</th>
                 <td><div class="score_text7"></div></td>
                 <td><div class="weight_text7"></div></td>
                 <td><div class="weight_score7"></div></td>
                   <td><div class="time_score7"></div></td>
               </tr>
               <tr>
-                <th scope="row">9.</th>
+                <th scope="row" style="display: flex; font-size: 14px; font-weight: bold;">9.</th>
                 <td><div class="score_text8"></div></td>
                 <td><div class="weight_text8"></div></td>
                 <td><div class="weight_score8"></div></td>
                   <td><div class="time_score8"></div></td>
               </tr>
-              <tr>
-                <th scope="row">10.</th>
+              <tr style="background-color:rgb(75, 192, 192, 0.1);">
+                <th scope="row" style="display: flex; font-size: 14px; font-weight: bold;">10.</th>
                 <td><div class="score_text9"></div></td>
                 <td><div class="weight_text9"></div></td>
                 <td><div class="weight_score9"></div></td>
                   <td><div class="time_score9"></div></td>
               </tr>
               <tr>
-                <th scope="row">11.</th>
+                <th scope="row" style="display: flex; font-size: 14px; font-weight: bold;">11.</th>
                 <td><div class="score_text10"></div></td>
                 <td><div class="weight_text10"></div></td>
                 <td><div class="weight_score10"></div></td>
                   <td><div class="time_score10"></div></td>
               </tr>
-              <tr class="table-success">
-                <th scope="row" style=" font-weight:normal" ><small><strong>Customer<br> Dimension</small></strong></th>
-                <td  colspan="2" ><div class="" style=" font-weight:normal" ><small><strong>Weighted Opportunity Confidence Level:</small></strong></div></td>
+              <tr style="background-color:rgb(75, 192, 192, 0.2);">
+              <td  colspan="2" ><div class="" style=" font-weight:normal" ><small><strong>Weighted Opportunity<br> Confidence Level:</small></strong></div></td>
+              <td><div class="customerOCLTextguide1"></div></td>
                 <td><div class="weightOCL_Customer"></div></td>
                   <td><div class="time_scoreCustomer"></div></td>
               </tr>
               <tr>
-                <th scope="row">12.</th>
+                <td colspan="5" style="background-color:rgb(255, 99, 132, 0.2);"><center><small><strong>Market Dimension</strong></small></center>     </td>
+              </tr>
+              <tr>
+                <th scope="row" style="display: flex; font-size: 14px; font-weight: bold;">12.</th>
                 <td><div class="score_text11"></div></td>
                 <td><div class="weight_text11"></div></td>
                 <td><div class="weight_score11"></div></td>
                   <td><div class="time_score11"></div></td>
               </tr>
-              <tr>
-                <th scope="row">13.</th>
+              <tr style="background-color:rgb(255, 99, 132, 0.1);">
+                <th scope="row" style="display: flex; font-size: 14px; font-weight: bold;">13.</th>
                 <td><div class="score_text12"></div></td>
                 <td><div class="weight_text12"></div></td>
                 <td><div class="weight_score12"></div></td>
                   <td><div class="time_score12"></div></td>
               </tr>
               <tr>
-                <th scope="row">14.</th>
+                <th scope="row" style="display: flex; font-size: 14px; font-weight: bold;">14.</th>
                 <td><div class="score_text13"></div></td>
                 <td><div class="weight_text13"></div></td>
                 <td><div class="weight_score13"></div></td>
                   <td><div class="time_score13"></div></td>
               </tr>
-              <tr>
-                <th scope="row">15.</th>
+              <tr style="background-color:rgb(255, 99, 132, 0.1);">
+                <th scope="row" style="display: flex; font-size: 14px; font-weight: bold;">15.</th>
                 <td><div class="score_text14"></div></td>
                 <td><div class="weight_text14"></div></td>
                 <td><div class="weight_score14"></div></td>
                   <td><div class="time_score14"></div></td>
               </tr>
               <tr>
-                <th scope="row">16.</th>
+                <th scope="row" style="display: flex; font-size: 14px; font-weight: bold;">16.</th>
                 <td><div class="score_text15"></div></td>
                 <td><div class="weight_text15"></div></td>
                 <td><div class="weight_score15"></div></td>
                   <td><div class="time_score15"></div></td>
               </tr>
-              <tr>
-                <th scope="row">17.</th>
+              <tr style="background-color:rgb(255, 99, 132, 0.1);">
+                <th scope="row" style="display: flex; font-size: 14px; font-weight: bold;">17.</th>
                 <td><div class="score_text16"></div></td>
                 <td><div class="weight_text16"></div></td>
                 <td><div class="weight_score16"></div></td>
                   <td><div class="time_score16"></div></td>
               </tr>
               <tr>
-                <th scope="row">18.</th>
+                <th scope="row" style="display: flex; font-size: 14px; font-weight: bold;">18.</th>
                 <td><div class="score_text17"></div></td>
                 <td><div class="weight_text17"></div></td>
                 <td><div class="weight_score17"></div></td>
                   <td><div class="time_score17"></div></td>
               </tr>
-              <tr class="table-success">
-                <th scope="row" style=" font-weight:normal" > <small><strong>Market<br> Dimension</small></strong></th>
-                <td  colspan="2" ><div class="" style=" font-weight:normal" > <small><strong>Weighted Opportunity Confidence Level:</small></strong></div></td>
+              <tr style="background-color:rgb(255, 99, 132, 0.2);">
+                <td  colspan="2" ><div class="" style=" font-weight:normal" > <small><strong>Weighted Opportunity <br>Confidence Level:</small></strong></div></td>
+                <td><div class="marketOCLTextguide1"></div></td>
                 <td><div class="weightOCL_Market"></div></td>
                   <td><div class="time_scoreMarket"></div></td>
               </tr>
               <tr>
-                <th scope="row">19.</th>
+                <td colspan="5" style="background-color:rgb(255, 205, 86, 0.2);"><center><small><strong>Product Dimension</strong></small></center>     </td>
+              </tr>
+              <tr>
+                <th scope="row" style="display: flex; font-size: 14px; font-weight: bold;">19.</th>
                 <td><div class="score_text18"></div></td>
                 <td><div class="weight_text18"></div></td>
                 <td><div class="weight_score18"></div></td>
                   <td><div class="time_score18"></div></td>
               </tr>
-              <tr>
-                <th scope="row">20.</th>
+              <tr style="background-color:rgb(255, 205, 86, 0.1);">
+                <th scope="row" style="display: flex; font-size: 14px; font-weight: bold;">20.</th>
                 <td><div class="score_text19"></div></td>
                 <td><div class="weight_text19"></div></td>
                 <td><div class="weight_score19"></div></td>
                   <td><div class="time_score19"></div></td>
               </tr>
               <tr>
-                <th scope="row">21.</th>
+                <th scope="row" style="display: flex; font-size: 14px; font-weight: bold;">21.</th>
                 <td><div class="score_text20"></div></td>
                 <td><div class="weight_text20"></div></td>
                 <td><div class="weight_score20"></div></td>
                   <td><div class="time_score20"></div></td>
               </tr>
-              <tr>
-                <th scope="row">22.</th>
+              <tr style="background-color:rgb(255, 205, 86, 0.1);">
+                <th scope="row" style="display: flex; font-size: 14px; font-weight: bold;">22.</th>
                 <td><div class="score_text21"></div></td>
                 <td><div class="weight_text21"></div></td>
                 <td><div class="weight_score21"></div></td>
                   <td><div class="time_score21"></div></td>
               </tr>
               <tr>
-                <th scope="row">23.</th>
+                <th scope="row" style="display: flex; font-size: 14px; font-weight: bold;">23.</th>
                 <td><div class="score_text22"></div></td>
                 <td><div class="weight_text22"></div></td>
                 <td><div class="weight_score22"></div></td>
                   <td><div class="time_score22"></div></td>
               </tr>
-              <tr>
-                <th scope="row">24.</th>
+              <tr style="background-color:rgb(255, 205, 86, 0.1);">
+                <th scope="row" style="display: flex; font-size: 14px; font-weight: bold;">24.</th>
                 <td><div class="score_text23"></div></td>
                 <td><div class="weight_text23"></div></td>
                 <td><div class="weight_score23"></div></td>
                   <td><div class="time_score23"></div></td>
               </tr>
               <tr>
-                <th scope="row">25.</th>
+                <th scope="row" style="display: flex; font-size: 14px; font-weight: bold;">25.</th>
                 <td><div class="score_text24"></div></td>
                 <td><div class="weight_text24"></div></td>
                 <td><div class="weight_score24"></div></td>
                   <td><div class="time_score24"></div></td>
               </tr>
-              <tr class="table-success">
-                <th scope="row" style=" font-weight:normal" ><small><strong>Product<br> Dimension</small></strong></th>
-                <td  colspan="2" ><div class="" style=" font-weight:normal" ><small><strong>Weighted Opportunity Confidence Level:</small></strong></div></td>
+              <tr style="background-color:rgb(255, 205, 86, 0.2);">
+
+                <td  colspan="2" ><div class="" style=" font-weight:normal" ><small><strong>Weighted Opportunity <br>Confidence Level:</small></strong></div></td>
+                <td><div class="productOCLTextguide1"></div></td>
                 <td><div class="weightOCL_Product"></div></td>
                   <td><div class="time_scoreProduct"></div></td>
               </tr>
               <tr>
-                <th scope="row">26.</th>
+                <td colspan="5" style="background-color:rgb(54, 162, 235, 0.2);"><center><small><strong>Business Dimension</strong></small></center>     </td>
+              </tr>
+              <tr>
+                <th scope="row" style="display: flex; font-size: 14px; font-weight: bold;">26.</th>
                 <td><div class="score_text25"></div></td>
                 <td><div class="weight_text25"></div></td>
                 <td><div class="weight_score25"></div></td>
                   <td><div class="time_score25"></div></td>
               </tr>
-              <tr>
-                <th scope="row">27.</th>
+              <tr style="background-color:rgb(54, 162, 235, 0.1);">
+                <th scope="row" style="display: flex; font-size: 14px; font-weight: bold;">27.</th>
                 <td><div class="score_text26"></div></td>
                 <td><div class="weight_text26"></div></td>
                 <td><div class="weight_score26"></div></td>
                   <td><div class="time_score26"></div></td>
               </tr>
               <tr>
-                <th scope="row">28.</th>
+                <th scope="row" style="display: flex; font-size: 14px; font-weight: bold;">28.</th>
                 <td><div class="score_text27"></div></td>
                 <td><div class="weight_text27"></div></td>
                 <td><div class="weight_score27"></div></td>
                   <td><div class="time_score27"></div></td>
               </tr>
-              <tr>
-                <th scope="row">29.</th>
+              <tr style="background-color:rgb(54, 162, 235, 0.1);">
+                <th scope="row" style="display: flex; font-size: 14px; font-weight: bold;">29.</th>
                 <td><div class="score_text28"></div></td>
                 <td><div class="weight_text28"></div></td>
                 <td><div class="weight_score28"></div></td>
                   <td><div class="time_score28"></div></td>
               </tr>
               <tr>
-                <th scope="row">30.</th>
+                <th scope="row" style="display: flex; font-size: 14px; font-weight: bold;">30.</th>
                 <td><div class="score_text29"></div></td>
                 <td><div class="weight_text29"></div></td>
                 <td><div class="weight_score29"></div></td>
                   <td><div class="time_score29"></div></td>
               </tr>
-              <tr>
-                <th scope="row">31.</th>
+              <tr style="background-color:rgb(54, 162, 235, 0.1);">
+                <th scope="row" style="display: flex; font-size: 14px; font-weight: bold;">31.</th>
                 <td><div class="score_text30"></div></td>
                 <td><div class="weight_text30"></div></td>
                 <td><div class="weight_score30"></div></td>
                   <td><div class="time_score30"></div></td>
               </tr>
               <tr>
-                <th scope="row">32.</th>
+                <th scope="row" style="display: flex; font-size: 14px; font-weight: bold;">32.</th>
                 <td><div class="score_text31"></div></td>
                 <td><div class="weight_text31"></div></td>
                 <td><div class="weight_score31"></div></td>
                   <td><div class="time_score31"></div></td>
               </tr>
-              <tr class="table-success">
-                <th scope="row" style=" font-weight:normal" ><small><strong>Business<br> Dimension</small></strong></th>
-                <td  colspan="2" ><div class="" style=" font-weight:normal" ><small><strong>Weighted Opportunity Confidence Level:</small></strong></div></td>
+              <tr style="background-color:rgb(54, 162, 235, 0.2);">
+              <td  colspan="2" ><div class="" style=" font-weight:normal" ><small><strong>Weighted Opportunity <br>Confidence Level:</small></strong></div></td>
+                <td><div class="businessOCLTextguide1"></div></td>
                 <td><div class="weightOCL_Business"></div></td>
                   <td><div class="time_scoreBusiness"></div></td>
               </tr>
+
               <tr class="table-success">
                 <th scope="row" style=" font-weight:normal" ><strong>Overall:</th>
                 <td  colspan="2" ><div class="" style=" font-weight:normal" > </div></td>
@@ -440,7 +558,7 @@
             </tbody>
           </table>
 
-
+</div>
     <div class="buttons align-items-center">
         <button id="centerz1" class="btn btn-primary" type="button" data-toggle="modal" data-target="#myModal2" >Answer again</button>
         <button id="centerz2" class="btn btn-primary" type="button" data-toggle="modal" data-target="#myModal">Home</button>
@@ -514,16 +632,19 @@
             </div>
             <!-- Modal body -->
             <div class="modal-body" style=" font-weight:normal;">
-              We humbly ask for your time to answer a quick survey to assess our market validation tool.<br><em><small>(3-4 minute survey through google forms.)</small><br><br> <strong><small>Download results as:
+              We humbly ask for your time to answer a quick survey to assess our market validation tool.<br><em><small>(less than 6-7 minute survey through google forms.)</small><br><br> <strong><small>Download results as:
             </div>
-            <div style="text-align:center; margin-bottom:20px;"> <button type="button" class="btn btn-danger" ><i class='bx bxs-file-pdf'></i>  .PDF</button>
-            <button type="button" class="btn btn-danger" ><i class='bx bxs-file-image' ></i>  .PNG</button>
+            <div style="text-align:center; margin-bottom:20px;">
+            <button type="button" id = "download" onClick="showDiv()" class="btn btn-danger" ><i class='bx bxs-file-pdf'></i>  .PDF</button>
            </div>
+           <div class="modal-body" style=" font-weight:normal;">
+<center>Please download the PDF result file first before you take the survey as this is needed in the survey form.</center>
+         </div>
             <!-- Modal footer -->
             <div class="modal-footer">
               <button type="button" class="btn btn-sm border border-danger" data-dismiss="modal">Home</button>
 
-              <button type="button" class="btn btn-danger" onClick="window.location.href("x");" target="_blank">Take survey</button>
+              <button type="button" class="btn btn-danger" id = "survey" onclick='window.open("https://forms.gle/tp1MXAfHRx7TDwvN6");return false;'>Take survey</button>
             </div>
           </div>
         </div>
@@ -542,7 +663,7 @@
 
         <div class="row justify-content-center">
           <div class="col-lg-6">
-             <a><img src="assets/img/Logo.png" alt="" class="img-fluid" style="width:150px;height:50px;" type="button" data-toggle="modal" data-target="#myModal"></a>
+             <a><img src="https://ucarecdn.com/a012691a-6bcb-40c7-b164-679ee182743d/LogoTry.png" alt="" class="img-fluid" style="width:350px;height:120px;" type="button" data-toggle="modal" data-target="#myModal"></a>
             <p>Automated market validation assessment tool for developing economies.</p>
           </div>
         </div>
@@ -554,13 +675,13 @@
 
       <div class="copyright">
 
-      <center>  &copy; Copyright <strong><span>Team RRL</span></strong>. All Rights Reserved 2022 </center>
+      <center>  &copy; Copyright <strong><span>Team Athena</span></strong>. All Rights Reserved 2022 </center>
 
         <center>See the creative commons license and Terms of conditions <a href="https://docs.google.com/document/d/1Ctti8-iYKYjFtUf2VKqbn-E4t8SN6aRMVfvz5Uc7JrQ/edit?usp=sharing" target="_blank">here.</a></center>
 
       </div>
       <div style="position:relative;" class="x23x">
-      <img src="assets/img/qr.png" class="imgQR">
+      <img src="https://ucarecdn.com/376b0531-510a-401e-93ef-b1d1619b18aa/qr.png" class="imgQR">
       </div>
 
     </div>
@@ -585,8 +706,9 @@
   <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/venobox/1.9.3/venobox.min.js" integrity="sha512-zBTnX97k269iewUwROiWwO82A6uXO4lcjq0Z4xnvO+qAblC/RMQRUu8fQVKtSFhPNKD5Xzh9PMoZG7+LnmH1Hg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
 <script src="assets/js/main_noAnimSTSS.js"></script>
@@ -602,6 +724,7 @@ $(window).on('beforeunload', function() {
 <script>
 $(window).on("load",function(){
         $('#preloader').fadeOut("slow");
+        document.getElementById('survey').disabled = true;
 });
 </script>
 <script async>
@@ -628,6 +751,11 @@ $(window).on("load",function(){
   scrollTop: $("#faq").offset().top
   },200);
   });
+
+  function showDiv() {
+document.getElementById('survey').disabled = false;
+  }
+
 </script>
 
 </body>
