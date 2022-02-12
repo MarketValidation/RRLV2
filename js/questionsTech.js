@@ -98,7 +98,7 @@ let questions = [
   },
   {
   numb: 6,
-  question: "How confident are you that the customers can easily recognize the problem that your product/service concept are trying to solve/provide solution?",
+  question: "How confident are you that the customers can easily recognize the problem that your product/service is trying to solve/provide a solution?",
   detailedquestion: "Is the problem recognition too complex for customers to identify or it is relatively easy to identify?",
   scoringnote: "Scoring note: The more obvious the problem type that the product/service can solve, the higher the score.",
   answer: 1,
