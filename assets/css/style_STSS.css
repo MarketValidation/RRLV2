@@ -62,7 +62,7 @@ margin-bottom: 20px;
 
 .result_box.activeResult{
     opacity: 1;
-margin-top: 80px;
+margin-top: 200px;
     pointer-events: auto;
     transform: translate(-50%, -50%) scale(1);
     display: flex;
@@ -1562,7 +1562,7 @@ margin-right: 30px;
 /*--------------------------------------------------------------
 # Frequently Asked Questions
 --------------------------------------------------------------*/
-.faq {   height: 1900px; }
+.faq {   height: 1700px; }
 .faq .faq-item {
   margin: 20px 0;
   padding: 20px 0;
