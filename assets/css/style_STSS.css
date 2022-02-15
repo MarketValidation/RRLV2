@@ -386,7 +386,7 @@ footer button.show{
 }
 
 .result_box .icon{
-  
+
     text-align: center;
     margin-bottom: 10px;
 }
@@ -1562,7 +1562,7 @@ margin-right: 30px;
 /*--------------------------------------------------------------
 # Frequently Asked Questions
 --------------------------------------------------------------*/
-.faq {   height: 800px; }
+.faq {   height: 1900px; }
 .faq .faq-item {
   margin: 20px 0;
   padding: 20px 0;

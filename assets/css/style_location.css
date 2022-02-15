@@ -113,6 +113,7 @@ body {
   background-size: cover; /* Resize the background image to cover the entire container */
   background-size: 700px 500px;
   background-attachment: fixed;
+
 }
 
 a {
@@ -1222,7 +1223,9 @@ margin-right: 30px;
 /*--------------------------------------------------------------
 # Frequently Asked Questions
 --------------------------------------------------------------*/
-.faq {   padding-bottom: 400px; }
+.faq {   padding-bottom: 1200px;
+
+}
 .faq .faq-item {
   margin: 20px 0;
   padding: 20px 0;
