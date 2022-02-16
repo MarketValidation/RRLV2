@@ -364,7 +364,7 @@ footer button.show{
 
 .result_box{
     background: #fff;
-  
+
     opacity: 0;
     pointer-events: none;
     transition: all 0.3s ease;
@@ -1869,9 +1869,10 @@ position: relative;
   }
 
   .table {overflow: scroll; }
+  .Fbutton {line-height: normal;}
 }
 
 @media all and (max-width: 1000px) and (min-width: 100px) {
 .table {overflow: scroll; }
-
+.Fbutton {line-height: normal;}
 }
