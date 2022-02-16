@@ -556,8 +556,13 @@
                 <td><div class="weightOCL_Overall"></div></td>
                   <td><div class="time_scoreOverall"></div></td>
               </tr>
+
+
             </tbody>
           </table>
+          <span><small>
+                      <center> What do you think about these system generated results? Give us your thoughts and have a chance to win $5 Amazon gift cards! Your feedback would greatly help the researchers in making Athena better! <br><strong>Click <a href="" id="Slink" data-toggle="modal" data-target="#myModal3">here</a> for the 5-7 minute survey. </center>
+                    </strong></small> </span>
 </div>
 </div>
     <div class="buttons align-items-center">
@@ -641,7 +646,7 @@
            <div id="showWait"><br><center><i class="fas fa-cog fa-spin fa-3x"></i><br><em><strong>Downloading.... please wait..</strong></em></center></div>
 
            <div class="modal-body" style=" font-weight:normal;">
-<center>Please download the PDF result file first before you take the survey as this is needed in the survey form.</center>
+<center>Please download the PDF result file first before you take the survey as this is needed in the survey form. <br><br>  10 lucky participants who will provide their honest feedback in the google forms will have a chance to win $5 amazon gift cards.</center>
          </div>
             <!-- Modal footer -->
             <div class="modal-footer">
@@ -755,9 +760,18 @@ $(window).on("load",function(){
   },200);
   });
 
+  $("#Slink").click(function() {
+  $('html, body').animate({
+  scrollTop: $("#faq").offset().top
+  },200);
+  });
+
   function showDiv() {
 document.getElementById('survey').disabled = false;
 document.getElementById('showWait').style.display = 'block';
+document.getElementById("Slink").setAttribute("href", "https://forms.gle/tp1MXAfHRx7TDwvN6");
+document.getElementById("Slink").setAttribute("data-toggle", "");
+document.getElementById("Slink").setAttribute("data-target", "");
   }
 
 </script>
