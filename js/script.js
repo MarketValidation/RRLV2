@@ -764,6 +764,27 @@ const weightOCL_Overall = result_box.querySelector(".weightOCL_Overall");
 let weightOCLTag_Overall = '<span>'+ overallScore +'</span>';
 weightOCL_Overall.innerHTML = weightOCLTag_Overall;
 
+
+
+const actualOverallText = result_box.querySelector(".actualOverallText");
+let actualOverallTextTag = "";
+if (overallScore < 3) { //9,10
+  actualOverallTextTag = '<span> Lowest </span>';
+}
+else if (overallScore > 2 && overallScore < 5) { //8,7
+  actualOverallTextTag = '<span> Low </span>';
+}
+else if (overallScore > 4 && overallScore < 7 ) { //5,6
+  actualOverallTextTag = '<span> Medium </span>';
+}
+else if (overallScore > 6 && overallScore < 9 )  { //3,4
+  actualOverallTextTag = '<span> High </span>';
+}
+else if (overallScore > 8) { // 2,1
+  actualOverallTextTag = '<span> Highest </span>';
+}
+actualOverallText.innerHTML = actualOverallTextTag;
+
 google.charts.load('current', {'packages':['corechart']});
 
      // Set a callback to run when the Google Visualization API is loaded.
