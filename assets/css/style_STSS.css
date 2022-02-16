@@ -1555,7 +1555,7 @@ margin-right: 30px;
 /*--------------------------------------------------------------
 # Frequently Asked Questions
 --------------------------------------------------------------*/
-.faq {   height: 1700px; }
+.faq {   height: 1300px; }
 .faq .faq-item {
   margin: 20px 0;
   padding: 20px 0;
@@ -1870,9 +1870,11 @@ position: relative;
 
   .table {overflow: scroll; }
   .Fbutton {line-height: normal;}
+  .faq {   height: 1600px; }
 }
 
 @media all and (max-width: 1000px) and (min-width: 100px) {
 .table {overflow: scroll; }
 .Fbutton {line-height: normal;}
+.faq {   height: 1600px; }
 }
