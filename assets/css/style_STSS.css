@@ -21,6 +21,7 @@
 .scoring_note .SNVLow {display: none;}
 .scoring_note .SNLow {display: none;}
 .scoring_note .SNMedium {display: none;}
+#showWait {display: none;}
 ::selection{
     color: #fff;
     background: #007bff;
