@@ -364,14 +364,7 @@ footer button.show{
 
 .result_box{
     background: #fff;
-    border-radius: 5px;
-    display: flex;
-    padding: 25px 30px;
-    width: 80%;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    transform: translate(-50%, -50%) scale(0.9);
+  
     opacity: 0;
     pointer-events: none;
     transition: all 0.3s ease;
@@ -1874,4 +1867,11 @@ position: relative;
     float: none;
     text-align: center;
   }
+
+  .table {overflow: scroll; }
+}
+
+@media all and (max-width: 1000px) and (min-width: 100px) {
+.table {overflow: scroll; }
+
 }
