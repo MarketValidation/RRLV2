@@ -13,7 +13,10 @@ const timeCount = document.querySelector(".timer .timer_sec");
 const titleDimension = document.querySelector(".titleDimension");
 let userAns;
 
-
+var finalcustomerLoop;
+var finalmarketLoop;
+var finalproductLoop;
+var finalbusinessLoop;
 // if startQuiz button clicked
 start_btn.onclick = ()=>{
     info_box.classList.add("activeInfo"); //show info box
@@ -262,6 +265,10 @@ console.log(que_count);  }
 }
 
 function showResult(){
+
+
+
+
   document.getElementById('faq').style.height = '4000px';
 
     info_box.classList.remove("activeInfo"); //hide info box
@@ -299,6 +306,7 @@ function showResult(){
     const scoreText29 = result_box.querySelector(".score_text29");
     const scoreText30 = result_box.querySelector(".score_text30");
     const scoreText31 = result_box.querySelector(".score_text31");
+
 
 
     const weightText = result_box.querySelector(".weight_text");
@@ -368,10 +376,17 @@ function showResult(){
     const weightScore30 = result_box.querySelector(".weight_score30");
     const weightScore31 = result_box.querySelector(".weight_score31");
 
-    const weightOCL_Customer = result_box.querySelector(".weightOCL_Customer");
-    const weightOCL_Market = result_box.querySelector(".weightOCL_Market");
-    const weightOCL_Product = result_box.querySelector(".weightOCL_Product");
-    const weightOCL_Business = result_box.querySelector(".weightOCL_Business");
+  var weightOCL_Customer = result_box.querySelector(".weightOCL_Customer");
+  var weightOCL_Market = result_box.querySelector(".weightOCL_Market");
+  var weightOCL_Product = result_box.querySelector(".weightOCL_Product");
+  var weightOCL_Business = result_box.querySelector(".weightOCL_Business");
+
+  var weightOCL_Customer1 = result_box.querySelector(".weightOCL_Customer1");
+  var weightOCL_Market1 = result_box.querySelector(".weightOCL_Market1");
+  var weightOCL_Product1 = result_box.querySelector(".weightOCL_Product1");
+  var weightOCL_Business1 = result_box.querySelector(".weightOCL_Business1");
+
+
 
     const timeScore = result_box.querySelector(".time_score");
     const timeScore1 = result_box.querySelector(".time_score1");
@@ -665,98 +680,139 @@ timeQues[10] )+'</span>';
       weightTag = '<span>'+ questions[31].answer +'</span>';
         weightText31.innerHTML = weightTag;
 
-  let scoreWTag = '<span>'+ (questions[0].answer * ansArr[0]).toFixed(2) +'</span>';
+var q1w = (questions[0].answer * ansArr[0]).toFixed(2);
+var q2w = (questions[1].answer * ansArr[1]).toFixed(2);
+var q3w = (questions[2].answer * ansArr[2]).toFixed(2);
+var q4w = (questions[3].answer * ansArr[3]).toFixed(2);
+var q5w = (questions[4].answer * ansArr[4]).toFixed(2);
+var q6w = (questions[5].answer * ansArr[5]).toFixed(2);
+var q7w = (questions[6].answer * ansArr[6]).toFixed(2);
+var q8w = (questions[7].answer * ansArr[7]).toFixed(2);
+var q9w = (questions[8].answer * ansArr[8]).toFixed(2);
+var q10w = (questions[9].answer * ansArr[9]).toFixed(2);
+var q11w = (questions[10].answer * ansArr[10]).toFixed(2);
+var q12w = (questions[11].answer * ansArr[11]).toFixed(2);
+var q13w = (questions[12].answer * ansArr[12]).toFixed(2);
+var q14w = (questions[13].answer * ansArr[13]).toFixed(2);
+var q15w = (questions[14].answer * ansArr[14]).toFixed(2);
+var q16w = (questions[15].answer * ansArr[15]).toFixed(2);
+var q17w = (questions[16].answer * ansArr[16]).toFixed(2);
+var q18w = (questions[17].answer * ansArr[17]).toFixed(2);
+var q19w = (questions[18].answer * ansArr[18]).toFixed(2);
+var q20w = (questions[19].answer * ansArr[19]).toFixed(2);
+var q21w = (questions[20].answer * ansArr[20]).toFixed(2);
+var q22w = (questions[21].answer * ansArr[21]).toFixed(2);
+var q23w = (questions[22].answer * ansArr[22]).toFixed(2);
+var q24w = (questions[23].answer * ansArr[23]).toFixed(2);
+var q25w = (questions[24].answer * ansArr[24]).toFixed(2);
+var q26w = (questions[25].answer * ansArr[25]).toFixed(2);
+var q27w = (questions[26].answer * ansArr[26]).toFixed(2);
+var q28w = (questions[27].answer * ansArr[27]).toFixed(2);
+var q29w = (questions[28].answer * ansArr[28]).toFixed(2);
+var q30w = (questions[29].answer * ansArr[29]).toFixed(2);
+var q31w = (questions[30].answer * ansArr[30]).toFixed(2);
+var q32w = (questions[31].answer * ansArr[31]).toFixed(2);
+
+  let scoreWTag = '<span>'+ q1w +'</span>';
         weightScore.innerHTML = scoreWTag;
-      scoreWTag = '<span>'+ (questions[1].answer * ansArr[1]).toFixed(2) +'</span>';
+      scoreWTag = '<span>'+ q2w +'</span>';
         weightScore1.innerHTML = scoreWTag;
-      scoreWTag = '<span>'+ (questions[2].answer * ansArr[2]).toFixed(2) +'</span>';
+      scoreWTag = '<span>'+ q3w +'</span>';
         weightScore2.innerHTML = scoreWTag;
-      scoreWTag = '<span>'+ (questions[3].answer * ansArr[3]).toFixed(2) +'</span>';
+      scoreWTag = '<span>'+ q4w +'</span>';
         weightScore3.innerHTML = scoreWTag;
-      scoreWTag = '<span>'+ (questions[4].answer * ansArr[4]).toFixed(2) +'</span>';
+      scoreWTag = '<span>'+ q5w +'</span>';
         weightScore4.innerHTML = scoreWTag;
-      scoreWTag = '<span>'+ (questions[5].answer * ansArr[5]).toFixed(2) +'</span>';
+      scoreWTag = '<span>'+ q6w +'</span>';
         weightScore5.innerHTML = scoreWTag;
-      scoreWTag = '<span>'+ (questions[6].answer * ansArr[6]).toFixed(2) +'</span>';
+      scoreWTag = '<span>'+ q7w +'</span>';
         weightScore6.innerHTML = scoreWTag;
-      scoreWTag = '<span>'+ (questions[7].answer * ansArr[7]).toFixed(2) +'</span>';
+      scoreWTag = '<span>'+ q8w +'</span>';
         weightScore7.innerHTML = scoreWTag;
-      scoreWTag = '<span>'+ (questions[8].answer * ansArr[8]).toFixed(2) +'</span>';
+      scoreWTag = '<span>'+ q9w +'</span>';
         weightScore8.innerHTML = scoreWTag;
-      scoreWTag = '<span>'+ (questions[9].answer * ansArr[9]).toFixed(2) +'</span>';
+      scoreWTag = '<span>'+ q10w +'</span>';
         weightScore9.innerHTML = scoreWTag;
-      scoreWTag = '<span>'+ (questions[10].answer * ansArr[10]).toFixed(2) +'</span>';
+      scoreWTag = '<span>'+ q11w +'</span>';
         weightScore10.innerHTML = scoreWTag;
-      scoreWTag = '<span>'+ (questions[11].answer * ansArr[11]).toFixed(2) +'</span>';
+      scoreWTag = '<span>'+ q12w +'</span>';
         weightScore11.innerHTML = scoreWTag;
-      scoreWTag = '<span>'+ (questions[12].answer * ansArr[12]).toFixed(2) +'</span>';
+      scoreWTag = '<span>'+ q13w +'</span>';
         weightScore12.innerHTML = scoreWTag;
-      scoreWTag = '<span>'+ (questions[13].answer * ansArr[13]).toFixed(2) +'</span>';
+      scoreWTag = '<span>'+ q14w +'</span>';
         weightScore13.innerHTML = scoreWTag;
-      scoreWTag = '<span>'+ (questions[14].answer * ansArr[14]).toFixed(2) +'</span>';
+      scoreWTag = '<span>'+ q15w +'</span>';
         weightScore14.innerHTML = scoreWTag;
-      scoreWTag = '<span>'+ (questions[15].answer * ansArr[15]).toFixed(2) +'</span>';
+      scoreWTag = '<span>'+ q16w +'</span>';
         weightScore15.innerHTML = scoreWTag;
-      scoreWTag = '<span>'+ (questions[16].answer * ansArr[16]).toFixed(2) +'</span>';
+      scoreWTag = '<span>'+ q17w +'</span>';
         weightScore16.innerHTML = scoreWTag;
-      scoreWTag = '<span>'+ (questions[17].answer * ansArr[17]).toFixed(2) +'</span>';
+      scoreWTag = '<span>'+ q18w +'</span>';
         weightScore17.innerHTML = scoreWTag;
-      scoreWTag = '<span>'+ (questions[18].answer * ansArr[18]).toFixed(2) +'</span>';
+      scoreWTag = '<span>'+ q19w +'</span>';
         weightScore18.innerHTML = scoreWTag;
-      scoreWTag = '<span>'+ (questions[19].answer * ansArr[19]).toFixed(2) +'</span>';
+      scoreWTag = '<span>'+ q20w +'</span>';
         weightScore19.innerHTML = scoreWTag;
-      scoreWTag = '<span>'+ (questions[20].answer * ansArr[20]).toFixed(2) +'</span>';
+      scoreWTag = '<span>'+ q21w +'</span>';
         weightScore20.innerHTML = scoreWTag;
-      scoreWTag = '<span>'+ (questions[21].answer * ansArr[21]).toFixed(2) +'</span>';
+      scoreWTag = '<span>'+ q22w +'</span>';
         weightScore21.innerHTML = scoreWTag;
-      scoreWTag = '<span>'+ (questions[22].answer * ansArr[22]).toFixed(2) +'</span>';
+      scoreWTag = '<span>'+ q23w +'</span>';
         weightScore22.innerHTML = scoreWTag;
-      scoreWTag = '<span>'+ (questions[23].answer * ansArr[23]).toFixed(2) +'</span>';
+      scoreWTag = '<span>'+ q24w +'</span>';
         weightScore23.innerHTML = scoreWTag;
-      scoreWTag = '<span>'+ (questions[24].answer * ansArr[24]).toFixed(2) +'</span>';
+      scoreWTag = '<span>'+ q25w +'</span>';
         weightScore24.innerHTML = scoreWTag;
-      scoreWTag = '<span>'+ (questions[25].answer * ansArr[25]).toFixed(2) +'</span>';
+      scoreWTag = '<span>'+ q26w +'</span>';
         weightScore25.innerHTML = scoreWTag;
-      scoreWTag = '<span>'+ (questions[26].answer * ansArr[26]).toFixed(2) +'</span>';
+      scoreWTag = '<span>'+ q27w +'</span>';
         weightScore26.innerHTML = scoreWTag;
-      scoreWTag = '<span>'+ (questions[27].answer * ansArr[27]).toFixed(2) +'</span>';
+      scoreWTag = '<span>'+ q28w +'</span>';
         weightScore27.innerHTML = scoreWTag;
-      scoreWTag = '<span>'+ (questions[28].answer * ansArr[28]).toFixed(2) +'</span>';
+      scoreWTag = '<span>'+ q29w +'</span>';
         weightScore28.innerHTML = scoreWTag;
-      scoreWTag = '<span>'+ (questions[29].answer * ansArr[29]).toFixed(2) +'</span>';
+      scoreWTag = '<span>'+ q30w +'</span>';
         weightScore29.innerHTML = scoreWTag;
-      scoreWTag = '<span>'+ (questions[30].answer * ansArr[30]).toFixed(2) +'</span>';
+      scoreWTag = '<span>'+ q31w +'</span>';
         weightScore30.innerHTML = scoreWTag;
-      scoreWTag = '<span>'+ (questions[31].answer * ansArr[31]).toFixed(2) +'</span>';
+      scoreWTag = '<span>'+ q32w +'</span>';
         weightScore31.innerHTML = scoreWTag;
 
 var customerLoop = 0;
         for(var i=0; i < 11; i++){
             customerLoop += parseInt(questions[i].answer * ansArr[i]); }
-var finalcustomerLoop = (customerLoop/11).toFixed(2);
+ finalcustomerLoop = (customerLoop/11).toFixed(2);
   let weightOCLTag_Customer = '<span>'+ finalcustomerLoop +'</span>';
   weightOCL_Customer.innerHTML = weightOCLTag_Customer;
+    weightOCL_Customer1.innerHTML = weightOCLTag_Customer;
+
 
 var marketLoop = 0;
           for(var i=11; i < 18; i++){
              marketLoop += parseInt(questions[i].answer * ansArr[i]); }
-var finalmarketLoop = (marketLoop/7).toFixed(2);
+ finalmarketLoop = (marketLoop/7).toFixed(2);
   let weightOCLTag_Market = '<span>'+ finalmarketLoop +'</span>';
   weightOCL_Market.innerHTML = weightOCLTag_Market;
+    weightOCL_Market1.innerHTML = weightOCLTag_Market;
+
 
 var productLoop = 0;
           for(var i=18; i < 25; i++){
             productLoop += parseInt(questions[i].answer * ansArr[i]); }
-var finalproductLoop = (productLoop/7).toFixed(2);
+finalproductLoop = (productLoop/7).toFixed(2);
   let weightOCLTag_Product = '<span>'+ finalproductLoop +'</span>';
   weightOCL_Product.innerHTML = weightOCLTag_Product;
+  weightOCL_Product1.innerHTML = weightOCLTag_Product;
+
 
 var businessLoop = 0;
             for(var i=25; i < 32; i++){
                   businessLoop += parseInt(questions[i].answer * ansArr[i]); }
-var finalbusinessLoop = (businessLoop/7).toFixed(2);
+finalbusinessLoop = (businessLoop/7).toFixed(2);
   let weightOCLTag_Business = '<span>'+finalbusinessLoop +'</span>';
   weightOCL_Business.innerHTML = weightOCLTag_Business;
+    weightOCL_Business1.innerHTML = weightOCLTag_Business;
+
 
 var overallScore = (((businessLoop/7)+(productLoop/7)+(marketLoop/7)+(customerLoop/11))/4).toFixed(2); //attempted to modify by adding all (finalmarketLoop+finalbusinessLoop+finalproductLoop+)/4 but the answer is NaN ??
 
@@ -768,6 +824,7 @@ weightOCL_Overall.innerHTML = weightOCLTag_Overall;
 
 const actualOverallText = result_box.querySelector(".actualOverallText");
 let actualOverallTextTag = "";
+
 if (overallScore < 3) { //9,10
   actualOverallTextTag = '<span> Lowest </span>';
 }
@@ -784,6 +841,556 @@ else if (overallScore > 8) { // 2,1
   actualOverallTextTag = '<span> Highest </span>';
 }
 actualOverallText.innerHTML = actualOverallTextTag;
+
+const tweightScore = result_box.querySelector(".tweight_score");
+const tweightScore1 = result_box.querySelector(".tweight_score1");
+const tweightScore2 = result_box.querySelector(".tweight_score2");
+const tweightScore3 = result_box.querySelector(".tweight_score3");
+const tweightScore4 = result_box.querySelector(".tweight_score4");
+const tweightScore5 = result_box.querySelector(".tweight_score5");
+const tweightScore6 = result_box.querySelector(".tweight_score6");
+const tweightScore7 = result_box.querySelector(".tweight_score7");
+const tweightScore8 = result_box.querySelector(".tweight_score8");
+const tweightScore9 = result_box.querySelector(".tweight_score9");
+const tweightScore10 = result_box.querySelector(".tweight_score10");
+const tweightScore11 = result_box.querySelector(".tweight_score11");
+const tweightScore12 = result_box.querySelector(".tweight_score12");
+const tweightScore13 = result_box.querySelector(".tweight_score13");
+const tweightScore14 = result_box.querySelector(".tweight_score14");
+const tweightScore15 = result_box.querySelector(".tweight_score15");
+const tweightScore16 = result_box.querySelector(".tweight_score16");
+const tweightScore17 = result_box.querySelector(".tweight_score17");
+const tweightScore18 = result_box.querySelector(".tweight_score18");
+const tweightScore19 = result_box.querySelector(".tweight_score19");
+const tweightScore20 = result_box.querySelector(".tweight_score20");
+const tweightScore21 = result_box.querySelector(".tweight_score21");
+const tweightScore22 = result_box.querySelector(".tweight_score22");
+const tweightScore23 = result_box.querySelector(".tweight_score23");
+const tweightScore24 = result_box.querySelector(".tweight_score24");
+const tweightScore25 = result_box.querySelector(".tweight_score25");
+const tweightScore26 = result_box.querySelector(".tweight_score26");
+const tweightScore27 = result_box.querySelector(".tweight_score27");
+const tweightScore28 = result_box.querySelector(".tweight_score28");
+const tweightScore29 = result_box.querySelector(".tweight_score29");
+const tweightScore30 = result_box.querySelector(".tweight_score30");
+const tweightScore31 = result_box.querySelector(".tweight_score31");
+
+let qtag = "";
+if (q1w < 3) { //9,10
+  qtag = '<span> Lowest </span>';
+}
+else if (q1w > 2 && q1w < 5) { //8,7
+  qtag = '<span> Low </span>';
+}
+else if (q1w > 4 && q1w < 7 ) { //5,6
+  qtag = '<span> Medium </span>';
+}
+else if (q1w > 6 && q1w < 9 )  { //3,4
+  qtag = '<span> High </span>';
+}
+else if (q1w > 8) { // 2,1
+  qtag = '<span> Highest </span>';
+}
+tweightScore.innerHTML = qtag;
+if (q2w < 3) { //9,10
+  qtag = '<span> Lowest </span>';
+}
+else if (q2w > 2 && q2w < 5) { //8,7
+  qtag = '<span> Low </span>';
+}
+else if (q2w > 4 && q2w < 7 ) { //5,6
+  qtag = '<span> Medium </span>';
+}
+else if (q2w > 6 && q2w < 9 )  { //3,4
+  qtag = '<span> High </span>';
+}
+else if (q2w > 8) { // 2,1
+  qtag = '<span> Highest </span>';
+}
+tweightScore1.innerHTML = qtag;
+if (q3w < 3) { //9,10
+  qtag = '<span> Lowest </span>';
+}
+else if (q3w > 2 && q3w < 5) { //8,7
+  qtag = '<span> Low </span>';
+}
+else if (q3w > 4 && q3w < 7 ) { //5,6
+  qtag = '<span> Medium </span>';
+}
+else if (q3w > 6 && q3w < 9 )  { //3,4
+  qtag = '<span> High </span>';
+}
+else if (q3w > 8) { // 2,1
+  qtag = '<span> Highest </span>';
+}
+tweightScore2.innerHTML = qtag;
+if (q4w < 3) { //9,10
+  qtag = '<span> Lowest </span>';
+}
+else if (q4w > 2 && q4w < 5) { //8,7
+  qtag = '<span> Low </span>';
+}
+else if (q4w > 4 && q4w < 7 ) { //5,6
+  qtag = '<span> Medium </span>';
+}
+else if (q4w > 6 && q4w < 9 )  { //3,4
+  qtag = '<span> High </span>';
+}
+else if (q4w > 8) { // 2,1
+  qtag = '<span> Highest </span>';
+}
+tweightScore3.innerHTML = qtag;
+if (q5w < 3) { //9,10
+  qtag = '<span> Lowest </span>';
+}
+else if (q5w > 2 && q5w < 5) { //8,7
+  qtag = '<span> Low </span>';
+}
+else if (q5w > 4 && q5w < 7 ) { //5,6
+  qtag = '<span> Medium </span>';
+}
+else if (q5w > 6 && q5w < 9 )  { //3,4
+  qtag = '<span> High </span>';
+}
+else if (q5w > 8) { // 2,1
+  qtag = '<span> Highest </span>';
+}
+tweightScore4.innerHTML = qtag;
+if (q6w < 3) { //9,10
+  qtag = '<span> Lowest </span>';
+}
+else if (q6w > 2 && q6w < 5) { //8,7
+  qtag = '<span> Low </span>';
+}
+else if (q6w > 4 && q6w < 7 ) { //5,6
+  qtag = '<span> Medium </span>';
+}
+else if (q6w > 6 && q6w < 9 )  { //3,4
+  qtag = '<span> High </span>';
+}
+else if (q6w > 8) { // 2,1
+  qtag = '<span> Highest </span>';
+}
+tweightScore5.innerHTML = qtag;
+if (q7w < 3) { //9,10
+  qtag = '<span> Lowest </span>';
+}
+else if (q7w > 2 && q7w < 5) { //8,7
+  qtag = '<span> Low </span>';
+}
+else if (q7w > 4 && q7w < 7 ) { //5,6
+  qtag = '<span> Medium </span>';
+}
+else if (q7w > 6 && q7w < 9 )  { //3,4
+  qtag = '<span> High </span>';
+}
+else if (q7w > 8) { // 2,1
+  qtag = '<span> Highest </span>';
+}
+tweightScore6.innerHTML = qtag;
+if (q8w < 3) { //9,10
+  qtag = '<span> Lowest </span>';
+}
+else if (q8w > 2 && q8w < 5) { //8,7
+  qtag = '<span> Low </span>';
+}
+else if (q8w > 4 && q8w < 7 ) { //5,6
+  qtag = '<span> Medium </span>';
+}
+else if (q8w > 6 && q8w < 9 )  { //3,4
+  qtag = '<span> High </span>';
+}
+else if (q8w > 8) { // 2,1
+  qtag = '<span> Highest </span>';
+}
+tweightScore7.innerHTML = qtag;
+if (q9w < 3) { //9,10
+  qtag = '<span> Lowest </span>';
+}
+else if (q9w > 2 && q9w < 5) { //8,7
+  qtag = '<span> Low </span>';
+}
+else if (q9w > 4 && q9w < 7 ) { //5,6
+  qtag = '<span> Medium </span>';
+}
+else if (q9w > 6 && q9w < 9 )  { //3,4
+  qtag = '<span> High </span>';
+}
+else if (q9w > 8) { // 2,1
+  qtag = '<span> Highest </span>';
+}
+tweightScore8.innerHTML = qtag;
+if (q10w < 3) { //9,10
+  qtag = '<span> Lowest </span>';
+}
+else if (q10w > 2 && q10w < 5) { //8,7
+  qtag = '<span> Low </span>';
+}
+else if (q10w > 4 && q10w < 7 ) { //5,6
+  qtag = '<span> Medium </span>';
+}
+else if (q10w > 6 && q10w < 9 )  { //3,4
+  qtag = '<span> High </span>';
+}
+else if (q10w > 8) { // 2,1
+  qtag = '<span> Highest </span>';
+}
+tweightScore9.innerHTML = qtag;
+if (q11w < 3) { //9,10
+  qtag = '<span> Lowest </span>';
+}
+else if (q11w > 2 && q11w < 5) { //8,7
+  qtag = '<span> Low </span>';
+}
+else if (q11w > 4 && q11w < 7 ) { //5,6
+  qtag = '<span> Medium </span>';
+}
+else if (q11w > 6 && q11w < 9 )  { //3,4
+  qtag = '<span> High </span>';
+}
+else if (q11w > 8) { // 2,1
+  qtag = '<span> Highest </span>';
+}
+tweightScore10.innerHTML = qtag;
+if (q12w < 3) { //9,10
+  qtag = '<span> Lowest </span>';
+}
+else if (q12w > 2 && q12w < 5) { //8,7
+  qtag = '<span> Low </span>';
+}
+else if (q12w > 4 && q12w < 7 ) { //5,6
+  qtag = '<span> Medium </span>';
+}
+else if (q12w > 6 && q12w < 9 )  { //3,4
+  qtag = '<span> High </span>';
+}
+else if (q12w > 8) { // 2,1
+  qtag = '<span> Highest </span>';
+}
+tweightScore11.innerHTML = qtag;
+if (q13w < 3) { //9,10
+  qtag = '<span> Lowest </span>';
+}
+else if (q13w > 2 && q13w < 5) { //8,7
+  qtag = '<span> Low </span>';
+}
+else if (q13w > 4 && q13w < 7 ) { //5,6
+  qtag = '<span> Medium </span>';
+}
+else if (q13w > 6 && q13w < 9 )  { //3,4
+  qtag = '<span> High </span>';
+}
+else if (q13w > 8) { // 2,1
+  qtag = '<span> Highest </span>';
+}
+tweightScore12.innerHTML = qtag;
+if (q14w < 3) { //9,10
+  qtag = '<span> Lowest </span>';
+}
+else if (q14w > 2 && q14w < 5) { //8,7
+  qtag = '<span> Low </span>';
+}
+else if (q14w > 4 && q14w < 7 ) { //5,6
+  qtag = '<span> Medium </span>';
+}
+else if (q14w > 6 && q14w < 9 )  { //3,4
+  qtag = '<span> High </span>';
+}
+else if (q14w > 8) { // 2,1
+  qtag = '<span> Highest </span>';
+}
+tweightScore13.innerHTML = qtag;
+if (q15w < 3) { //9,10
+  qtag = '<span> Lowest </span>';
+}
+else if (q15w > 2 && q15w < 5) { //8,7
+  qtag = '<span> Low </span>';
+}
+else if (q15w > 4 && q15w < 7 ) { //5,6
+  qtag = '<span> Medium </span>';
+}
+else if (q15w > 6 && q15w < 9 )  { //3,4
+  qtag = '<span> High </span>';
+}
+else if (q15w > 8) { // 2,1
+  qtag = '<span> Highest </span>';
+}
+tweightScore14.innerHTML = qtag;
+if (q16w < 3) { //9,10
+  qtag = '<span> Lowest </span>';
+}
+else if (q16w > 2 && q16w < 5) { //8,7
+  qtag = '<span> Low </span>';
+}
+else if (q16w > 4 && q16w < 7 ) { //5,6
+  qtag = '<span> Medium </span>';
+}
+else if (q16w > 6 && q16w < 9 )  { //3,4
+  qtag = '<span> High </span>';
+}
+else if (q16w > 8) { // 2,1
+  qtag = '<span> Highest </span>';
+}
+tweightScore15.innerHTML = qtag;
+if (q17w < 3) { //9,10
+  qtag = '<span> Lowest </span>';
+}
+else if (q1w > 2 && q17w < 5) { //8,7
+  qtag = '<span> Low </span>';
+}
+else if (q17w > 4 && q17w < 7 ) { //5,6
+  qtag = '<span> Medium </span>';
+}
+else if (q17w > 6 && q17w < 9 )  { //3,4
+  qtag = '<span> High </span>';
+}
+else if (q17w > 8) { // 2,1
+  qtag = '<span> Highest </span>';
+}
+tweightScore16.innerHTML = qtag;
+if (q1w < 3) { //9,10
+  qtag = '<span> Lowest </span>';
+}
+else if (q18w > 2 && q18w < 5) { //8,7
+  qtag = '<span> Low </span>';
+}
+else if (q18w > 4 && q18w < 7 ) { //5,6
+  qtag = '<span> Medium </span>';
+}
+else if (q18w > 6 && q18w < 9 )  { //3,4
+  qtag = '<span> High </span>';
+}
+else if (q18w > 8) { // 2,1
+  qtag = '<span> Highest </span>';
+}
+tweightScore17.innerHTML = qtag;
+if (q19w < 3) { //9,10
+  qtag = '<span> Lowest </span>';
+}
+else if (q19w > 2 && q19w < 5) { //8,7
+  qtag = '<span> Low </span>';
+}
+else if (q19w > 4 && q19w < 7 ) { //5,6
+  qtag = '<span> Medium </span>';
+}
+else if (q19w > 6 && q19w < 9 )  { //3,4
+  qtag = '<span> High </span>';
+}
+else if (q19w > 8) { // 2,1
+  qtag = '<span> Highest </span>';
+}
+tweightScore18.innerHTML = qtag;
+if (q20w < 3) { //9,10
+  qtag = '<span> Lowest </span>';
+}
+else if (q20w > 2 && q20w < 5) { //8,7
+  qtag = '<span> Low </span>';
+}
+else if (q20w > 4 && q20w < 7 ) { //5,6
+  qtag = '<span> Medium </span>';
+}
+else if (q20w > 6 && q20w < 9 )  { //3,4
+  qtag = '<span> High </span>';
+}
+else if (q20w > 8) { // 2,1
+  qtag = '<span> Highest </span>';
+}
+tweightScore19.innerHTML = qtag;
+if (q21w < 3) { //9,10
+  qtag = '<span> Lowest </span>';
+}
+else if (q21w > 2 && q21w < 5) { //8,7
+  qtag = '<span> Low </span>';
+}
+else if (q21w > 4 && q21w < 7 ) { //5,6
+  qtag = '<span> Medium </span>';
+}
+else if (q21w > 6 && q21w < 9 )  { //3,4
+  qtag = '<span> High </span>';
+}
+else if (q21w > 8) { // 2,1
+  qtag = '<span> Highest </span>';
+}
+tweightScore20.innerHTML = qtag;
+if (q22w < 3) { //9,10
+  qtag = '<span> Lowest </span>';
+}
+else if (q22w > 2 && q22w < 5) { //8,7
+  qtag = '<span> Low </span>';
+}
+else if (q22w > 4 && q22w < 7 ) { //5,6
+  qtag = '<span> Medium </span>';
+}
+else if (q22w > 6 && q22w < 9 )  { //3,4
+  qtag = '<span> High </span>';
+}
+else if (q22w > 8) { // 2,1
+  qtag = '<span> Highest </span>';
+}
+tweightScore21.innerHTML = qtag;
+if (q23w < 3) { //9,10
+  qtag = '<span> Lowest </span>';
+}
+else if (q23w > 2 && q23w < 5) { //8,7
+  qtag = '<span> Low </span>';
+}
+else if (q23w > 4 && q23w < 7 ) { //5,6
+  qtag = '<span> Medium </span>';
+}
+else if (q23w > 6 && q23w < 9 )  { //3,4
+  qtag = '<span> High </span>';
+}
+else if (q23w > 8) { // 2,1
+  qtag = '<span> Highest </span>';
+}
+tweightScore22.innerHTML = qtag;
+if (q24w < 3) { //9,10
+  qtag = '<span> Lowest </span>';
+}
+else if (q24w > 2 && q24w < 5) { //8,7
+  qtag = '<span> Low </span>';
+}
+else if (q24w > 4 && q24w < 7 ) { //5,6
+  qtag = '<span> Medium </span>';
+}
+else if (q24w > 6 && q24w < 9 )  { //3,4
+  qtag = '<span> High </span>';
+}
+else if (q24w > 8) { // 2,1
+  qtag = '<span> Highest </span>';
+}
+tweightScore23.innerHTML = qtag;
+if (q25w < 3) { //9,10
+  qtag = '<span> Lowest </span>';
+}
+else if (q25w > 2 && q25w < 5) { //8,7
+  qtag = '<span> Low </span>';
+}
+else if (q25w > 4 && q25w < 7 ) { //5,6
+  qtag = '<span> Medium </span>';
+}
+else if (q25w > 6 && q25w < 9 )  { //3,4
+  qtag = '<span> High </span>';
+}
+else if (q25w > 8) { // 2,1
+  qtag = '<span> Highest </span>';
+}
+tweightScore24.innerHTML = qtag;
+if (q26w < 3) { //9,10
+  qtag = '<span> Lowest </span>';
+}
+else if (q26w > 2 && q26w < 5) { //8,7
+  qtag = '<span> Low </span>';
+}
+else if (q26w > 4 && q26w < 7 ) { //5,6
+  qtag = '<span> Medium </span>';
+}
+else if (q26w > 6 && q26w < 9 )  { //3,4
+  qtag = '<span> High </span>';
+}
+else if (q26w > 8) { // 2,1
+  qtag = '<span> Highest </span>';
+}
+tweightScore25.innerHTML = qtag;
+if (q1w < 3) { //9,10
+  qtag = '<span> Lowest </span>';
+}
+else if (q27w > 2 && q27w < 5) { //8,7
+  qtag = '<span> Low </span>';
+}
+else if (q27w > 4 && q27w < 7 ) { //5,6
+  qtag = '<span> Medium </span>';
+}
+else if (q27w > 6 && q27w < 9 )  { //3,4
+  qtag = '<span> High </span>';
+}
+else if (q27w > 8) { // 2,1
+  qtag = '<span> Highest </span>';
+}
+tweightScore26.innerHTML = qtag;
+if (q28w < 3) { //9,10
+  qtag = '<span> Lowest </span>';
+}
+else if (q28w > 2 && q28w < 5) { //8,7
+  qtag = '<span> Low </span>';
+}
+else if (q28w > 4 && q28w < 7 ) { //5,6
+  qtag = '<span> Medium </span>';
+}
+else if (q28w > 6 && q28w < 9 )  { //3,4
+  qtag = '<span> High </span>';
+}
+else if (q28w > 8) { // 2,1
+  qtag = '<span> Highest </span>';
+}
+tweightScore27.innerHTML = qtag;
+if (q29w < 3) { //9,10
+  qtag = '<span> Lowest </span>';
+}
+else if (q29w > 2 && q29w < 5) { //8,7
+  qtag = '<span> Low </span>';
+}
+else if (q29w > 4 && q29w < 7 ) { //5,6
+  qtag = '<span> Medium </span>';
+}
+else if (q29w > 6 && q29w < 9 )  { //3,4
+  qtag = '<span> High </span>';
+}
+else if (q29w > 8) { // 2,1
+  qtag = '<span> Highest </span>';
+}
+tweightScore28.innerHTML = qtag;
+if (q30w < 3) { //9,10
+  qtag = '<span> Lowest </span>';
+}
+else if (q30w > 2 && q30w < 5) { //8,7
+  qtag = '<span> Low </span>';
+}
+else if (q30w > 4 && q30w < 7 ) { //5,6
+  qtag = '<span> Medium </span>';
+}
+else if (q30w > 6 && q30w < 9 )  { //3,4
+  qtag = '<span> High </span>';
+}
+else if (q30w > 8) { // 2,1
+  qtag = '<span> Highest </span>';
+}
+tweightScore29.innerHTML = qtag;
+if (q31w < 3) { //9,10
+  qtag = '<span> Lowest </span>';
+}
+else if (q31w > 2 && q31w < 5) { //8,7
+  qtag = '<span> Low </span>';
+}
+else if (q31w > 4 && q31w < 7 ) { //5,6
+  qtag = '<span> Medium </span>';
+}
+else if (q31w > 6 && q31w < 9 )  { //3,4
+  qtag = '<span> High </span>';
+}
+else if (q31w > 8) { // 2,1
+  qtag = '<span> Highest </span>';
+}
+tweightScore30.innerHTML = qtag;
+if (q32w < 3) { //9,10
+  qtag = '<span> Lowest </span>';
+}
+else if (q32w > 2 && q32w < 5) { //8,7
+  qtag = '<span> Low </span>';
+}
+else if (q32w > 4 && q32w < 7 ) { //5,6
+  qtag = '<span> Medium </span>';
+}
+else if (q32w > 6 && q32w < 9 )  { //3,4
+  qtag = '<span> High </span>';
+}
+else if (q32w > 8) { // 2,1
+  qtag = '<span> Highest </span>';
+}
+tweightScore31.innerHTML = qtag;
+
+
+
 
 google.charts.load('current', {'packages':['corechart']});
 
@@ -976,6 +1583,10 @@ businesssource = "<center><small><em><strong>Additional resources:</strong>  <a 
    const marketOCLTextguideTag1 = result_box.querySelector(".marketOCLTextguide1");
    const productOCLTextguideTag1 = result_box.querySelector(".productOCLTextguide1");
    const businessOCLTextguideTag1 = result_box.querySelector(".businessOCLTextguide1");
+   const customerOCLTextguideTag2 = result_box.querySelector(".customerOCLTextguide2"); //higest or high or medium or low or lowest
+   const marketOCLTextguideTag2 = result_box.querySelector(".marketOCLTextguide2");
+   const productOCLTextguideTag2 = result_box.querySelector(".productOCLTextguide2");
+   const businessOCLTextguideTag2 = result_box.querySelector(".businessOCLTextguide2");
    const customersourceTag = result_box.querySelector(".customersource"); //higest or high or medium or low or lowest
    const marketsourceTag = result_box.querySelector(".marketsource");
    const productsourceTag = result_box.querySelector(".productsource");
@@ -992,6 +1603,10 @@ businesssourceTag.innerHTML = businesssource;
   marketOCLTextguideTag1.innerHTML = marketOCLTextguide;
   productOCLTextguideTag1.innerHTML = productOCLTextguide;
   businessOCLTextguideTag1.innerHTML = businessOCLTextguide;
+  customerOCLTextguideTag2.innerHTML = customerOCLTextguide;
+  marketOCLTextguideTag2.innerHTML = marketOCLTextguide;
+  productOCLTextguideTag2.innerHTML = productOCLTextguide;
+  businessOCLTextguideTag2.innerHTML = businessOCLTextguide;
   customerOCLTextTag.innerHTML = customerOCLText;
   marketOCLTextTag.innerHTML = marketOCLText;
   productOCLTextTag.innerHTML = productOCLText;
@@ -1029,6 +1644,100 @@ const myChart = new Chart(
   document.getElementById('myChart'),
   config
 );
+
+
+var complex = parseFloat(finalcustomerLoop)*10;
+var complex1 = parseFloat(finalmarketLoop)*10;
+var complex2 = parseFloat(finalproductLoop)*10;
+var complex3 = parseFloat(finalbusinessLoop)*10;
+
+var complex4 = parseFloat(overallScore)*10;
+
+document.getElementById('customerLine').setAttribute('aria-valuenow',complex);
+document.getElementById('customerLine').setAttribute('style','width:'+complex+'%');
+document.getElementById('marketLine').setAttribute('aria-valuenow',complex1);
+document.getElementById('marketLine').setAttribute('style','width:'+complex1+'%');
+document.getElementById('productLine').setAttribute('aria-valuenow',complex2);
+document.getElementById('productLine').setAttribute('style','width:'+complex2+'%');
+document.getElementById('businessLine').setAttribute('aria-valuenow',complex3);
+document.getElementById('businessLine').setAttribute('style','width:'+complex3+'%');
+
+document.getElementById('customerpbar').setAttribute('aria-valuenow',complex);
+document.getElementById('customerpbar').setAttribute('style','width:'+complex+'%');
+document.getElementById('marketpbar').setAttribute('aria-valuenow',complex1);
+document.getElementById('marketpbar').setAttribute('style','width:'+complex1+'%');
+document.getElementById('productpbar').setAttribute('aria-valuenow',complex2);
+document.getElementById('productpbar').setAttribute('style','width:'+complex2+'%');
+document.getElementById('businesspbar').setAttribute('aria-valuenow',complex3);
+document.getElementById('businesspbar').setAttribute('style','width:'+complex3+'%');
+
+document.getElementById('allpbar').setAttribute('aria-valuenow',complex4);
+document.getElementById('allpbar').setAttribute('style','width:'+complex4+'%');
+
+document.getElementById('q1pbar').setAttribute('aria-valuenow',((questions[0].answer * ansArr[0])*10).toFixed(2));
+document.getElementById('q1pbar').setAttribute('style','width:'+((questions[0].answer * ansArr[0])*10).toFixed(2)+'%');
+document.getElementById('q2pbar').setAttribute('aria-valuenow',((questions[1].answer * ansArr[1])*10).toFixed(2));
+document.getElementById('q2pbar').setAttribute('style','width:'+((questions[1].answer * ansArr[1])*10).toFixed(2)+'%');
+document.getElementById('q3pbar').setAttribute('aria-valuenow',((questions[2].answer * ansArr[2])*10).toFixed(2));
+document.getElementById('q3pbar').setAttribute('style','width:'+((questions[2].answer * ansArr[2])*10).toFixed(2)+'%');
+document.getElementById('q4pbar').setAttribute('aria-valuenow',((questions[3].answer * ansArr[3])*10).toFixed(2));
+document.getElementById('q4pbar').setAttribute('style','width:'+((questions[3].answer * ansArr[3])*10).toFixed(2)+'%');
+document.getElementById('q5pbar').setAttribute('aria-valuenow',((questions[4].answer * ansArr[4])*10).toFixed(2));
+document.getElementById('q5pbar').setAttribute('style','width:'+((questions[4].answer * ansArr[4])*10).toFixed(2)+'%');
+document.getElementById('q6pbar').setAttribute('aria-valuenow',((questions[5].answer * ansArr[5])*10).toFixed(2));
+document.getElementById('q6pbar').setAttribute('style','width:'+((questions[5].answer * ansArr[5])*10).toFixed(2)+'%');
+document.getElementById('q7pbar').setAttribute('aria-valuenow',((questions[6].answer * ansArr[6])*10).toFixed(2));
+document.getElementById('q7pbar').setAttribute('style','width:'+((questions[6].answer * ansArr[6])*10).toFixed(2)+'%');
+document.getElementById('q8pbar').setAttribute('aria-valuenow',((questions[7].answer * ansArr[7])*10).toFixed(2));
+document.getElementById('q8pbar').setAttribute('style','width:'+((questions[7].answer * ansArr[7])*10).toFixed(2)+'%');
+document.getElementById('q9pbar').setAttribute('aria-valuenow',((questions[8].answer * ansArr[8])*10).toFixed(2));
+document.getElementById('q9pbar').setAttribute('style','width:'+((questions[8].answer * ansArr[8])*10).toFixed(2)+'%');
+document.getElementById('q10pbar').setAttribute('aria-valuenow',((questions[9].answer * ansArr[9])*10).toFixed(2));
+document.getElementById('q10pbar').setAttribute('style','width:'+((questions[9].answer * ansArr[9])*10).toFixed(2)+'%');
+document.getElementById('q11pbar').setAttribute('aria-valuenow',((questions[10].answer * ansArr[10])*10).toFixed(2));
+document.getElementById('q11pbar').setAttribute('style','width:'+((questions[10].answer * ansArr[10])*10).toFixed(2)+'%');
+document.getElementById('q12pbar').setAttribute('aria-valuenow',((questions[11].answer * ansArr[11])*10).toFixed(2));
+document.getElementById('q12pbar').setAttribute('style','width:'+((questions[11].answer * ansArr[11])*10).toFixed(2)+'%');
+document.getElementById('q13pbar').setAttribute('aria-valuenow',((questions[12].answer * ansArr[12])*10).toFixed(2));
+document.getElementById('q13pbar').setAttribute('style','width:'+((questions[12].answer * ansArr[12])*10).toFixed(2)+'%');
+document.getElementById('q14pbar').setAttribute('aria-valuenow',((questions[13].answer * ansArr[13])*10).toFixed(2));
+document.getElementById('q14pbar').setAttribute('style','width:'+((questions[13].answer * ansArr[13])*10).toFixed(2)+'%');
+document.getElementById('q15pbar').setAttribute('aria-valuenow',((questions[14].answer * ansArr[14])*10).toFixed(2));
+document.getElementById('q15pbar').setAttribute('style','width:'+((questions[14].answer * ansArr[14])*10).toFixed(2)+'%');
+document.getElementById('q16pbar').setAttribute('aria-valuenow',((questions[15].answer * ansArr[15])*10).toFixed(2));
+document.getElementById('q16pbar').setAttribute('style','width:'+((questions[15].answer * ansArr[15])*10).toFixed(2)+'%');
+document.getElementById('q17pbar').setAttribute('aria-valuenow',((questions[16].answer * ansArr[16])*10).toFixed(2));
+document.getElementById('q17pbar').setAttribute('style','width:'+((questions[16].answer * ansArr[16])*10).toFixed(2)+'%');
+document.getElementById('q18pbar').setAttribute('aria-valuenow',((questions[17].answer * ansArr[17])*10).toFixed(2));
+document.getElementById('q18pbar').setAttribute('style','width:'+((questions[17].answer * ansArr[17])*10).toFixed(2)+'%');
+document.getElementById('q19pbar').setAttribute('aria-valuenow',((questions[18].answer * ansArr[18])*10).toFixed(2));
+document.getElementById('q19pbar').setAttribute('style','width:'+((questions[18].answer * ansArr[18])*10).toFixed(2)+'%');
+document.getElementById('q20pbar').setAttribute('aria-valuenow',((questions[19].answer * ansArr[19])*10).toFixed(2));
+document.getElementById('q20pbar').setAttribute('style','width:'+((questions[19].answer * ansArr[19])*10).toFixed(2)+'%');
+document.getElementById('q21pbar').setAttribute('aria-valuenow',((questions[20].answer * ansArr[20])*10).toFixed(2));
+document.getElementById('q21pbar').setAttribute('style','width:'+((questions[20].answer * ansArr[20])*10).toFixed(2)+'%');
+document.getElementById('q22pbar').setAttribute('aria-valuenow',((questions[21].answer * ansArr[21])*10).toFixed(2));
+document.getElementById('q22pbar').setAttribute('style','width:'+((questions[21].answer * ansArr[21])*10).toFixed(2)+'%');
+document.getElementById('q23pbar').setAttribute('aria-valuenow',((questions[22].answer * ansArr[22])*10).toFixed(2));
+document.getElementById('q23pbar').setAttribute('style','width:'+((questions[22].answer * ansArr[22])*10).toFixed(2)+'%');
+document.getElementById('q24pbar').setAttribute('aria-valuenow',((questions[23].answer * ansArr[23])*10).toFixed(2));
+document.getElementById('q24pbar').setAttribute('style','width:'+((questions[23].answer * ansArr[23])*10).toFixed(2)+'%');
+document.getElementById('q25pbar').setAttribute('aria-valuenow',((questions[24].answer * ansArr[24])*10).toFixed(2));
+document.getElementById('q25pbar').setAttribute('style','width:'+((questions[24].answer * ansArr[24])*10).toFixed(2)+'%');
+document.getElementById('q26pbar').setAttribute('aria-valuenow',((questions[25].answer * ansArr[25])*10).toFixed(2));
+document.getElementById('q26pbar').setAttribute('style','width:'+((questions[25].answer * ansArr[25])*10).toFixed(2)+'%');
+document.getElementById('q27pbar').setAttribute('aria-valuenow',((questions[26].answer * ansArr[26])*10).toFixed(2));
+document.getElementById('q27pbar').setAttribute('style','width:'+((questions[26].answer * ansArr[26])*10).toFixed(2)+'%');
+document.getElementById('q28pbar').setAttribute('aria-valuenow',((questions[27].answer * ansArr[27])*10).toFixed(2));
+document.getElementById('q28pbar').setAttribute('style','width:'+((questions[27].answer * ansArr[27])*10).toFixed(2)+'%');
+document.getElementById('q29pbar').setAttribute('aria-valuenow',((questions[28].answer * ansArr[28])*10).toFixed(2));
+document.getElementById('q29pbar').setAttribute('style','width:'+((questions[28].answer * ansArr[28])*10).toFixed(2)+'%');
+document.getElementById('q30pbar').setAttribute('aria-valuenow',((questions[29].answer * ansArr[29])*10).toFixed(2));
+document.getElementById('q30pbar').setAttribute('style','width:'+((questions[29].answer * ansArr[29])*10).toFixed(2)+'%');
+document.getElementById('q31pbar').setAttribute('aria-valuenow',((questions[30].answer * ansArr[30])*10).toFixed(2));
+document.getElementById('q31pbar').setAttribute('style','width:'+((questions[30].answer * ansArr[30])*10).toFixed(2)+'%');
+document.getElementById('q32pbar').setAttribute('aria-valuenow',((questions[31].answer * ansArr[31])*10).toFixed(2));
+document.getElementById('q32pbar').setAttribute('style','width:'+((questions[31].answer * ansArr[31])*10).toFixed(2)+'%');
 }
 // insert time here
 function startTimer(time){
@@ -1045,7 +1754,12 @@ function queCounter(index){
     bottom_ques_counter.innerHTML = totalQueCounTag;  //adding new span tag inside bottom_ques_counter
 }
 
+
+
 window.onload = function () {
+  var dt = new Date();
+document.getElementById('date-time').innerHTML=dt;
+
     document.getElementById("download")
         .addEventListener("click", () => {
             const result_box = this.document.getElementById("result_box");

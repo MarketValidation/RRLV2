@@ -29,9 +29,7 @@
   <link href="assets/css/style_STSS.css" rel="stylesheet">
  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
- <link rel="stylesheet" href="assets/newcss/animate.min.css">
- <link rel="stylesheet" href="assets/newcss/custom-animation.css">
- <link rel="stylesheet" href="assets/newcss/style.css">
+
   <!-- =======================================================
   * Template Name: Bocor - v2.0.0
   * Template URL: https://bootstrapmade.com/bocor-bootstrap-template-nice-animation/
@@ -102,7 +100,7 @@
     <div class="info-title"><span>Before you begin the assessment...</span></div>
     <div class="info-list">
       <div class="info"><strong>Please note that due to technical issues, we encourage participants to answer using a desktop PC rather than mobile for now beacuse these can affect the appearance of the results tab at the end of the assessment. Thank you</strong></div>
-  
+
         <div class="info">1. There are a total of<span> 32 unique questions</span> in this assessment.</div>
         <div class="info">2. There are no time limit. Please answer honestly to have the best results.</div>
         <div class="info">3. A detailed calculation of the scores will be included at the results.</div>
@@ -169,20 +167,18 @@
 </div>
 
 <!-- Result Box -->
-<div class="result_box">
-<div id="result_box">
-  <div class="icon justify-content-center">
+<div class="result_box" >
+<div id="result_box" >
+  <div class="icon justify-content-center" >
     <center>   <img src="https://ucarecdn.com/a012691a-6bcb-40c7-b164-679ee182743d/LogoTry.png" alt="" class="img-fluid" style="width:300px;height:90px;"></center>
   </div>
   <center>  <div class="complete_text">Hooray! You've completed the assessment! <br><small>You may download the results at the bottom of this page and answer the survey form and have a chance to win Amazon gift cards!</small><br> <center><strong>Result analysis: </strong></center> </div></center>
+
 <div class="table-responsive">
-      <table class="table text-center table-borderless" style="margin: 0 auto;">
+    <small>Date of Assessment: <span id='date-time'></span>.</small>
+      <table class="table text-center table-borderless" style="margin: 0 auto; ">
       <thead>
-        <tr>
-          <th scope="row" colspan="4" ><span> <strong>
-                  <center></center>
-                </strong> </span></th>
-        </tr>
+
         <tr>
           <th scope="row" colspan="4" style="background-color: #dbdbdb;"><span> <strong>
                   <center>Comparison of the 4 dimensions</center>
@@ -209,11 +205,64 @@
         </tr>
       </thead>
       <tbody>
+
+
         <tr>
-          <th scope="row" colspan="4" ><span> <strong>
-                  <center></center>
-                </strong> </span></th>
+          <th scope="row" colspan="2"></th>
+            <th scope="row" colspan="2"></th>
         </tr>
+        <tr>
+          <th scope="row" colspan="2" style="background-color:rgb(75, 192, 192, 0.2);"><span><small> <strong>
+                  <center>Customer dimension </center>
+                </strong></small> </span></th>
+          <td colspan="2" style="background-color:rgb(255, 205, 86, 0.2);"><span><small> <strong>
+                  <center>Product dimension </center>
+                </strong></small> </span></td>
+        </tr>
+
+        <tr>
+          <th scope="row" style="background-color:rgb(75, 192, 192, 0.2); font-weight: bold; font-size: 14px;" class="weightOCL_Customer1 align-middle justify-content-center"></th>
+          <th scope="row" style="background-color:rgb(75, 192, 192, 0.1);" class="align-middle justify-content-center">
+
+            <div class="progress" style="height: 20px;">
+       <div class="progress-bar bg-success progress-bar-striped progress-bar-animated customerOCLTextguide2" role="progressbar" style="" aria-valuenow="" aria-valuemin="0" aria-valuemax="100" id="customerLine"></div>
+     </div><div style="float:left;"><small>Low OCL</small></div>
+              <div style="float:right; text-align:right;"><small>High OCL</small></div>
+
+            </th>
+            <th scope="row" style="background-color:rgb(255, 205, 86, 0.2); font-weight: bold; font-size: 14px;" class="weightOCL_Product1 align-middle justify-content-center"></th>
+            <th scope="row" style="background-color:rgb(255, 205, 86, 0.1);" class="align-middle justify-content-center">
+              <div class="progress" style="height: 20px;">
+         <div class="progress-bar bg-warning progress-bar-striped progress-bar-animated productOCLTextguide2" role="progressbar" style="" aria-valuenow="" aria-valuemin="0" aria-valuemax="100" id="productLine"></div>
+       </div><div style="float:left;"><small>Low OCL</small></div>
+                <div style="float:right; text-align:right;"><small>High OCL</small></div>
+
+              </th>
+        </tr>
+        <tr>
+          <th scope="row" colspan="2" style="background-color:rgb(255, 99, 132, 0.2);"><span><small> <strong>
+                  <center>Market dimension </center>
+                </strong></small> </span></th>
+          <td colspan="2" style="background-color:rgb(54, 162, 235, 0.2);"><span><small> <strong>
+                  <center>Business dimension </center>
+                </strong></small> </span></td>
+        </tr>
+
+        <tr>
+          <th scope="row" style="background-color:rgb(255, 99, 132, 0.2); font-weight: bold; font-size: 14px;" class="weightOCL_Market1 align-middle justify-content-center"></th>
+          <th scope="row" style="background-color:rgb(255, 99, 132, 0.1);" class="align-middle justify-content-center">
+            <div class="progress" style="height: 20px;">
+       <div class="progress-bar bg-danger progress-bar-striped progress-bar-animated marketOCLTextguide2" role="progressbar" style="" aria-valuenow="" aria-valuemin="0" aria-valuemax="100" id="marketLine"></div>
+     </div><div style="float:left;"><small>Low OCL</small></div>
+              <div style="float:right; text-align:right;"><small>High OCL</small></div></th>
+            <th scope="row" style="background-color:rgb(54, 162, 235, 0.2); font-weight: bold; font-size: 14px;" class="weightOCL_Business1 align-middle justify-content-center"></th>
+            <th scope="row" style="background-color:rgb(54, 162, 235, 0.1);" class="align-middle justify-content-center">
+              <div class="progress" style="height: 20px;">
+         <div class="progress-bar bg-info progress-bar-striped progress-bar-animated businessOCLTextguide2" role="progressbar" style="" aria-valuenow="" aria-valuemin="0" aria-valuemax="100" id="businessLine"></div>
+       </div><div style="float:left;"><small>Low OCL</small></div>
+                <div style="float:right; text-align:right;"><small>High OCL</small></div></div></th>
+        </tr>
+
         <tr>
           <th scope="row" colspan="4" style="background-color: #dbdbdb;"><span> <strong>
                   <center>Opportunity Confidence level indicators and recommendations</center>
@@ -269,6 +318,7 @@
                   <center>Assessment statistics</center>
                 </strong> </span></th>
         </tr>
+
       </tbody>
     </table>
 </div>
@@ -277,21 +327,22 @@
     </div>
 
         <div class=""> <center><strong>Assessment statistics: </strong></div>-->
-<div class="table-responsive">
+        <div class="table-responsive">
           <table class="table table-sm table-bordered justify-cotent-center" style="height:1520px; width:425px; margin: 0 auto; left: 25%; top: 25%;">
 
             <thead>
               <tr style="  line-height: 95%;">
                 <th scope="col" style="text-align: center; vertical-align: middle;">Questions</th>
                 <th scope="col" style="text-align: center; vertical-align: middle;">Your<br> answer</th>
-                <th scope="col" style="text-align: center; vertical-align: middle;">Weight <br> <em style=" font-weight:normal"><small>(Social Startup)</small></th>
+                <th scope="col" style="text-align: center; vertical-align: middle;">Weight <br> <em style=" font-weight:normal"><small>(Small Startup)</small></em></th>
                 <th scope="col" style="text-align: center; vertical-align: middle;">Weighted<br> Score</th>
                 <th scope="col" style="text-align: center; vertical-align: middle;"><small><em>Time taken<br>(seconds)</small></th>
+                <th scope="col" colspan="2" style="text-align: center; vertical-align: middle;"><em style=" font-weight:normal"><small>Visualization <br>& Indicators</small></em></th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td colspan="5" style="background-color:rgb(75, 192, 192, 0.2);"><center><small><strong>Customer Dimension</strong></small></center>     </td>
+                <td colspan="7" style="background-color:rgb(75, 192, 192, 0.2);"><center><strong>Customer Dimension</strong></center>     </td>
               </tr>
               <tr>
                 <th scope="row" style="display: flex; font-size: 14px; font-weight: bold;">1.</th>
@@ -299,6 +350,10 @@
                 <td><div class="weight_text"></div></td>
                 <td><div class="weight_score"></div></td>
                 <td><div class="time_score"></div></td>
+                <td style="min-width:150px">  <div class="progress" style="height: 13px;">
+           <div class="progress-bar bg-success progress-bar-striped" role="progressbar" style="" aria-valuenow="" aria-valuemin="0" aria-valuemax="100" id="q1pbar"></div>
+         </div></td>
+                <td><div class="tweight_score" style="font-size: 14px;"></div></td>
               </tr>
               <tr style="background-color:rgb(75, 192, 192, 0.1);">
                 <th scope="row" style="display: flex; font-size: 14px; font-weight: bold;">2.</th>
@@ -306,6 +361,10 @@
                 <td><div class="weight_text1"></div></td>
                 <td><div class="weight_score1"></div></td>
                   <td><div class="time_score1"></div></td>
+                  <td>  <div class="progress" style="height: 13px;">
+             <div class="progress-bar bg-success progress-bar-striped" role="progressbar" style="" aria-valuenow="" aria-valuemin="0" aria-valuemax="100" id="q2pbar"></div>
+           </div></td>
+                  <td><div class="tweight_score1" style="font-size: 14px;"></div></td>
               </tr>
               <tr>
                 <th scope="row" style="display: flex; font-size: 14px; font-weight: bold;">3.</th>
@@ -313,6 +372,10 @@
                 <td><div class="weight_text2"></div></td>
                 <td><div class="weight_score2"></div></td>
                   <td><div class="time_score2"></div></td>
+                  <td>  <div class="progress" style="height: 13px;">
+             <div class="progress-bar bg-success progress-bar-striped" role="progressbar" style="" aria-valuenow="" aria-valuemin="0" aria-valuemax="100" id="q3pbar"></div>
+           </div></td>
+                  <td><div class="tweight_score2" style="font-size: 14px;"></div></td>
               </tr>
               <tr style="background-color:rgb(75, 192, 192, 0.1);">
                 <th scope="row" style="display: flex; font-size: 14px; font-weight: bold;">4.</th>
@@ -320,6 +383,10 @@
                 <td><div class="weight_text3"></div></td>
                 <td><div class="weight_score3"></div></td>
                   <td><div class="time_score3"></div></td>
+                  <td>  <div class="progress" style="height: 13px;">
+             <div class="progress-bar bg-success progress-bar-striped" role="progressbar" style="" aria-valuenow="" aria-valuemin="0" aria-valuemax="100" id="q4pbar"></div>
+           </div></td>
+                  <td><div class="tweight_score3" style="font-size: 14px;"></div></td>
               </tr>
               <tr>
                 <th scope="row" style="display: flex; font-size: 14px; font-weight: bold;">5.</th>
@@ -327,6 +394,10 @@
                 <td><div class="weight_text4"></div></td>
                 <td><div class="weight_score4"></div></td>
                   <td><div class="time_score4"></div></td>
+                  <td>  <div class="progress" style="height: 13px;">
+             <div class="progress-bar bg-success progress-bar-striped" role="progressbar" style="" aria-valuenow="" aria-valuemin="0" aria-valuemax="100" id="q5pbar"></div>
+           </div></td>
+                  <td><div class="tweight_score4" style="font-size: 14px;"></div></td>
               </tr>
               <tr style="background-color:rgb(75, 192, 192, 0.1);">
                 <th scope="row" style="display: flex; font-size: 14px; font-weight: bold;">6.</th>
@@ -334,6 +405,10 @@
                 <td><div class="weight_text5"></div></td>
                 <td><div class="weight_score5"></div></td>
                   <td><div class="time_score5"></div></td>
+                  <td>  <div class="progress" style="height: 13px;">
+             <div class="progress-bar bg-success progress-bar-striped" role="progressbar" style="" aria-valuenow="" aria-valuemin="0" aria-valuemax="100" id="q6pbar"></div>
+           </div></td>
+                  <td><div class="tweight_score5" style="font-size: 14px;"></div></td>
               </tr>
               <tr>
                 <th scope="row" style="display: flex; font-size: 14px; font-weight: bold;">7.</th>
@@ -341,6 +416,10 @@
                 <td><div class="weight_text6"></div></td>
                 <td><div class="weight_score6"></div></td>
                   <td><div class="time_score6"></div></td>
+                  <td>  <div class="progress" style="height: 13px;">
+             <div class="progress-bar bg-success progress-bar-striped" role="progressbar" style="" aria-valuenow="" aria-valuemin="0" aria-valuemax="100" id="q7pbar"></div>
+           </div></td>
+                  <td><div class="tweight_score6" style="font-size: 14px;"></div></td>
               </tr>
               <tr style="background-color:rgb(75, 192, 192, 0.1);">
                 <th scope="row" style="display: flex; font-size: 14px; font-weight: bold;">8.</th>
@@ -348,6 +427,10 @@
                 <td><div class="weight_text7"></div></td>
                 <td><div class="weight_score7"></div></td>
                   <td><div class="time_score7"></div></td>
+                  <td>  <div class="progress" style="height: 13px;">
+             <div class="progress-bar bg-success progress-bar-striped" role="progressbar" style="" aria-valuenow="" aria-valuemin="0" aria-valuemax="100" id="q8pbar"></div>
+           </div></td>
+                  <td><div class="tweight_score7" style="font-size: 14px;"></div></td>
               </tr>
               <tr>
                 <th scope="row" style="display: flex; font-size: 14px; font-weight: bold;">9.</th>
@@ -355,6 +438,10 @@
                 <td><div class="weight_text8"></div></td>
                 <td><div class="weight_score8"></div></td>
                   <td><div class="time_score8"></div></td>
+                  <td>  <div class="progress" style="height: 13px;">
+             <div class="progress-bar bg-success progress-bar-striped" role="progressbar" style="" aria-valuenow="" aria-valuemin="0" aria-valuemax="100" id="q9pbar"></div>
+           </div></td>
+                  <td><div class="tweight_score8" style="font-size: 14px;"></div></td>
               </tr>
               <tr style="background-color:rgb(75, 192, 192, 0.1);">
                 <th scope="row" style="display: flex; font-size: 14px; font-weight: bold;">10.</th>
@@ -362,6 +449,10 @@
                 <td><div class="weight_text9"></div></td>
                 <td><div class="weight_score9"></div></td>
                   <td><div class="time_score9"></div></td>
+                  <td>  <div class="progress" style="height: 13px;">
+             <div class="progress-bar bg-success progress-bar-striped" role="progressbar" style="" aria-valuenow="" aria-valuemin="0" aria-valuemax="100" id="q10pbar"></div>
+           </div></td>
+                  <td><div class="tweight_score9" style="font-size: 14px;" ></div></td>
               </tr>
               <tr>
                 <th scope="row" style="display: flex; font-size: 14px; font-weight: bold;">11.</th>
@@ -369,15 +460,23 @@
                 <td><div class="weight_text10"></div></td>
                 <td><div class="weight_score10"></div></td>
                   <td><div class="time_score10"></div></td>
+                  <td>  <div class="progress" style="height: 13px;">
+             <div class="progress-bar bg-success progress-bar-striped" role="progressbar" style="" aria-valuenow="" aria-valuemin="0" aria-valuemax="100" id="q11pbar"></div>
+           </div></td>
+                  <td><div class="tweight_score10" style="font-size: 14px;"></div></td>
               </tr>
-              <tr style="background-color:rgb(75, 192, 192, 0.2);">
-              <td  colspan="2" ><div class="" style=" font-weight:normal" ><small><strong>Weighted Opportunity<br> Confidence Level:</small></strong></div></td>
-              <td><div class="customerOCLTextguide1"></div></td>
+              <tr style="background-color:rgb(75, 192, 192, 0.2); font-size: 14px;">
+              <td  colspan="3" ><div class="" style=" font-weight:normal" ><strong>Average OCL Score:</strong></div></td>
+
                 <td><div class="weightOCL_Customer"></div></td>
                   <td><div class="time_scoreCustomer"></div></td>
+                  <td>  <div class="progress" style="height: 20px;">
+             <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" style="" aria-valuenow="" aria-valuemin="0" aria-valuemax="100" id="customerpbar"></div>
+           </div></td>
+                  <td><div class="customerOCLTextguide1" style="font-weight: bold;"></div></td>
               </tr>
               <tr>
-                <td colspan="5" style="background-color:rgb(255, 99, 132, 0.2);"><center><small><strong>Market Dimension</strong></small></center>     </td>
+                <td colspan="7" style="background-color:rgb(255, 99, 132, 0.2);"><center><strong>Market Dimension</strong></center>     </td>
               </tr>
               <tr>
                 <th scope="row" style="display: flex; font-size: 14px; font-weight: bold;">12.</th>
@@ -385,6 +484,10 @@
                 <td><div class="weight_text11"></div></td>
                 <td><div class="weight_score11"></div></td>
                   <td><div class="time_score11"></div></td>
+                  <td>  <div class="progress" style="height: 13px;">
+             <div class="progress-bar bg-danger progress-bar-striped" role="progressbar" style="" aria-valuenow="" aria-valuemin="0" aria-valuemax="100" id="q12pbar"></div>
+           </div></td>
+                  <td><div class="tweight_score11" style="font-size: 14px;"></div></td>
               </tr>
               <tr style="background-color:rgb(255, 99, 132, 0.1);">
                 <th scope="row" style="display: flex; font-size: 14px; font-weight: bold;">13.</th>
@@ -392,6 +495,10 @@
                 <td><div class="weight_text12"></div></td>
                 <td><div class="weight_score12"></div></td>
                   <td><div class="time_score12"></div></td>
+                  <td>  <div class="progress" style="height: 13px;">
+             <div class="progress-bar bg-danger progress-bar-striped" role="progressbar" style="" aria-valuenow="" aria-valuemin="0" aria-valuemax="100" id="q13pbar"></div>
+           </div></td>
+                  <td><div class="tweight_score12" style="font-size: 14px;"></div></td>
               </tr>
               <tr>
                 <th scope="row" style="display: flex; font-size: 14px; font-weight: bold;">14.</th>
@@ -399,6 +506,10 @@
                 <td><div class="weight_text13"></div></td>
                 <td><div class="weight_score13"></div></td>
                   <td><div class="time_score13"></div></td>
+                  <td>  <div class="progress" style="height: 13px;">
+             <div class="progress-bar bg-danger progress-bar-striped" role="progressbar" style="" aria-valuenow="" aria-valuemin="0" aria-valuemax="100" id="q14pbar"></div>
+           </div></td>
+                  <td><div class="tweight_score13" style="font-size: 14px;"></div></td>
               </tr>
               <tr style="background-color:rgb(255, 99, 132, 0.1);">
                 <th scope="row" style="display: flex; font-size: 14px; font-weight: bold;">15.</th>
@@ -406,6 +517,10 @@
                 <td><div class="weight_text14"></div></td>
                 <td><div class="weight_score14"></div></td>
                   <td><div class="time_score14"></div></td>
+                  <td>  <div class="progress" style="height: 13px;">
+             <div class="progress-bar bg-danger progress-bar-striped" role="progressbar" style="" aria-valuenow="" aria-valuemin="0" aria-valuemax="100" id="q15pbar"></div>
+           </div></td>
+                  <td><div class="tweight_score14" style="font-size: 14px;"></div></td>
               </tr>
               <tr>
                 <th scope="row" style="display: flex; font-size: 14px; font-weight: bold;">16.</th>
@@ -413,6 +528,10 @@
                 <td><div class="weight_text15"></div></td>
                 <td><div class="weight_score15"></div></td>
                   <td><div class="time_score15"></div></td>
+                  <td>  <div class="progress" style="height: 13px;">
+             <div class="progress-bar bg-danger progress-bar-striped" role="progressbar" style="" aria-valuenow="" aria-valuemin="0" aria-valuemax="100" id="q16pbar"></div>
+           </div></td>
+                  <td><div class="tweight_score15" style="font-size: 14px;"></div></td>
               </tr>
               <tr style="background-color:rgb(255, 99, 132, 0.1);">
                 <th scope="row" style="display: flex; font-size: 14px; font-weight: bold;">17.</th>
@@ -420,6 +539,10 @@
                 <td><div class="weight_text16"></div></td>
                 <td><div class="weight_score16"></div></td>
                   <td><div class="time_score16"></div></td>
+                  <td>  <div class="progress" style="height: 13px;">
+             <div class="progress-bar bg-danger progress-bar-striped" role="progressbar" style="" aria-valuenow="" aria-valuemin="0" aria-valuemax="100" id="q17pbar"></div>
+           </div></td>
+                  <td><div class="tweight_score16" style="font-size: 14px;"></div></td>
               </tr>
               <tr>
                 <th scope="row" style="display: flex; font-size: 14px; font-weight: bold;">18.</th>
@@ -427,15 +550,23 @@
                 <td><div class="weight_text17"></div></td>
                 <td><div class="weight_score17"></div></td>
                   <td><div class="time_score17"></div></td>
+                  <td>  <div class="progress" style="height: 13px;">
+             <div class="progress-bar bg-danger progress-bar-striped" role="progressbar" style="" aria-valuenow="" aria-valuemin="0" aria-valuemax="100" id="q18pbar"></div>
+           </div></td>
+                  <td><div class="tweight_score17" style="font-size: 14px;"></div></td>
               </tr>
-              <tr style="background-color:rgb(255, 99, 132, 0.2);">
-                <td  colspan="2" ><div class="" style=" font-weight:normal" > <small><strong>Weighted Opportunity <br>Confidence Level:</small></strong></div></td>
-                <td><div class="marketOCLTextguide1"></div></td>
+              <tr style="background-color:rgb(255, 99, 132, 0.2); font-size: 14px;">
+                <td  colspan="3" ><div class="" style=" font-weight:normal" ><strong>Average OCL Score:</strong></div></td>
+
                 <td><div class="weightOCL_Market"></div></td>
                   <td><div class="time_scoreMarket"></div></td>
+                  <td>  <div class="progress" style="height: 20px;">
+             <div class="progress-bar bg-danger progress-bar-striped progress-bar-animated" role="progressbar" style="" aria-valuenow="" aria-valuemin="0" aria-valuemax="100" id="marketpbar"></div>
+           </div></td>
+                  <td><div class="marketOCLTextguide1" style="font-weight: bold;"></div></td>
               </tr>
               <tr>
-                <td colspan="5" style="background-color:rgb(255, 205, 86, 0.2);"><center><small><strong>Product Dimension</strong></small></center>     </td>
+                <td colspan="7" style="background-color:rgb(255, 205, 86, 0.2);"><center><strong>Product Dimension</strong></center>     </td>
               </tr>
               <tr>
                 <th scope="row" style="display: flex; font-size: 14px; font-weight: bold;">19.</th>
@@ -443,6 +574,10 @@
                 <td><div class="weight_text18"></div></td>
                 <td><div class="weight_score18"></div></td>
                   <td><div class="time_score18"></div></td>
+                  <td>  <div class="progress" style="height: 13px;">
+             <div class="progress-bar bg-warning progress-bar-striped" role="progressbar" style="" aria-valuenow="" aria-valuemin="0" aria-valuemax="100" id="q19pbar"></div>
+           </div></td>
+                  <td><div class="tweight_score18" style="font-size: 14px;"></div></td>
               </tr>
               <tr style="background-color:rgb(255, 205, 86, 0.1);">
                 <th scope="row" style="display: flex; font-size: 14px; font-weight: bold;">20.</th>
@@ -450,6 +585,10 @@
                 <td><div class="weight_text19"></div></td>
                 <td><div class="weight_score19"></div></td>
                   <td><div class="time_score19"></div></td>
+                  <td>  <div class="progress" style="height: 13px;">
+             <div class="progress-bar bg-warning progress-bar-striped" role="progressbar" style="" aria-valuenow="" aria-valuemin="0" aria-valuemax="100" id="q20pbar"></div>
+           </div></td>
+                  <td><div class="tweight_score19" style="font-size: 14px;"></div></td>
               </tr>
               <tr>
                 <th scope="row" style="display: flex; font-size: 14px; font-weight: bold;">21.</th>
@@ -457,6 +596,10 @@
                 <td><div class="weight_text20"></div></td>
                 <td><div class="weight_score20"></div></td>
                   <td><div class="time_score20"></div></td>
+                  <td>  <div class="progress" style="height: 13px;">
+             <div class="progress-bar bg-warning progress-bar-striped" role="progressbar" style="" aria-valuenow="" aria-valuemin="0" aria-valuemax="100" id="q21pbar"></div>
+           </div></td>
+                  <td><div class="tweight_score20" style="font-size: 14px;"></div></td>
               </tr>
               <tr style="background-color:rgb(255, 205, 86, 0.1);">
                 <th scope="row" style="display: flex; font-size: 14px; font-weight: bold;">22.</th>
@@ -464,6 +607,10 @@
                 <td><div class="weight_text21"></div></td>
                 <td><div class="weight_score21"></div></td>
                   <td><div class="time_score21"></div></td>
+                  <td>  <div class="progress" style="height: 13px;">
+             <div class="progress-bar bg-warning progress-bar-striped" role="progressbar" style="" aria-valuenow="" aria-valuemin="0" aria-valuemax="100" id="q22pbar"></div>
+           </div></td>
+                  <td><div class="tweight_score21" style="font-size: 14px;"></div></td>
               </tr>
               <tr>
                 <th scope="row" style="display: flex; font-size: 14px; font-weight: bold;">23.</th>
@@ -471,6 +618,10 @@
                 <td><div class="weight_text22"></div></td>
                 <td><div class="weight_score22"></div></td>
                   <td><div class="time_score22"></div></td>
+                  <td>  <div class="progress" style="height: 13px;">
+             <div class="progress-bar bg-warning progress-bar-striped" role="progressbar" style="" aria-valuenow="" aria-valuemin="0" aria-valuemax="100" id="q23pbar"></div>
+           </div></td>
+                  <td><div class="tweight_score22" style="font-size: 14px;"></div></td>
               </tr>
               <tr style="background-color:rgb(255, 205, 86, 0.1);">
                 <th scope="row" style="display: flex; font-size: 14px; font-weight: bold;">24.</th>
@@ -478,6 +629,10 @@
                 <td><div class="weight_text23"></div></td>
                 <td><div class="weight_score23"></div></td>
                   <td><div class="time_score23"></div></td>
+                  <td>  <div class="progress" style="height: 13px;">
+             <div class="progress-bar bg-warning progress-bar-striped" role="progressbar" style="" aria-valuenow="" aria-valuemin="0" aria-valuemax="100" id="q24pbar"></div>
+           </div></td>
+                  <td><div class="tweight_score23" style="font-size: 14px;"></div></td>
               </tr>
               <tr>
                 <th scope="row" style="display: flex; font-size: 14px; font-weight: bold;">25.</th>
@@ -485,16 +640,24 @@
                 <td><div class="weight_text24"></div></td>
                 <td><div class="weight_score24"></div></td>
                   <td><div class="time_score24"></div></td>
+                  <td>  <div class="progress" style="height: 13px;">
+             <div class="progress-bar bg-warning progress-bar-striped" role="progressbar" style="" aria-valuenow="" aria-valuemin="0" aria-valuemax="100" id="q25pbar"></div>
+           </div></td>
+                  <td><div class="tweight_score24" style="font-size: 14px;"></div></td>
               </tr>
-              <tr style="background-color:rgb(255, 205, 86, 0.2);">
+              <tr style="background-color:rgb(255, 205, 86, 0.2); font-size: 14px;">
 
-                <td  colspan="2" ><div class="" style=" font-weight:normal" ><small><strong>Weighted Opportunity <br>Confidence Level:</small></strong></div></td>
-                <td><div class="productOCLTextguide1"></div></td>
+                <td  colspan="3" ><div class="" style=" font-weight:normal" ><strong>Average OCL Score:</strong></div></td>
+
                 <td><div class="weightOCL_Product"></div></td>
                   <td><div class="time_scoreProduct"></div></td>
+                  <td>  <div class="progress" style="height: 20px;">
+             <div class="progress-bar bg-warning progress-bar-striped progress-bar-animated" role="progressbar" style="" aria-valuenow="" aria-valuemin="0" aria-valuemax="100" id="productpbar"></div>
+           </div></td>
+                  <td><div class="productOCLTextguide1" style="font-weight: bold;"></div></td>
               </tr>
               <tr>
-                <td colspan="5" style="background-color:rgb(54, 162, 235, 0.2);"><center><small><strong>Business Dimension</strong></small></center>     </td>
+                <td colspan="7" style="background-color:rgb(54, 162, 235, 0.2);"><center><strong>Business Dimension</strong></center>     </td>
               </tr>
               <tr>
                 <th scope="row" style="display: flex; font-size: 14px; font-weight: bold;">26.</th>
@@ -502,6 +665,10 @@
                 <td><div class="weight_text25"></div></td>
                 <td><div class="weight_score25"></div></td>
                   <td><div class="time_score25"></div></td>
+                  <td>  <div class="progress" style="height: 13px;">
+             <div class="progress-bar bg-info progress-bar-striped" role="progressbar" style="" aria-valuenow="" aria-valuemin="0" aria-valuemax="100" id="q26pbar"></div>
+           </div></td>
+                  <td><div class="tweight_score25" style="font-size: 14px;"></div></td>
               </tr>
               <tr style="background-color:rgb(54, 162, 235, 0.1);">
                 <th scope="row" style="display: flex; font-size: 14px; font-weight: bold;">27.</th>
@@ -509,6 +676,10 @@
                 <td><div class="weight_text26"></div></td>
                 <td><div class="weight_score26"></div></td>
                   <td><div class="time_score26"></div></td>
+                  <td>  <div class="progress" style="height: 13px;">
+             <div class="progress-bar bg-info progress-bar-striped" role="progressbar" style="" aria-valuenow="" aria-valuemin="0" aria-valuemax="100" id="q27pbar"></div>
+           </div></td>
+                  <td><div class="tweight_score26" style="font-size: 14px;"></div></td>
               </tr>
               <tr>
                 <th scope="row" style="display: flex; font-size: 14px; font-weight: bold;">28.</th>
@@ -516,6 +687,10 @@
                 <td><div class="weight_text27"></div></td>
                 <td><div class="weight_score27"></div></td>
                   <td><div class="time_score27"></div></td>
+                  <td>  <div class="progress" style="height: 13px;">
+             <div class="progress-bar bg-info progress-bar-striped" role="progressbar" style="" aria-valuenow="" aria-valuemin="0" aria-valuemax="100" id="q28pbar"></div>
+           </div></td>
+                  <td><div class="tweight_score27" style="font-size: 14px;"></div></td>
               </tr>
               <tr style="background-color:rgb(54, 162, 235, 0.1);">
                 <th scope="row" style="display: flex; font-size: 14px; font-weight: bold;">29.</th>
@@ -523,6 +698,10 @@
                 <td><div class="weight_text28"></div></td>
                 <td><div class="weight_score28"></div></td>
                   <td><div class="time_score28"></div></td>
+                  <td>  <div class="progress" style="height: 13px;">
+             <div class="progress-bar bg-info progress-bar-striped" role="progressbar" style="" aria-valuenow="" aria-valuemin="0" aria-valuemax="100" id="q29pbar"></div>
+           </div></td>
+                  <td><div class="tweight_score28" style="font-size: 14px;"></div></td>
               </tr>
               <tr>
                 <th scope="row" style="display: flex; font-size: 14px; font-weight: bold;">30.</th>
@@ -530,6 +709,10 @@
                 <td><div class="weight_text29"></div></td>
                 <td><div class="weight_score29"></div></td>
                   <td><div class="time_score29"></div></td>
+                  <td>  <div class="progress" style="height: 13px;">
+             <div class="progress-bar bg-info progress-bar-striped" role="progressbar" style="" aria-valuenow="" aria-valuemin="0" aria-valuemax="100" id="q30pbar"></div>
+           </div></td>
+                  <td><div class="tweight_score29" style="font-size: 14px;"></div></td>
               </tr>
               <tr style="background-color:rgb(54, 162, 235, 0.1);">
                 <th scope="row" style="display: flex; font-size: 14px; font-weight: bold;">31.</th>
@@ -537,6 +720,10 @@
                 <td><div class="weight_text30"></div></td>
                 <td><div class="weight_score30"></div></td>
                   <td><div class="time_score30"></div></td>
+                  <td>  <div class="progress" style="height: 13px;">
+             <div class="progress-bar bg-info progress-bar-striped" role="progressbar" style="" aria-valuenow="" aria-valuemin="0" aria-valuemax="100" id="q31pbar"></div>
+           </div></td>
+                  <td><div class="tweight_score30" style="font-size: 14px;"></div></td>
               </tr>
               <tr>
                 <th scope="row" style="display: flex; font-size: 14px; font-weight: bold;">32.</th>
@@ -544,26 +731,39 @@
                 <td><div class="weight_text31"></div></td>
                 <td><div class="weight_score31"></div></td>
                   <td><div class="time_score31"></div></td>
+                  <td>  <div class="progress" style="height: 13px;">
+             <div class="progress-bar bg-info progress-bar-striped" role="progressbar" style="" aria-valuenow="" aria-valuemin="0" aria-valuemax="100" id="q32pbar"></div>
+           </div></td>
+                  <td><div class="tweight_score31" style="font-size: 14px;"></div></td>
               </tr>
-              <tr style="background-color:rgb(54, 162, 235, 0.2);">
-              <td  colspan="2" ><div class="" style=" font-weight:normal" ><small><strong>Weighted Opportunity <br>Confidence Level:</small></strong></div></td>
-                <td><div class="businessOCLTextguide1"></div></td>
+              <tr style="background-color:rgb(54, 162, 235, 0.2); font-size: 14px;">
+              <td  colspan="3" ><div class="" style=" font-weight:normal" ><strong>Average OCL Score:</strong></div></td>
+
                 <td><div class="weightOCL_Business"></div></td>
                   <td><div class="time_scoreBusiness"></div></td>
+                  <td>  <div class="progress" style="height: 20px;">
+             <div class="progress-bar bg-info progress-bar-striped progress-bar-animated" role="progressbar" style="" aria-valuenow="" aria-valuemin="0" aria-valuemax="100" id="businesspbar"></div>
+           </div></td>
+                  <td><div class="businessOCLTextguide1" style="font-weight: bold;"></div></td>
               </tr>
 
               <tr class="table-success">
-                <th scope="row" style=" font-weight:normal" ><strong>Overall:</th>
-                <td  colspan="2" ><div class="actualOverallText" style=" font-weight:normal" > </div></td>
-                <td><div class="weightOCL_Overall"></div></td>
+                <th scope="row" colspan="3" style=" font-weight:normal" ><strong>Overall startup score:</th>
+                <td ><div class="weightOCL_Overall" style=" font-weight:normal" > </div></td>
+
                   <td><div class="time_scoreOverall"></div></td>
+                  <td>  <div class="progress" style="height: 20px;">
+             <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="" aria-valuenow="" aria-valuemin="0" aria-valuemax="100" id="allpbar"></div>
+           </div></td>
+                  <td><div class="actualOverallText" style="font-weight: bold;"></div></td>
               </tr>
             </tbody>
           </table>
           <span><small>
                       <center> What do you think about these system generated results? Give us your thoughts and have a chance to win $5 Amazon gift cards! Your feedback would greatly help the researchers in making Athena better! <br><strong>Click <a href="" id="Slink" data-toggle="modal" data-target="#myModal3">here</a> for the 5-7 minute survey. </center>
                     </strong></small> </span>
-</div>
+        </div>
+
 </div>
     <div class="buttons align-items-center">
         <button id="centerz1" class="btn btn-primary Fbutton" type="button" data-toggle="modal" data-target="#myModal2" >Answer again</button>
