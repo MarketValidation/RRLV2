@@ -268,7 +268,6 @@ function showResult(){
 
 
 
-
   document.getElementById('faq').style.height = '4000px';
 
     info_box.classList.remove("activeInfo"); //hide info box
@@ -1535,7 +1534,7 @@ productOCLTextguide = "Medium";
 productOCLText = "Your product is on average opportunity confidence level. Your product should be in a better position and decide what important features of your new product/service concept you should focus on streamlining, as well as the categories of possible early adopters and the projected adoption rate should be taken into consideration. Plan your traditional product release, and learn how to build the simplest possible feature to assist both your startup team and your potential target customers (or testers) in understanding the issue that they're attempting to answer. The learnings gained from these can greatly help fine-tune your product/service concept that is tailored for your target customers.  ";
 productsource = "<center><small><em><strong>Additional resources:</strong>  <a href=\"https://www.jigsawacademy.com/blogs/product-management/product-positioning-strategy/\" target=\"_blank\"> Product Management</a></em></small></center>";
    }
-   else if (parseFloat(finalproductLoop) > 6 && parseFloat(finalcustomerLoop) < 9) { //8,7
+   else if (parseFloat(finalproductLoop) > 6 && parseFloat(finalproductLoop) < 9) { //8,7
     productOCLTextguide = "High";
     productOCLText = "Your product/service concept is great! You seem to have a great minimum viable product (MVP) concept and innovation type. The startup team should be able to measure the feasibility of implementing and developing the product concept with ease and determine its adoption rate. It is ideal to continue researching about the product such as: Seeking cost advantages over the competition, Re-innovating – making changes to designs after their first introduction and then quickly introducing them to the market, Developing a reputation for product quality, procedures, and standards for more efficient and economic production of the product or optimizing the process of the service, and learning from users and customers about their experience to continue making your product/service great. ";
   productsource = "<center><small><em><strong>Additional resources:</strong>  <a href=\"https://www.viima.com/blog/types-of-innovation\" target=\"_blank\"> Types of Innovation</a></em></small></center>";
