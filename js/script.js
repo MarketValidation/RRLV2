@@ -1753,29 +1753,17 @@ function queCounter(index){
     bottom_ques_counter.innerHTML = totalQueCounTag;  //adding new span tag inside bottom_ques_counter
 }
 
-
-
 window.onload = function () {
   var dt = new Date();
 document.getElementById('date-time').innerHTML=dt;
-
     document.getElementById("download")
         .addEventListener("click", () => {
             const result_box = this.document.getElementById("result_box");
             console.log(result_box);
             console.log(window);
-            var opt = {
-                margin:       .8,
-                filename:     'My_Athena_Assessment_Report.pdf',
-                image:        { type: 'jpeg', quality: 0.98 },
-                html2canvas:  {
-                                scale: 2,
-dpi: 300,
-letterRendering: true,
-useCORS: true
-},
-                jsPDF:        { unit: 'in', format: 'letter', orientation: 'landscape' }
+            var opt = { margin:.8,filename:'My_Athena_Assessment_Report.pdf',image:{type:'jpeg',quality:0.98},html2canvas:{scale:2,dpi:300,letterRendering:true,useCORS:true},jsPDF:{unit:'in',format:'letter',orientation:'landscape'}
               };
             html2pdf().from(result_box).set(opt).save();
+            
         })
 }
