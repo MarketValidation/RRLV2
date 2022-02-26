@@ -215,7 +215,7 @@ numb: 12,
 question: "How large is the target market for your product/service concept?",
 detailedquestion: "How certain are you about the perceived exact scale of the market? Do you think there is an opportunity for this product to increase its share of the market? What data do you have to indicate market share increase?",
 scoringnote: "Scoring note: The higher the reach of the target market, based on evidence, facts, observation, or research, the higher the score.",
-answer: 8,
+answer: .8,
 options: [
   "1",
   "2",
