@@ -193,7 +193,8 @@ prev_btn.onclick = ()=>{
     //    clearInterval(counterLine); //clear counterLine (running time display)
     //    startTimer(timeValue); //calling startTimer function 15s start
     //    startTimerLine(widthValue); //calling startTimerLine function 0s start line
-        startTimer(0);
+     clearInterval(counter);
+      
 
         next_btn.classList.add("show"); //show the next button
         prev_btn.classList.add("show"); //show the next button
@@ -203,7 +204,8 @@ document.getElementById(x).classList.add("correct");
 
        if(que_numb == 1){  prev_btn.classList.remove("show"); }
     }else{
-    //    clearInterval(counter); //clears counter
+       clearInterval(counter);
+
     //    clearInterval(counterLine); //clear counterLine
 
     }
@@ -1764,6 +1766,6 @@ document.getElementById('date-time').innerHTML=dt;
             var opt = { margin:.8,filename:'My_Athena_Assessment_Report.pdf',image:{type:'jpeg',quality:0.98},html2canvas:{scale:2,dpi:300,letterRendering:true,useCORS:true},jsPDF:{unit:'in',format:'letter',orientation:'landscape'}
               };
             html2pdf().from(result_box).set(opt).save();
-            
+
         })
 }
