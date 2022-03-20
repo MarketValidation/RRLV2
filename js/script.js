@@ -194,7 +194,7 @@ prev_btn.onclick = ()=>{
     //    startTimer(timeValue); //calling startTimer function 15s start
     //    startTimerLine(widthValue); //calling startTimerLine function 0s start line
      clearInterval(counter);
-      
+
 
         next_btn.classList.add("show"); //show the next button
         prev_btn.classList.add("show"); //show the next button
@@ -1756,8 +1756,6 @@ function queCounter(index){
 }
 
 window.onload = function () {
-  var dt = new Date();
-document.getElementById('date-time').innerHTML=dt;
     document.getElementById("download")
         .addEventListener("click", () => {
             const result_box = this.document.getElementById("result_box");
