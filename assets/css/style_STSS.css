@@ -393,6 +393,12 @@ footer button.show{
     font-size: 20px;
     font-weight: 500;
 }
+.result_box .q_text, .q_text1, .q_text2, .q_text3, .q_text4, .q_text5, .q_text6, .q_text7, .q_text8, .q_text9, .q_text10, .q_text11, .q_text12, .q_text13, .q_text14, .q_text15, .q_text16, .q_text17, .q_text18, .q_text19, .q_text20,
+.q_text21, .q_text22, .q_text23, .q_text24, .q_text25, .q_text26, .q_text27, .q_text28, .q_text29, .q_text30, .q_text31, .q_text32 span{
+    display: flex;
+    font-size: 13px;
+    font-weight: 400;
+}
 
 .result_box .score_text, .score_text1, .score_text2, .score_text3, .score_text4, .score_text5, .score_text6, .score_text7, .score_text8, .score_text9, .score_text10, .score_text11, .score_text12, .score_text13, .score_text14, .score_text15, .score_text16, .score_text17, .score_text18, .score_text19, .score_text20,
 .score_text21, .score_text22, .score_text23, .score_text24, .score_text25, .score_text26, .score_text27, .score_text28, .score_text29, .score_text30, .score_text31, .score_text32 span{

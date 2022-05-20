@@ -102,9 +102,9 @@ const bottom_ques_counter = document.querySelector(".total_que");
           que_numb++; //increment the que_numb value
           showQuetions(que_count); //calling showQestions function
           queCounter(que_numb); //passing que_numb value to queCounter
-        //  clearInterval(counter); //clear counter 15s(time)
+        //  clearInterval(counter); //clear counter
         //  clearInterval(counterLine); //clear counterLine (running time display)
-          startTimer(0); //calling startTimer function 15s start
+          startTimer(0); //calling startTimer function
         //  startTimerLine(widthValue); //calling startTimerLine function 0s start line
           timeText.textContent = "Time taken"; //change the timeText to Time Left
           next_btn.classList.remove("show"); //hide the next button
@@ -121,7 +121,6 @@ const bottom_ques_counter = document.querySelector(".total_que");
         showQuetions(que_count); //calling showQestions function
         queCounter(que_numb); //passing que_numb value to queCounter
              document.getElementById(x).classList.add("correct");
-
                prev_btn.classList.add("show");
                next_btn.classList.add("show"); //show the next button
                clear_btn.classList.add("show"); //show the next button
@@ -212,65 +211,102 @@ document.getElementById(x).classList.add("correct");
 }
 
 clear_btn.onclick = ()=>{
-var x = ansArr[que_count].toString();
-document.getElementById(x).classList.remove("correct");
+//var x = ansArr[que_count].toString();
+//document.getElementById(x).classList.remove("correct");
+var allElements = document.querySelectorAll(".option");
+  for(i=0; i<allElements.length; i++)
+  {
+   allElements[i].classList.remove('correct');
+  }
 protec = 0;
 ansArr[que_count] = 0;
-console.log(x);
-console.log(ansArr[que_count]);
-console.log(que_count);
+//console.log(x);
+//console.log(ansArr[que_count]);
+//console.log(que_count);
   clear_btn.classList.remove("show"); //show the next button
+    next_btn.classList.remove("show"); //show the next button if user selected any option
 }
+var reselect1 = 0;
+var alreadyselected = 0;
 
 //if user clicked on option
-function optionSelected(answer){
 
+function optionSelected(answer) {
+
+  if (reselect1 == 1) {
+    var allElements = document.querySelectorAll(".option");
+    for (i = 0; i < allElements.length; i++) {
+      allElements[i].classList.remove('correct');
+    }
+    answer.classList.add("correct");
+    reselect1 = 0;
+    alreadyselected = 1;
     clearInterval(counter); //clear counter
     clearInterval(counterLine); //clear counterLine
-  userAns = answer.textContent; //getting user selected option
-
-  //  let correcAns = questions[que_count].answer; //getting correct answer from array (or weight)
-
+    userAns = answer.textContent; //getting user selected option
+    //  let correcAns = questions[que_count].answer; //getting correct answer from array (or weight)
     const allOptions = option_list.children.length; //getting all option items
-     //if user selected option is equal to array's correct answer
-
-if ((protec == 0) && (ansArr[que_count] == 0)){
-protec =1;
-
-answer.classList.add("correct");
-
-
-userScore += parseInt(userAns); //upgrading score value with 1
-ansArr[que_count] = parseInt(userAns);
-
-} else{   console.log(protec);
-console.log(ansArr[que_count]);
-console.log(que_count);  }
-
-
-//       if (ansArr[que_count + 1 ] == 0){   if ((ansArr[que_count]) == (parseInt(userAns))){  } else {
-//        answer.classList.add("correct"); //adding green color to correct selected option
-//        answer.insertAdjacentHTML("beforeend", tickIconTag); //adding tick icon to correct selected option
-//      }} else {answer.classList.remove("correct"); //adding green color to correct selected option
-//answer.removeAttribute("tickIconTag"); //adding tick icon to correct selected option
-
-
-
-      //  console.log("Correct Answer");
-    //    console.log("Your correct answers = " + userScore);
-    //    console.log("que_count = " + que_count);
-    //    console.log("que_numb = " + que_numb);
-    //    console.log("nsArr[que_count] = " + ansArr[que_count]);
-    //    console.log("answer" + answer);
+    //if user selected option is equal to array's correct answer
+    if ((protec == 0) && (ansArr[que_count] == 0)) {
+      protec = 1;
+      answer.classList.add("correct");
+      userScore += parseInt(userAns); //upgrading score value with 1
+      ansArr[que_count] = parseInt(userAns);
+    }
     next_btn.classList.add("show"); //show the next button if user selected any option
     clear_btn.classList.add("show"); //show the next button
+    return;
+  }
+  if (reselect1 == 0 && alreadyselected == 0) {
+    answer.classList.add("correct");
+    reselect1 = 1;
+    clearInterval(counter); //clear counter
+    clearInterval(counterLine); //clear counterLine
+    userAns = answer.textContent; //getting user selected option
+    //  let correcAns = questions[que_count].answer; //getting correct answer from array (or weight)
+    const allOptions = option_list.children.length; //getting all option items
+    //if user selected option is equal to array's correct answer
+    if ((protec == 0) && (ansArr[que_count] == 0)) {
+      protec = 1;
+      answer.classList.add("correct");
+      userScore += parseInt(userAns); //upgrading score value with 1
+      ansArr[que_count] = parseInt(userAns);
+    }
+    next_btn.classList.add("show"); //show the next button if user selected any option
+    clear_btn.classList.add("show"); //show the next button
+    return;
+  }
+  if (alreadyselected == 1) {
+    var allElements = document.querySelectorAll(".option");
+    for (i = 0; i < allElements.length; i++) {
+      allElements[i].classList.remove('correct');
+    }
+    answer.classList.add("correct");
+    reselect1 = 0;
+    alreadyselected = 1;
+    clearInterval(counter); //clear counter
+    clearInterval(counterLine); //clear counterLine
+    userAns = answer.textContent; //getting user selected option
+    //  let correcAns = questions[que_count].answer; //getting correct answer from array (or weight)
+    const allOptions = option_list.children.length; //getting all option items
+    //if user selected option is equal to array's correct answer
+    if ((protec == 0) && (ansArr[que_count] == 0)) {
+      protec = 1;
+      answer.classList.add("correct");
+      userScore += parseInt(userAns); //upgrading score value with 1
+      ansArr[que_count] = parseInt(userAns);
+    }
+    next_btn.classList.add("show"); //show the next button if user selected any option
+    clear_btn.classList.add("show"); //show the next button
+    return;
+  } else {
+    console.log("error no logic1");
+  }
+
 }
 
 function showResult(){
-
-
-
-  document.getElementById('faq').style.height = '4000px';
+  document.getElementById('faq').style.height = '4900px';
 
     info_box.classList.remove("activeInfo"); //hide info box
     quiz_box.classList.remove("activeQuiz"); //hide quiz box
@@ -308,6 +344,39 @@ function showResult(){
     const scoreText30 = result_box.querySelector(".score_text30");
     const scoreText31 = result_box.querySelector(".score_text31");
 
+
+    const q_Text = result_box.querySelector(".q_text");
+    const q_Text1 = result_box.querySelector(".q_text1");
+    const q_Text2 = result_box.querySelector(".q_text2");
+    const q_Text3 = result_box.querySelector(".q_text3");
+    const q_Text4 = result_box.querySelector(".q_text4");
+    const q_Text5 = result_box.querySelector(".q_text5");
+    const q_Text6 = result_box.querySelector(".q_text6");
+    const q_Text7 = result_box.querySelector(".q_text7");
+    const q_Text8 = result_box.querySelector(".q_text8");
+    const q_Text9 = result_box.querySelector(".q_text9");
+    const q_Text10 = result_box.querySelector(".q_text10");
+    const q_Text11 = result_box.querySelector(".q_text11");
+    const q_Text12 = result_box.querySelector(".q_text12");
+    const q_Text13 = result_box.querySelector(".q_text13");
+    const q_Text14 = result_box.querySelector(".q_text14");
+    const q_Text15 = result_box.querySelector(".q_text15");
+    const q_Text16 = result_box.querySelector(".q_text16");
+    const q_Text17 = result_box.querySelector(".q_text17");
+    const q_Text18 = result_box.querySelector(".q_text18");
+    const q_Text19 = result_box.querySelector(".q_text19");
+    const q_Text20 = result_box.querySelector(".q_text20");
+    const q_Text21 = result_box.querySelector(".q_text21");
+    const q_Text22 = result_box.querySelector(".q_text22");
+    const q_Text23 = result_box.querySelector(".q_text23");
+    const q_Text24 = result_box.querySelector(".q_text24");
+    const q_Text25 = result_box.querySelector(".q_text25");
+    const q_Text26 = result_box.querySelector(".q_text26");
+    const q_Text27 = result_box.querySelector(".q_text27");
+    const q_Text28 = result_box.querySelector(".q_text28");
+    const q_Text29 = result_box.querySelector(".q_text29");
+    const q_Text30 = result_box.querySelector(".q_text30");
+    const q_Text31 = result_box.querySelector(".q_text31");
 
 
     const weightText = result_box.querySelector(".weight_text");
@@ -680,6 +749,72 @@ timeQues[10] )+'</span>';
         weightText30.innerHTML = weightTag;
       weightTag = '<span>'+ questions[31].answer +'</span>';
         weightText31.innerHTML = weightTag;
+
+        let qTag = '<span>'+ questions[0].question +'</span>';
+              q_Text.innerHTML = qTag;
+            qTag = '<span>'+ questions[1].question +'</span>';
+              q_Text1.innerHTML = qTag;
+            qTag = '<span>'+ questions[2].question +'</span>';
+              q_Text2.innerHTML = qTag;
+            qTag = '<span>'+ questions[3].question +'</span>';
+              q_Text3.innerHTML = qTag;
+            qTag = '<span>'+ questions[4].question +'</span>';
+              q_Text4.innerHTML = qTag;
+            qTag = '<span>'+ questions[5].question +'</span>';
+              q_Text5.innerHTML = qTag;
+            qTag = '<span>'+ questions[6].question +'</span>';
+              q_Text6.innerHTML = qTag;
+            qTag = '<span>'+ questions[7].question +'</span>';
+              q_Text7.innerHTML = qTag;
+            qTag = '<span>'+ questions[8].question +'</span>';
+              q_Text8.innerHTML = qTag;
+            qTag = '<span>'+ questions[9].question +'</span>';
+              q_Text9.innerHTML = qTag;
+            qTag = '<span>'+ questions[10].question +'</span>';
+              q_Text10.innerHTML = qTag;
+            qTag = '<span>'+ questions[11].question +'</span>';
+              q_Text11.innerHTML = qTag;
+            qTag = '<span>'+ questions[12].question +'</span>';
+              q_Text12.innerHTML = qTag;
+            qTag = '<span>'+ questions[13].question +'</span>';
+              q_Text13.innerHTML = qTag;
+            qTag = '<span>'+ questions[14].question +'</span>';
+              q_Text14.innerHTML = qTag;
+            qTag = '<span>'+ questions[15].question +'</span>';
+              q_Text15.innerHTML = qTag;
+            qTag = '<span>'+ questions[16].question +'</span>';
+              q_Text16.innerHTML = qTag;
+            qTag = '<span>'+ questions[17].question +'</span>';
+              q_Text17.innerHTML = qTag;
+            qTag = '<span>'+ questions[18].question +'</span>';
+              q_Text18.innerHTML = qTag;
+            qTag = '<span>'+ questions[19].question +'</span>';
+              q_Text19.innerHTML = qTag;
+            qTag = '<span>'+ questions[20].question +'</span>';
+              q_Text20.innerHTML = qTag;
+            qTag = '<span>'+ questions[21].question +'</span>';
+              q_Text21.innerHTML = qTag;
+            qTag = '<span>'+ questions[22].question +'</span>';
+              q_Text22.innerHTML = qTag;
+            qTag = '<span>'+ questions[23].question +'</span>';
+              q_Text23.innerHTML = qTag;
+            qTag = '<span>'+ questions[24].question +'</span>';
+              q_Text24.innerHTML = qTag;
+            qTag = '<span>'+ questions[25].question +'</span>';
+              q_Text25.innerHTML = qTag;
+            qTag = '<span>'+ questions[26].question +'</span>';
+              q_Text26.innerHTML = qTag;
+            qTag = '<span>'+ questions[27].question +'</span>';
+              q_Text27.innerHTML = qTag;
+            qTag = '<span>'+ questions[28].question +'</span>';
+              q_Text28.innerHTML = qTag;
+            qTag = '<span>'+ questions[29].question +'</span>';
+              q_Text29.innerHTML = qTag;
+            qTag = '<span>'+ questions[30].question +'</span>';
+              q_Text30.innerHTML = qTag;
+            qTag = '<span>'+ questions[31].question +'</span>';
+              q_Text31.innerHTML = qTag;
+
 
 var q1w = (questions[0].answer * ansArr[0]).toFixed(2);
 var q2w = (questions[1].answer * ansArr[1]).toFixed(2);
