@@ -956,13 +956,13 @@ $(window).on('beforeunload', function() {
 
 </script> -->
 <script>
-function downloadz() {document.getElementById('togglee1').click()}
+
 var dt = new Date();
 document.getElementById('date-time').innerHTML=dt;
 
 
 var w = document.getElementById("faq");
-var s = window.matchMedia("(max-width: 1010px)")
+var s = window.matchMedia("(max-width: 1010px)");
 
 
 function action1() {
@@ -1021,7 +1021,10 @@ let box = document.getElementById('tableinquestion'),
 let box1 = document.getElementById('tableinquestion1'),
     btn3 = document.getElementById('toggler1');
     btn4 = document.getElementById('togglee1');
-
+    function downloadz() {
+      if (box1.classList.contains('hidden')) {
+      document.getElementById('togglee1').click();} else {}
+    }
 btn.addEventListener('click', function () {
 
   if (box.classList.contains('hidden')) {
