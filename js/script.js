@@ -306,8 +306,10 @@ function optionSelected(answer) {
 }
 
 function showResult(){
-  document.getElementById('faq').style.height = '4900px';
-
+  document.getElementById('faq').style.height = '4700px';
+  document.getElementById('result_box').style.paddingTop = '1200px;';
+  document.getElementById('result_box').style.width = 'auto;';
+  document.getElementById('result_box').style.display = 'block;';
     info_box.classList.remove("activeInfo"); //hide info box
     quiz_box.classList.remove("activeQuiz"); //hide quiz box
     result_box.classList.add("activeResult"); //show result box
@@ -1542,8 +1544,8 @@ google.charts.load('current', {'packages':['corechart']});
        var data = google.visualization.arrayToDataTable([
         ["Element", "Weight", { role: "style" } ],
         ["Customer", parseFloat(finalcustomerLoop), 'stroke-color: #4bc0c0; stroke-opacity: 1; stroke-width: 1; fill-color: #4bc0c0; fill-opacity: 0.2'],
-        ["Market", parseFloat(finalmarketLoop), 'stroke-color: #ff6384; stroke-opacity: 1; stroke-width: 1; fill-color: #ff6384; fill-opacity: 0.2'],
-        ["Product", parseFloat(finalproductLoop), 'stroke-color: #ffcd56; stroke-opacity: 1; stroke-width: 1; fill-color: #ffcd56; fill-opacity: 0.2'],
+        ["Market", parseFloat(finalmarketLoop), 'stroke-color: rgb(255, 124, 54); stroke-opacity: 1; stroke-width: 1; fill-color: rgb(255, 124, 54); fill-opacity: 0.2'],
+        ["Product", parseFloat(finalproductLoop), 'stroke-color: rgb(221, 127, 250); stroke-opacity: 1; stroke-width: 1; fill-color: rgb(221, 127, 250); fill-opacity: 0.2'],
         ["Business", parseFloat(finalbusinessLoop), 'stroke-color: #36a2eb; stroke-opacity: 1; stroke-width: 1; fill-color: #36a2eb; fill-opacity: 0.2']
       ]);
 
@@ -1565,25 +1567,30 @@ google.charts.load('current', {'packages':['corechart']});
 
 const dataz = {
      labels: [
-       'Customer',
-       'Market',
        'Product',
-       'Business'
+       'Business',
+       'Market',
+       'Customer'
+
      ],
      datasets: [{
        label: 'My First Dataset',
-       data: [parseFloat(finalcustomerLoop), parseFloat(finalmarketLoop),  parseFloat(finalproductLoop), parseFloat(finalbusinessLoop)],
+       data: [ parseFloat(finalproductLoop), parseFloat(finalbusinessLoop), parseFloat(finalmarketLoop), parseFloat(finalcustomerLoop) ],
        backgroundColor: [
-         'rgb(75, 192, 192, 0.2)',
-         'rgb(255, 99, 132, 0.2)',
-         'rgb(255, 205, 86, 0.2)',
-         'rgb(54, 162, 235, 0.2)'
+
+       'rgb(221, 127, 250, 0.2)',
+       'rgb(54, 162, 235, 0.2)',
+       'rgb(255, 124, 54, 0.2)',
+       'rgb(75, 192, 192, 0.2)'
+
        ],
             borderColor: [
-              'rgb(75, 192, 192, 1)',
-              'rgb(255, 99, 132, 1)',
-              'rgb(255, 205, 86, 1)',
-              'rgb(54, 162, 235, 1)'
+
+          'rgb(221, 127, 250, 1)',
+          'rgb(54, 162, 235, 1)',
+          'rgb(255, 124, 54, 1)',
+          'rgb(75, 192, 192, 1)'
+
             ],
             borderWidth: 1
      }]
@@ -1601,32 +1608,40 @@ const dataz = {
    var marketsource;
    var businesssource;
 
-
+let a = document.getElementById('customerLine');
+let b = document.getElementById('marketLine');
+let c = document.getElementById('productLine');
+let d = document.getElementById('businessLine');
 //CUSTOMER
     if (parseFloat(finalcustomerLoop) < 3) { // 2,1
   customerOCLTextguide = "Lowest";
   customerOCLText = "Your score is weak. There could be a problem with your understanding of your target customers. It is recommended to study problem recognition or evaluate the consumer’s perspective by considering the basic questions like: What kinds of needs or problems or efforts arise, What brought them about, and How it led the consumer towards the particular product. By identifying the effectiveness of your product/service to attract your target customers, conducting thorough activities with customer participation through surveys or questionnaires can help you better understand your target customers' behavior. As the saying goes that customers are always right means that in customer discovery. Great startup founders should be flexible enough to different perspectives or points of view as to how they want their product/service to be produced or delivered.  ";
- customersource = "<center><small><em><strong>Additional resources:</strong>  <a href=\"https://info.hurree.co/en/marketing-strategy-essential-guide\" target=\"_blank\"> Marketing Strategies </a> <a href=\"https://www.tutorialspoint.com/consumer_behavior/consumer_behavior_problem_recognition.htm\" target=\"_blank\">Customer Behaviour & Problem recognition</a></em></small></center>";
+customersource = "<center><small><em><strong>Additional resources:</strong>  <a href=\"https://info.hurree.co/en/marketing-strategy-essential-guide\" target=\"_blank\"> Marketing Strategies </a> <a href=\"https://www.tutorialspoint.com/consumer_behavior/consumer_behavior_problem_recognition.htm\" target=\"_blank\">Customer Behaviour & Problem recognition</a></em></small></center>";
+a.classList.add('bg-danger');
  }
  else if (parseFloat(finalcustomerLoop) > 2 && parseFloat(finalcustomerLoop) < 5 )  { //3,4
  customerOCLTextguide = "Low";
  customerOCLText = "Your score is weak. There could be a problem with your understanding of your target customers. It is recommended to study problem recognition or evaluate the consumer’s perspective by considering the basic questions like: What kinds of needs or problems or efforts arise, What brought them about, and How it led the consumer towards the particular product. By identifying the effectiveness of your product/service to attract your target customers, conducting thorough activities with customer participation through surveys or questionnaires can help you better understand your target customers' behavior. As the saying goes that customers are always right means that in customer discovery. Great startup founders should be flexible enough to different perspectives or points of view as to how they want their product/service to be produced or delivered.  ";
 customersource = "<center><small><em><strong>Additional resources:</strong>  <a href=\"https://info.hurree.co/en/marketing-strategy-essential-guide\" target=\"_blank\"> Marketing Strategies </a> <a href=\"https://www.tutorialspoint.com/consumer_behavior/consumer_behavior_problem_recognition.htm\" target=\"_blank\">Customer Behaviour & Problem recognition</a></em></small></center>";
+a.classList.add('bg-danger');
  }
  else if (parseFloat(finalcustomerLoop) > 4 && parseFloat(finalcustomerLoop) < 7 ) { //5,6
 customerOCLTextguide = "Medium";
 customerOCLText = "Your score is average. Based on a study by Harvard Business Review, It is important and recommended to know your customers' churn rate for acquiring new customers. As a startup, knowing why your customers leave in the first place makes you well-informed about the problem with your product/service or whether you have failed to satisfy your target customer needs. Ideally, conducting activities with customer participation through surveys or questionnaires related to your product/service can help you better understand your target customers' behavior. ";
 customersource = "<center><small><em><strong>Additional resources:</strong>  <a href=\"https://hbr.org/2014/10/the-value-of-keeping-the-right-customers\" target=\"_blank\"> The value of keeping the right customers</a></em></small></center>";
+a.classList.add('bg-warning');
  }
  else if (parseFloat(finalcustomerLoop) > 6 && parseFloat(finalcustomerLoop) < 9) { //8,7
   customerOCLTextguide = "High";
   customerOCLText = "You have a high opportunity for your potential customers! According to the product marketing alliance, having a high anticipation rate concludes that your target customers are highly likely to return to purchase your products or services on more than one occasion which is great for startups. This is because you might have provided them with significant and exceptional product/service delivery or satisfactory customer service and approaches. When customer retention rates and anticipation are high, this bodes against customer churn. This result means that there is no further enhancement needed for your startup. Click on the links to learn more about them!";
   customersource = "<center><small><em><strong>Additional resources:</strong>  <a href=\" https://productmarketingalliance.com/what-it-means-to-have-a-high-customer-retention-rate/\" target=\"_blank\"> Customer retention rates</a></em></small></center>";
+a.classList.add('bg-success');
 }
 else if (parseFloat(finalcustomerLoop) > 8) { //9,10
 customerOCLTextguide = "Highest";
 customerOCLText = "You have a high opportunity for your potential customers! According to the product marketing alliance, having a high anticipation rate concludes that your target customers are highly likely to return to purchase your products or services on more than one occasion which is great for startups. This is because you might have provided them with significant and exceptional product/service delivery or satisfactory customer service and approaches. When customer retention rates and anticipation are high, this bodes against customer churn. This result means that there is no further enhancement needed for your startup. Click on the links to learn more about them!";
 customersource = "<center><small><em><strong>Additional resources:</strong>  <a href=\" https://productmarketingalliance.com/what-it-means-to-have-a-high-customer-retention-rate/\" target=\"_blank\"> Customer retention rates</a></em></small></center>";
+a.classList.add('bg-success');
 }
 
 //MARKET
@@ -1634,78 +1649,93 @@ customersource = "<center><small><em><strong>Additional resources:</strong>  <a 
   marketOCLTextguide = "Lowest";
   marketOCLText= "Your score here is weak. This means that you still have to learn more about the marketing methods and market dynamics in your community. It is suggested that you improve your branding first, understand your target customers better, measure the effectiveness of your marketing plans, identify new opportunities, and get thorough insights into your product features from customers. Remember that marketing is the process of exploring, creating, and delivering value to meet the needs of a target market in terms of goods and services.";
   marketsource = "<center><small><em><strong>Additional resources:</strong>  <a href=\"https://www.bdc.ca/en/articles-tools/blog/5-ways-improve-business-market-research\" target=\"_blank\"> Market Research</a></em></small></center>";
+b.classList.add('bg-danger');
     }
     else if (parseFloat(finalmarketLoop)> 2 && parseFloat(finalmarketLoop) < 5 )  { //3,4
     marketOCLTextguide = "Low";
  marketOCLText= "Your score here is weak. This means that you still have to learn more about the marketing methods and market dynamics in your community. It is suggested that you improve your branding first, understand your target customers better, measure the effectiveness of your marketing plans, identify new opportunities, and get thorough insights into your product features from customers. Remember that marketing is the process of exploring, creating, and delivering value to meet the needs of a target market in terms of goods and services.";
  marketsource = "<center><small><em><strong>Additional resources:</strong>  <a href=\"https://www.bdc.ca/en/articles-tools/blog/5-ways-improve-business-market-research\" target=\"_blank\"> Market Research</a></em></small></center>";
+b.classList.add('bg-danger');
     }
     else if (parseFloat(finalmarketLoop) > 4 && parseFloat(finalmarketLoop) < 7 ) { //5,6
    marketOCLTextguide = "Medium";
  marketOCLText = "Your score is average. You may have a stable market reach but stability alone is not always enough since change and innovation are imminent from your competitors and other looming startups in the market landscape. To further enhance your market reach, these techniques are suggested: Trying new tweaks and developing variants for your product/service and offering free trials or samples to your target customers, using a different form of digital marketing platforms to further enhance your market reach, target multiple audiences, know your competitors and increase your partnership and networks with other people that could help your startup.";
  marketsource = "<center><small><em><strong>Additional resources:</strong>  <a href=\"https://customerthink.com/7-simple-marketing-techniques-that-will-increase-your-customer-reach/\" target=\"_blank\"> Marketing Techniques</a></em></small></center>";
+b.classList.add('bg-warning');
     }
     else if (parseFloat(finalmarketLoop) > 6 && parseFloat(finalmarketLoop) < 9) { //8,7
      marketOCLTextguide = "High";
      marketOCLText = "Your marketability score here is high! According to the balance of small business, market reach is important as it makes you determine crucial factors that could minimize the risks inherent to your business and helps in the planning and decision-making processes of your startup. Having a high score in the market dimension means that you have attained the best practices in marketing your product/service concept and hence, the suggested recommendation is to be constant and consistent with what you are doing and focus on other dimensions that need your attention.";
    marketsource = "<center><small><em><strong>Additional resources:</strong>  <a href=\"https://www.thebalancesmb.com/what-is-market-reach-2295559\" target=\"_blank\"> Market Reach</a></em></small></center>";
+b.classList.add('bg-success');
       }
     else if (parseFloat(finalmarketLoop) > 8) { //9,10
       marketOCLTextguide = "Highest";
      marketOCLText = "Your marketability score here is high! According to the balance of small business, market reach is important as it makes you determine crucial factors that could minimize the risks inherent to your business and helps in the planning and decision-making processes of your startup. Having a high score in the market dimension means that you have attained the best practices in marketing your product/service concept and hence, the suggested recommendation is to be constant and consistent with what you are doing and focus on other dimensions that need your attention.";
    marketsource = "<center><small><em><strong>Additional resources:</strong>  <a href=\"https://www.thebalancesmb.com/what-is-market-reach-2295559\" target=\"_blank\"> Market Reach</a></em></small></center>";
+b.classList.add('bg-success');
       }
 //PRODUCT
  if (parseFloat(finalproductLoop) < 3) { // 2,1
   productOCLTextguide = "Lowest";
   productOCLText = "Your score here is Low! Your product/service concept has a low opportunity confidence level. Startup teams should be able to decide whether to pivot to another product/service venture or modify and improve your existing minimum viable product (MVP). Take in mind that when introducing your product, startup teams are advised to follow modern product development methodologies. Ex. Lean Canvas. According to Steve Blank, traditional product development is not enough to penetrate your product into the market or choosing market. It is ideal to refine your product/service concept such that important factors are aligned with your goals such as taking into consideration the environmental impact, resources cost, well-defined plans of the processes related to the product or service, and its contribution to the problem that its' actually trying to solve.";
   productsource = "<center><small><em><strong>Additional resources:</strong>  <a href=\"https://slidebazaar.com/items/traditional-product-development-process/\" target=\"_blank\"> Product Development Process</a></em></small></center>";
+c.classList.add('bg-danger');
    }
    else if (parseFloat(finalproductLoop) > 2 && parseFloat(finalproductLoop) < 5 )  { //3,4
    productOCLTextguide = "Low";
    productOCLText = "Your score here is Low! Your product/service concept has a low opportunity confidence level. Startup teams should be able to decide whether to pivot to another product/service venture or modify and improve your existing minimum viable product (MVP). Take in mind that when introducing your product, startup teams are advised to follow modern product development methodologies. Ex. Lean Canvas. According to Steve Blank, traditional product development is not enough to penetrate your product into the market or choosing market. It is ideal to refine your product/service concept such that important factors are aligned with your goals such as taking into consideration the environmental impact, resources cost, well-defined plans of the processes related to the product or service, and its contribution to the problem that its' actually trying to solve.";
    productsource = "<center><small><em><strong>Additional resources:</strong>  <a href=\"https://slidebazaar.com/items/traditional-product-development-process/\" target=\"_blank\"> Product Development Process</a></em></small></center>";
+c.classList.add('bg-danger');
    }
    else if (parseFloat(finalproductLoop) > 4 && parseFloat(finalproductLoop) < 7 ) { //5,6
 productOCLTextguide = "Medium";
 productOCLText = "Your product is on average opportunity confidence level. Your product should be in a better position and decide what important features of your new product/service concept you should focus on streamlining, as well as the categories of possible early adopters and the projected adoption rate should be taken into consideration. Plan your traditional product release, and learn how to build the simplest possible feature to assist both your startup team and your potential target customers (or testers) in understanding the issue that they're attempting to answer. The learnings gained from these can greatly help fine-tune your product/service concept that is tailored for your target customers.  ";
 productsource = "<center><small><em><strong>Additional resources:</strong>  <a href=\"https://www.jigsawacademy.com/blogs/product-management/product-positioning-strategy/\" target=\"_blank\"> Product Management</a></em></small></center>";
+c.classList.add('bg-warning');
    }
    else if (parseFloat(finalproductLoop) > 6 && parseFloat(finalproductLoop) < 9) { //8,7
     productOCLTextguide = "High";
     productOCLText = "Your product/service concept is great! You seem to have a great minimum viable product (MVP) concept and innovation type. The startup team should be able to measure the feasibility of implementing and developing the product concept with ease and determine its adoption rate. It is ideal to continue researching about the product such as: Seeking cost advantages over the competition, Re-innovating – making changes to designs after their first introduction and then quickly introducing them to the market, Developing a reputation for product quality, procedures, and standards for more efficient and economic production of the product or optimizing the process of the service, and learning from users and customers about their experience to continue making your product/service great. ";
   productsource = "<center><small><em><strong>Additional resources:</strong>  <a href=\"https://www.viima.com/blog/types-of-innovation\" target=\"_blank\"> Types of Innovation</a></em></small></center>";
+c.classList.add('bg-success');
     }
   else if (parseFloat(finalproductLoop) > 8) { //9,10
     productOCLTextguide = "Highest";
     productOCLText = "Your product/service concept is great! You seem to have a great minimum viable product (MVP) concept and innovation type. The startup team should be able to measure the feasibility of implementing and developing the product concept with ease and determine its adoption rate. It is ideal to continue researching about the product such as: Seeking cost advantages over the competition, Re-innovating – making changes to designs after their first introduction and then quickly introducing them to the market, Developing a reputation for product quality, procedures, and standards for more efficient and economic production of the product or optimizing the process of the service, and learning from users and customers about their experience to continue making your product/service great. ";
  productsource = "<center><small><em><strong>Additional resources:</strong>  <a href=\"https://www.viima.com/blog/types-of-innovation\" target=\"_blank\"> Types of Innovation</a></em></small></center>";
+c.classList.add('bg-success');
     }
 //BUSINESS
  if (parseFloat(finalbusinessLoop) < 3) { // 2,1
   businessOCLTextguide = "Lowest";
   businessOCLText= "Your score here is Low! With a low score in the business dimension, it is advised to have a clear plan on how you would commercialize your product or service concept in the market by having a clear business model that revolves around your startup. A successful business creates something of value. The world is filled with opportunities to fulfill people’s wants and needs, and your job as an entrepreneur is to find a way to capitalize on these opportunities. At its heart, a business generates value for its customers. A business model is a specific method used to create and deliver this value. ";
   businesssource = "<center><small><em><strong>Additional resources:</strong>  <a href=\"https://online.hbs.edu/blog/post/types-of-business-models\" target=\"_blank\"> Business models and the value they deliver</a></em></small></center>";
+d.classList.add('bg-danger');
  }
  else if (parseFloat(finalbusinessLoop) > 2 && parseFloat(finalbusinessLoop) < 5 )  { //3,4
  businessOCLTextguide = "Low";
 businessOCLText= "Your score here is Low! With a low score in the business dimension, it is advised to have a clear plan on how you would commercialize your product or service concept in the market by having a clear business model that revolves around your startup. A successful business creates something of value. The world is filled with opportunities to fulfill people’s wants and needs, and your job as an entrepreneur is to find a way to capitalize on these opportunities. At its heart, a business generates value for its customers. A business model is a specific method used to create and deliver this value. ";
 businesssource = "<center><small><em><strong>Additional resources:</strong>  <a href=\"https://online.hbs.edu/blog/post/types-of-business-models\" target=\"_blank\"> Business models and the value they deliver</a></em></small></center>";
+d.classList.add('bg-danger');
  }
  else if (parseFloat(finalbusinessLoop) > 4 && parseFloat(finalbusinessLoop) < 7 ) { //5,6
 businessOCLTextguide = "Medium";
 businessOCLText = "Your score here is Medium! It is advised to use a risk management tool and reconstruct a business model in order to prevent any unprecedented situation that your startup could face. A risk assessment of the components of the business model will enable any prospective organization to evaluate the robustness of the existing business model and identify the events that could impact the efficiency and effectiveness of delivery to the customer offerings. The assessment should also identify opportunities for improving operational and compliance efficiency. ";
 businesssource = "<center><small><em><strong>Additional resources:</strong>  <a href=\"https://www.theirm.org/media/6879/0925-irm-risk-management-and-business-11-10-17-v3.pdf\" target=\"_blank\"> Risk management and the business model</a></em></small></center>";
+d.classList.add('bg-warning');
  }
  else if (parseFloat(finalbusinessLoop) > 6 && parseFloat(finalbusinessLoop) < 9) { //8,7
   businessOCLTextguide = "High";
   businessOCLText = "Your score here is High! This means that you have satisfied the most important internal factors that are needed in securing the sustainability of your startup in terms of business dimension including a great business model, legal, technical, financial, and Intellectual property of your aspiring startup plans, thus defending your competitive space. Additional resources are included below. ";
 businesssource = "<center><small><em><strong>Additional resources:</strong>  <a href=\"https://www.wipo.int/sme/en/\" target=\"_blank\"> IP assessment tool</a></em></small></center>";
+d.classList.add('bg-success');
     }
   else if (parseFloat(finalbusinessLoop) > 8) { //9,10
     businessOCLTextguide = "Highest";
    businessOCLText = "Your score here is High! This means that you have satisfied the most important internal factors that are needed in securing the sustainability of your startup in terms of business dimension including a great business model, legal, technical, financial, and Intellectual property of your aspiring startup plans, thus defending your competitive space. Additional resources are included below. ";
  businesssource = "<center><small><em><strong>Additional resources:</strong>  <a href=\"https://www.wipo.int/sme/en/\" target=\"_blank\"> IP assessment tool</a></em></small></center>";
+d.classList.add('bg-success');
     }
    const customerOCLTextguideTag = result_box.querySelector(".customerOCLTextguide"); //higest or high or medium or low or lowest
    const marketOCLTextguideTag = result_box.querySelector(".marketOCLTextguide");
@@ -1800,80 +1830,154 @@ document.getElementById('businessLine').setAttribute('style','width:'+complex3+'
 
 document.getElementById('customerpbar').setAttribute('aria-valuenow',complex);
 document.getElementById('customerpbar').setAttribute('style','width:'+complex+'%');
+let cpbr = document.getElementById('customerpbar');
+if (finalcustomerLoop < 3) {cpbr.classList.add('bg-danger');} else if (finalcustomerLoop < 7) {cpbr.classList.add('bg-warning');} else { cpbr.classList.add('bg-success');}
 document.getElementById('marketpbar').setAttribute('aria-valuenow',complex1);
 document.getElementById('marketpbar').setAttribute('style','width:'+complex1+'%');
+let mpbr = document.getElementById('marketpbar');
+if (finalmarketLoop < 3) {mpbr.classList.add('bg-danger');} else if (finalmarketLoop < 7) {mpbr.classList.add('bg-warning');} else { mpbr.classList.add('bg-success');}
 document.getElementById('productpbar').setAttribute('aria-valuenow',complex2);
 document.getElementById('productpbar').setAttribute('style','width:'+complex2+'%');
+let ppbr = document.getElementById('productpbar');
+if (finalproductLoop < 3) {ppbr.classList.add('bg-danger');} else if (finalproductLoop < 7) {ppbr.classList.add('bg-warning');} else { ppbr.classList.add('bg-success');}
 document.getElementById('businesspbar').setAttribute('aria-valuenow',complex3);
 document.getElementById('businesspbar').setAttribute('style','width:'+complex3+'%');
+let bpbr = document.getElementById('businesspbar');
+if (finalbusinessLoop < 3) {bpbr.classList.add('bg-danger');} else if (finalbusinessLoop < 7) {bpbr.classList.add('bg-warning');} else { bpbr.classList.add('bg-success');}
 
 document.getElementById('allpbar').setAttribute('aria-valuenow',complex4);
 document.getElementById('allpbar').setAttribute('style','width:'+complex4+'%');
+let apb = document.getElementById('allpbar');
+if (overallScore < 3) {apb.classList.add('bg-danger');} else if (overallScore < 7) {apb.classList.add('bg-warning');} else { apb.classList.add('bg-success');}
 
 document.getElementById('q1pbar').setAttribute('aria-valuenow',((questions[0].answer * ansArr[0])*10).toFixed(2));
 document.getElementById('q1pbar').setAttribute('style','width:'+((questions[0].answer * ansArr[0])*10).toFixed(2)+'%');
+let qc1 = document.getElementById('q1pbar');
+if ((questions[0].answer * ansArr[0]) < 3){ qc1.classList.add('bg-danger'); } else if ((questions[0].answer * ansArr[0]) < 7){ qc1.classList.add('bg-warning'); } else { qc1.classList.add('bg-success'); }
 document.getElementById('q2pbar').setAttribute('aria-valuenow',((questions[1].answer * ansArr[1])*10).toFixed(2));
 document.getElementById('q2pbar').setAttribute('style','width:'+((questions[1].answer * ansArr[1])*10).toFixed(2)+'%');
+let qc2 = document.getElementById('q2pbar');
+if ((questions[1].answer * ansArr[1]) < 3){ qc2.classList.add('bg-danger'); } else if ((questions[1].answer * ansArr[1]) < 7){ qc2.classList.add('bg-warning'); } else { qc2.classList.add('bg-success'); }
 document.getElementById('q3pbar').setAttribute('aria-valuenow',((questions[2].answer * ansArr[2])*10).toFixed(2));
 document.getElementById('q3pbar').setAttribute('style','width:'+((questions[2].answer * ansArr[2])*10).toFixed(2)+'%');
+let qc3 = document.getElementById('q3pbar');
+if ((questions[2].answer * ansArr[2]) < 3){ qc3.classList.add('bg-danger'); } else if ((questions[2].answer * ansArr[2]) < 7){ qc3.classList.add('bg-warning'); } else { qc3.classList.add('bg-success'); }
 document.getElementById('q4pbar').setAttribute('aria-valuenow',((questions[3].answer * ansArr[3])*10).toFixed(2));
 document.getElementById('q4pbar').setAttribute('style','width:'+((questions[3].answer * ansArr[3])*10).toFixed(2)+'%');
+let qc4 = document.getElementById('q4pbar');
+if ((questions[3].answer * ansArr[3]) < 3){ qc4.classList.add('bg-danger'); } else if ((questions[3].answer * ansArr[3]) < 7){ qc4.classList.add('bg-warning'); } else { qc4.classList.add('bg-success'); }
 document.getElementById('q5pbar').setAttribute('aria-valuenow',((questions[4].answer * ansArr[4])*10).toFixed(2));
 document.getElementById('q5pbar').setAttribute('style','width:'+((questions[4].answer * ansArr[4])*10).toFixed(2)+'%');
+let qc5 = document.getElementById('q5pbar');
+if ((questions[4].answer * ansArr[4]) < 3){ qc5.classList.add('bg-danger'); } else if ((questions[4].answer * ansArr[4]) < 7){ qc5.classList.add('bg-warning'); } else { qc5.classList.add('bg-success'); }
 document.getElementById('q6pbar').setAttribute('aria-valuenow',((questions[5].answer * ansArr[5])*10).toFixed(2));
 document.getElementById('q6pbar').setAttribute('style','width:'+((questions[5].answer * ansArr[5])*10).toFixed(2)+'%');
+let qc6 = document.getElementById('q6pbar');
+if ((questions[5].answer * ansArr[5]) < 3){ qc6.classList.add('bg-danger'); } else if ((questions[5].answer * ansArr[5]) < 7){ qc6.classList.add('bg-warning'); } else { qc6.classList.add('bg-success'); }
 document.getElementById('q7pbar').setAttribute('aria-valuenow',((questions[6].answer * ansArr[6])*10).toFixed(2));
 document.getElementById('q7pbar').setAttribute('style','width:'+((questions[6].answer * ansArr[6])*10).toFixed(2)+'%');
+let qc7 = document.getElementById('q7pbar');
+if ((questions[6].answer * ansArr[6]) < 3){ qc7.classList.add('bg-danger'); } else if ((questions[6].answer * ansArr[6]) < 7){ qc7.classList.add('bg-warning'); } else { qc7.classList.add('bg-success'); }
 document.getElementById('q8pbar').setAttribute('aria-valuenow',((questions[7].answer * ansArr[7])*10).toFixed(2));
 document.getElementById('q8pbar').setAttribute('style','width:'+((questions[7].answer * ansArr[7])*10).toFixed(2)+'%');
+let qc8 = document.getElementById('q8pbar');
+if ((questions[7].answer * ansArr[7]) < 3){ qc8.classList.add('bg-danger'); } else if ((questions[7].answer * ansArr[7]) < 7){ qc8.classList.add('bg-warning'); } else { qc8.classList.add('bg-success'); }
 document.getElementById('q9pbar').setAttribute('aria-valuenow',((questions[8].answer * ansArr[8])*10).toFixed(2));
 document.getElementById('q9pbar').setAttribute('style','width:'+((questions[8].answer * ansArr[8])*10).toFixed(2)+'%');
+let qc9 = document.getElementById('q9pbar');
+if ((questions[8].answer * ansArr[8]) < 3){ qc9.classList.add('bg-danger'); } else if ((questions[8].answer * ansArr[8]) < 7){ qc9.classList.add('bg-warning'); } else { qc9.classList.add('bg-success'); }
 document.getElementById('q10pbar').setAttribute('aria-valuenow',((questions[9].answer * ansArr[9])*10).toFixed(2));
 document.getElementById('q10pbar').setAttribute('style','width:'+((questions[9].answer * ansArr[9])*10).toFixed(2)+'%');
+let qc10 = document.getElementById('q10pbar');
+if ((questions[9].answer * ansArr[9]) < 3){ qc10.classList.add('bg-danger'); } else if ((questions[9].answer * ansArr[9]) < 7){ qc10.classList.add('bg-warning'); } else { qc10.classList.add('bg-success'); }
 document.getElementById('q11pbar').setAttribute('aria-valuenow',((questions[10].answer * ansArr[10])*10).toFixed(2));
 document.getElementById('q11pbar').setAttribute('style','width:'+((questions[10].answer * ansArr[10])*10).toFixed(2)+'%');
+let qc11 = document.getElementById('q11pbar');
+if ((questions[10].answer * ansArr[10]) < 3){ qc11.classList.add('bg-danger'); } else if ((questions[10].answer * ansArr[10]) < 7){ qc11.classList.add('bg-warning'); } else { qc11.classList.add('bg-success'); }
 document.getElementById('q12pbar').setAttribute('aria-valuenow',((questions[11].answer * ansArr[11])*10).toFixed(2));
 document.getElementById('q12pbar').setAttribute('style','width:'+((questions[11].answer * ansArr[11])*10).toFixed(2)+'%');
+let qc12 = document.getElementById('q12pbar');
+if ((questions[11].answer * ansArr[11]) < 3){ qc12.classList.add('bg-danger'); } else if ((questions[11].answer * ansArr[11]) < 7){ qc12.classList.add('bg-warning'); } else { qc12.classList.add('bg-success'); }
 document.getElementById('q13pbar').setAttribute('aria-valuenow',((questions[12].answer * ansArr[12])*10).toFixed(2));
 document.getElementById('q13pbar').setAttribute('style','width:'+((questions[12].answer * ansArr[12])*10).toFixed(2)+'%');
+let qc13 = document.getElementById('q13pbar');
+if ((questions[12].answer * ansArr[12]) < 3){ qc13.classList.add('bg-danger'); } else if ((questions[12].answer * ansArr[12]) < 7){ qc13.classList.add('bg-warning'); } else { qc13.classList.add('bg-success'); }
 document.getElementById('q14pbar').setAttribute('aria-valuenow',((questions[13].answer * ansArr[13])*10).toFixed(2));
 document.getElementById('q14pbar').setAttribute('style','width:'+((questions[13].answer * ansArr[13])*10).toFixed(2)+'%');
+let qc14 = document.getElementById('q14pbar');
+if ((questions[13].answer * ansArr[13]) < 3){ qc14.classList.add('bg-danger'); } else if ((questions[13].answer * ansArr[13]) < 7){ qc14.classList.add('bg-warning'); } else { qc14.classList.add('bg-success'); }
 document.getElementById('q15pbar').setAttribute('aria-valuenow',((questions[14].answer * ansArr[14])*10).toFixed(2));
 document.getElementById('q15pbar').setAttribute('style','width:'+((questions[14].answer * ansArr[14])*10).toFixed(2)+'%');
+let qc15 = document.getElementById('q15pbar');
+if ((questions[14].answer * ansArr[14]) < 3){ qc15.classList.add('bg-danger'); } else if ((questions[14].answer * ansArr[14]) < 7){ qc15.classList.add('bg-warning'); } else { qc15.classList.add('bg-success'); }
 document.getElementById('q16pbar').setAttribute('aria-valuenow',((questions[15].answer * ansArr[15])*10).toFixed(2));
 document.getElementById('q16pbar').setAttribute('style','width:'+((questions[15].answer * ansArr[15])*10).toFixed(2)+'%');
+let qc16 = document.getElementById('q16pbar');
+if ((questions[15].answer * ansArr[15]) < 3){ qc16.classList.add('bg-danger'); } else if ((questions[15].answer * ansArr[15]) < 7){ qc16.classList.add('bg-warning'); } else { qc16.classList.add('bg-success'); }
 document.getElementById('q17pbar').setAttribute('aria-valuenow',((questions[16].answer * ansArr[16])*10).toFixed(2));
 document.getElementById('q17pbar').setAttribute('style','width:'+((questions[16].answer * ansArr[16])*10).toFixed(2)+'%');
+let qc17 = document.getElementById('q17pbar');
+if ((questions[16].answer * ansArr[16]) < 3){ qc17.classList.add('bg-danger'); } else if ((questions[16].answer * ansArr[16]) < 7){ qc17.classList.add('bg-warning'); } else { qc17.classList.add('bg-success'); }
 document.getElementById('q18pbar').setAttribute('aria-valuenow',((questions[17].answer * ansArr[17])*10).toFixed(2));
 document.getElementById('q18pbar').setAttribute('style','width:'+((questions[17].answer * ansArr[17])*10).toFixed(2)+'%');
+let qc18 = document.getElementById('q18pbar');
+if ((questions[17].answer * ansArr[17]) < 3){ qc18.classList.add('bg-danger'); } else if ((questions[17].answer * ansArr[17]) < 7){ qc18.classList.add('bg-warning'); } else { qc18.classList.add('bg-success'); }
 document.getElementById('q19pbar').setAttribute('aria-valuenow',((questions[18].answer * ansArr[18])*10).toFixed(2));
 document.getElementById('q19pbar').setAttribute('style','width:'+((questions[18].answer * ansArr[18])*10).toFixed(2)+'%');
+let qc19 = document.getElementById('q19pbar');
+if ((questions[18].answer * ansArr[18]) < 3){ qc19.classList.add('bg-danger'); } else if ((questions[18].answer * ansArr[18]) < 7){ qc19.classList.add('bg-warning'); } else { qc19.classList.add('bg-success'); }
 document.getElementById('q20pbar').setAttribute('aria-valuenow',((questions[19].answer * ansArr[19])*10).toFixed(2));
 document.getElementById('q20pbar').setAttribute('style','width:'+((questions[19].answer * ansArr[19])*10).toFixed(2)+'%');
+let qc20 = document.getElementById('q20pbar');
+if ((questions[19].answer * ansArr[19]) < 3){ qc20.classList.add('bg-danger'); } else if ((questions[19].answer * ansArr[19]) < 7){ qc20.classList.add('bg-warning'); } else { qc20.classList.add('bg-success'); }
 document.getElementById('q21pbar').setAttribute('aria-valuenow',((questions[20].answer * ansArr[20])*10).toFixed(2));
 document.getElementById('q21pbar').setAttribute('style','width:'+((questions[20].answer * ansArr[20])*10).toFixed(2)+'%');
+let qc21 = document.getElementById('q21pbar');
+if ((questions[20].answer * ansArr[20]) < 3){ qc21.classList.add('bg-danger'); } else if ((questions[20].answer * ansArr[20]) < 7){ qc21.classList.add('bg-warning'); } else { qc21.classList.add('bg-success'); }
 document.getElementById('q22pbar').setAttribute('aria-valuenow',((questions[21].answer * ansArr[21])*10).toFixed(2));
 document.getElementById('q22pbar').setAttribute('style','width:'+((questions[21].answer * ansArr[21])*10).toFixed(2)+'%');
+let qc22 = document.getElementById('q22pbar');
+if ((questions[21].answer * ansArr[21]) < 3){ qc22.classList.add('bg-danger'); } else if ((questions[21].answer * ansArr[21]) < 7){ qc22.classList.add('bg-warning'); } else { qc22.classList.add('bg-success'); }
 document.getElementById('q23pbar').setAttribute('aria-valuenow',((questions[22].answer * ansArr[22])*10).toFixed(2));
 document.getElementById('q23pbar').setAttribute('style','width:'+((questions[22].answer * ansArr[22])*10).toFixed(2)+'%');
+let qc23 = document.getElementById('q23pbar');
+if ((questions[22].answer * ansArr[22]) < 3){ qc23.classList.add('bg-danger'); } else if ((questions[22].answer * ansArr[22]) < 7){ qc23.classList.add('bg-warning'); } else { qc23.classList.add('bg-success'); }
 document.getElementById('q24pbar').setAttribute('aria-valuenow',((questions[23].answer * ansArr[23])*10).toFixed(2));
 document.getElementById('q24pbar').setAttribute('style','width:'+((questions[23].answer * ansArr[23])*10).toFixed(2)+'%');
+let qc24 = document.getElementById('q24pbar');
+if ((questions[23].answer * ansArr[23]) < 3){ qc24.classList.add('bg-danger'); } else if ((questions[23].answer * ansArr[23]) < 7){ qc24.classList.add('bg-warning'); } else { qc24.classList.add('bg-success'); }
 document.getElementById('q25pbar').setAttribute('aria-valuenow',((questions[24].answer * ansArr[24])*10).toFixed(2));
 document.getElementById('q25pbar').setAttribute('style','width:'+((questions[24].answer * ansArr[24])*10).toFixed(2)+'%');
+let qc25 = document.getElementById('q25pbar');
+if ((questions[24].answer * ansArr[24]) < 3){ qc25.classList.add('bg-danger'); } else if ((questions[24].answer * ansArr[24]) < 7){ qc25.classList.add('bg-warning'); } else { qc25.classList.add('bg-success'); }
 document.getElementById('q26pbar').setAttribute('aria-valuenow',((questions[25].answer * ansArr[25])*10).toFixed(2));
 document.getElementById('q26pbar').setAttribute('style','width:'+((questions[25].answer * ansArr[25])*10).toFixed(2)+'%');
+let qc26 = document.getElementById('q26pbar');
+if ((questions[25].answer * ansArr[25]) < 3){ qc26.classList.add('bg-danger'); } else if ((questions[25].answer * ansArr[25]) < 7){ qc26.classList.add('bg-warning'); } else { qc26.classList.add('bg-success'); }
 document.getElementById('q27pbar').setAttribute('aria-valuenow',((questions[26].answer * ansArr[26])*10).toFixed(2));
 document.getElementById('q27pbar').setAttribute('style','width:'+((questions[26].answer * ansArr[26])*10).toFixed(2)+'%');
+let qc27 = document.getElementById('q27pbar');
+if ((questions[26].answer * ansArr[26]) < 3){ qc27.classList.add('bg-danger'); } else if ((questions[26].answer * ansArr[26]) < 7){ qc27.classList.add('bg-warning'); } else { qc27.classList.add('bg-success'); }
 document.getElementById('q28pbar').setAttribute('aria-valuenow',((questions[27].answer * ansArr[27])*10).toFixed(2));
 document.getElementById('q28pbar').setAttribute('style','width:'+((questions[27].answer * ansArr[27])*10).toFixed(2)+'%');
+let qc28 = document.getElementById('q28pbar');
+if ((questions[27].answer * ansArr[27]) < 3){ qc28.classList.add('bg-danger'); } else if ((questions[27].answer * ansArr[27]) < 7){ qc28.classList.add('bg-warning'); } else { qc28.classList.add('bg-success'); }
 document.getElementById('q29pbar').setAttribute('aria-valuenow',((questions[28].answer * ansArr[28])*10).toFixed(2));
 document.getElementById('q29pbar').setAttribute('style','width:'+((questions[28].answer * ansArr[28])*10).toFixed(2)+'%');
+let qc29 = document.getElementById('q29pbar');
+if ((questions[28].answer * ansArr[28]) < 3){ qc29.classList.add('bg-danger'); } else if ((questions[28].answer * ansArr[28]) < 7){ qc29.classList.add('bg-warning'); } else { qc29.classList.add('bg-success'); }
 document.getElementById('q30pbar').setAttribute('aria-valuenow',((questions[29].answer * ansArr[29])*10).toFixed(2));
 document.getElementById('q30pbar').setAttribute('style','width:'+((questions[29].answer * ansArr[29])*10).toFixed(2)+'%');
+let qc30 = document.getElementById('q30pbar');
+if ((questions[29].answer * ansArr[29]) < 3){ qc30.classList.add('bg-danger'); } else if ((questions[29].answer * ansArr[29]) < 7){ qc30.classList.add('bg-warning'); } else { qc30.classList.add('bg-success'); }
 document.getElementById('q31pbar').setAttribute('aria-valuenow',((questions[30].answer * ansArr[30])*10).toFixed(2));
 document.getElementById('q31pbar').setAttribute('style','width:'+((questions[30].answer * ansArr[30])*10).toFixed(2)+'%');
+let qc31 = document.getElementById('q31pbar');
+if ((questions[30].answer * ansArr[30]) < 3){ qc31.classList.add('bg-danger'); } else if ((questions[30].answer * ansArr[30]) < 7){ qc31.classList.add('bg-warning'); } else { qc31.classList.add('bg-success'); }
 document.getElementById('q32pbar').setAttribute('aria-valuenow',((questions[31].answer * ansArr[31])*10).toFixed(2));
 document.getElementById('q32pbar').setAttribute('style','width:'+((questions[31].answer * ansArr[31])*10).toFixed(2)+'%');
+let qc32 = document.getElementById('q32pbar');
+if ((questions[31].answer * ansArr[31]) < 3){ qc32.classList.add('bg-danger'); } else if ((questions[31].answer * ansArr[31]) < 7){ qc32.classList.add('bg-warning'); } else { qc32.classList.add('bg-success'); }
 }
 // insert time here
 function startTimer(time){
@@ -1886,7 +1990,7 @@ function startTimer(time){
 }
 function queCounter(index){
     //creating a new span tag and passing the question number and total question
-    let totalQueCounTag = '<span><p>'+ index +'</p> of <p>'+ questions.length +'</p> Questions</span>';
+    let totalQueCounTag = 'Progress: '+ index +' of '+ questions.length +' Questions';
     bottom_ques_counter.innerHTML = totalQueCounTag;  //adding new span tag inside bottom_ques_counter
 }
 

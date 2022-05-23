@@ -12,7 +12,7 @@
 /* importing google fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 
-.prev_btn, .clear_btn{height: 30px; width:100px; font-size: 12px;}
+.prev_btn, .clear_btn{height: 30px; width:120px; font-size: 12px;}
 .detailedquestion {font-size: 15px; font-weight: 400;}
 .ocl_text {font-size: 13px; font-weight: 400;}
 .scoring_note {font-size: 13px; font-weight: 400;}
@@ -27,9 +27,21 @@
     background: #007bff;
 }
 
+.tableinquestion {
+  transition: all 1s linear;
+  display: block;
+
+}
+.hidden {
+display: none;
+
+}
+.visuallyhidden {
+  opacity: 0;
+}
 
 
-
+.que_nav {margin-top: 10px;}
 
 .aa{  --animate-duration: 0.1s;  }
 .bb{  --animate-duration: 0.2s;  }
@@ -46,7 +58,7 @@
 .info_box,
 .quiz_box{
     position: absolute;
-    top: 40%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
@@ -67,7 +79,7 @@ margin-bottom: 20px;
 
 .result_box.activeResult{
     opacity: 1;
-margin-top: 200px;
+margin-top: 2250px;
     pointer-events: auto;
     transform: translate(-50%, -50%) scale(1);
     display: flex;
@@ -218,6 +230,7 @@ margin-top: 200px;
     background: #007bff;
 }
 
+
 section{
 padding: 0px;
     background: #fff;
@@ -226,6 +239,7 @@ padding: 0px;
 section .que_text{
     font-size: 25px;
     font-weight: 550;
+    margin-top: 15px;
 }
 
 section .option_list{
@@ -324,19 +338,7 @@ section .option_list .option .icon{
 }
 
 
-footer .total_que span{
-    display: flex;
-    user-select: none;
-}
 
-footer .total_que span p{
-    font-weight: 500;
-    padding: 0 5px;
-}
-
-footer .total_que span p:first-child{
-    padding-left: 0px;
-}
 
 footer button{
     height: 40px;
@@ -369,14 +371,12 @@ footer button.show{
 
 .result_box{
     background: #fff;
-
+    display: none;
     opacity: 0;
     pointer-events: none;
     transition: all 0.3s ease;
 
-    margin-top: 100px;
       position: absolute;
-      top: 40%;
       left: 50%;
       transform: translate(-50%, -50%);
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
@@ -398,6 +398,7 @@ footer button.show{
     display: flex;
     font-size: 13px;
     font-weight: 400;
+    line-height: 1.0;
 }
 
 .result_box .score_text, .score_text1, .score_text2, .score_text3, .score_text4, .score_text5, .score_text6, .score_text7, .score_text8, .score_text9, .score_text10, .score_text11, .score_text12, .score_text13, .score_text14, .score_text15, .score_text16, .score_text17, .score_text18, .score_text19, .score_text20,
@@ -487,8 +488,7 @@ font-weight: 500;
     margin-right:130px;
     bottom:40px;
   }
-  .imgQR{}
-    .result_box{width: 97%;}
+
 }
 .imgQR{position:absolute;
 width:190px;
@@ -538,20 +538,8 @@ width: 100%;
 body {
   font-family: "Open Sans", sans-serif;
   color: #444444;
-
-
-
-  background-position: left bottom; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: cover; /* Resize the background image to cover the entire container */
-  background-size: 700px 500px;
-  background-attachment: fixed;
-  position: relative;
-
-overflow-x: auto;
 margin: 0;
 padding: 0;
-height: 100%;
 }
 
 a {
@@ -1566,7 +1554,12 @@ margin-right: 30px;
 /*--------------------------------------------------------------
 # Frequently Asked Questions
 --------------------------------------------------------------*/
-.faq {   height: 1300px; }
+.faq {
+
+
+   min-height: calc(95vh - 40px);
+
+ }
 .faq .faq-item {
   margin: 20px 0;
   padding: 20px 0;
@@ -1872,7 +1865,25 @@ position: relative;
   font-size: 13px;
 }
 
+@media (max-width: 400px){
+
+.table {overflow: scroll; }
+.Fbutton {line-height: normal;}
+.next_btn {line-height: .7; height:50px;}
+.prev_btn {width: 60px; height:40px;}
+.clear_btn {width: 60px; height:40px;}
+.info_box {top:35%;}
+  .faq {   height: 1700px; }
+}
+@media (max-width: 500px){
+.table {overflow: scroll; }
+.Fbutton {line-height: normal;}
+  .faq {   height: 1700px; }
+
+}
+
 @media (max-width: 768px) {
+
   #footer .copyright, #footer .credits {
     padding: 5px;
     float: none;
@@ -1885,9 +1896,10 @@ position: relative;
   .result_box {margin-top: 500px;}
 }
 
-@media all and (max-width: 1000px) and (min-width: 100px) {
+@media all and (max-width: 1000px){
+
 .table {overflow: scroll; }
 .Fbutton {line-height: normal;}
-.faq {   height: 1600px; }
-.result_box {margin-top: 500px;}
+.faq {   height: 1400px; }
+
 }

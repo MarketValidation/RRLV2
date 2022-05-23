@@ -234,7 +234,7 @@ numb: 13,
 question: "How well informed are you about the competition and market dynamics in your target market? ",
 detailedquestion: "Is there a similar product/service that provides much better functionality/features or cost-effective solutions than what you offer?",
 scoringnote: "Scoring Note: The higher your knowledge about the competitive landscape in your target market, the higher the score.",
-answer: .1,
+answer: .8,
 options: [
   "1",
   "2",
