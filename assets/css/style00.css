@@ -25,7 +25,7 @@ https://www.youtube.com/watch?v=h-U1qtbRbiw&t=303s snow effect achieved 4 1 2020
     margin-right:130px;
     bottom:40px;
   }
-  .imgQR{}
+ 
 }
 .imgQR{position:absolute;
 width:190px;
@@ -1263,7 +1263,7 @@ margin-right: 30px;
 # Footer
 --------------------------------------------------------------*/
 #footer {
-  background: url("../img/footer-bg.jpg") center center no-repeat;
+  background: url("https://ucarecdn.com/b925fcbf-e1e7-4b03-8bae-e1ec24882636/") center center no-repeat;
   color: #fff;
   font-size: 14px;
   position: relative;
