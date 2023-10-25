@@ -78,7 +78,7 @@
           <div class="info_box">
             <div class="info-title"><span>Before you begin the assessment...</span></div>
              <div class="info-list">
-              <div class="info">1. There are a total of<span> 32 unique questions</span> in this assessment.</div>
+              <div class="info">1. There are a total of<span> 32 unique questions</span> in this assessment for Tech Startups.</div>
               <div class="info">2. There are no time limit. Please answer honestly to have the best results.</div>
               <div class="info">3. A detailed calculation of the scores will be included at the results.</div>
               <div class="info">4. The results can be downloaded but it won't be saved in our servers.</div>
@@ -133,7 +133,7 @@
 <button type="button" class="btn btn-outline-secondary btn-sm " onClick="action();" id="toggler">Show all questions <i class="icofont-simple-down"></i></button>
 <button type="button" class="btn btn-outline-secondary btn-sm " onClick="action();" id="togglee" style="display:none;">Hide all questions <i class="icofont-simple-up"></i></button>
 </div>
-</th> <th width="33%"></th></tr> </thead> </table></div>
+</th> <th width="33%" class="align-middle justify-content-center"> <span style="font-size:14px; float:left; font-weight: normal;">Category: Tech Startups</span>     </th></tr> </thead> </table></div>
 <br>
 <div class="table-responsive tableinquestion hidden visuallyhidden" id="tableinquestion">
   <table class="table text-center table-borderless"  style="margin: 0 auto; ">
@@ -224,7 +224,7 @@
               <div class="icon justify-content-center" >
                 <center><img src="https://ucarecdn.com/a012691a-6bcb-40c7-b164-679ee182743d/LogoTry.png" alt="" class="img-fluid" style="width:300px;height:110px;"></center>
               </div>
-                <center> <div class="complete_text">Hooray! You've completed the assessment! <br><small>You may download the results at the bottom of this page and answer the survey form and have a chance to win Amazon gift cards!</small><br> <center><strong>Result analysis: </strong></center> </div></center>
+                <center> <div class="complete_text">Hooray! You've completed the assessment! <br><small>You may download the results at the bottom of this page and answer the survey form.</small><br> <center><strong>Result analysis: </strong></center> </div></center>
 <small>Date Assessed: <span id='date-time'></span>.</small>
               <div class="table-responsive">
                 <table class="table text-center table-borderless" style="margin: 0 auto; ">
@@ -829,6 +829,32 @@
             <div class="modal-footer">
               <button type="button" class="btn btn-danger" data-dismiss="modal">Back</button>
               <button type="button" class="btn border border-danger" onclick="location.href='https://marketvalidation.github.io/RRLV2/index.html';" >Continue</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="myModaldevops">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h4 class="modal-title"><strong> <i class="icofont-warning"></i> Developer options </h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <!-- Modal body -->
+            <div class="modal-body" style=" font-weight:normal">
+              This will execute pre-answered assessment forms. Enter Password: <input type="password" id="passwordInput"> <!-- The text box -->
+              
+              <button onclick="verifyPassword()">Verify</button> <!-- The button to trigger verification -->
+              <p id="passwordStatus" style="margin: 0; padding: 0;" ></p> <!-- Display text below the text box -->
+            </div>
+            <!-- Modal footer -->
+            <div class="modal-footer">
+              <button type="button" class="btn border border-danger" data-dismiss="modal">Cancel</button>
+              <button type="button" class="btn btn-danger oneall" id="unlockButton" disabled data-dismiss="modal">1 all</button>
+              <button type="button" class="btn btn-danger tenall" id="unlockButton1" disabled data-dismiss="modal">10 all</button>
+              <button type="button" class="btn btn-danger randall" id="unlockButton2" disabled data-dismiss="modal">Random # all</button>
             </div>
           </div>
         </div>
