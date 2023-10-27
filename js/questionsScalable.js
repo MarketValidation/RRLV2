@@ -1,5 +1,5 @@
 // creating an array and passing the number, questions, options, and answers
-// questions for SOCIAL STARTUP (ONLY THEIR WEIGHT IS DIFFERENT FROM TOHERS. SAME QUESTIONS)
+// questions for scalable STARTUP (ONLY THEIR WEIGHT IS DIFFERENT FROM TOHERS. SAME QUESTIONS)
 let questions = [
     {
     numb: 1,
