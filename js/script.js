@@ -18,6 +18,11 @@ var finalmarketLoop;
 var finalproductLoop;
 var finalbusinessLoop;
 
+
+
+
+
+
 function verifyPassword() {
   // Get the input value from the text box
   var inputPassword = document.getElementById("passwordInput").value;
