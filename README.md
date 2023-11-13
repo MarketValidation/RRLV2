@@ -2,7 +2,7 @@
 <p align="center">
 <img src="https://ucarecdn.com/a012691a-6bcb-40c7-b164-679ee182743d/LogoTry.png" width="250">
  </p>
-**Athena** is an ancient Greek goddess particularly associated with wisdom and handicraft. Just like this web-based application that aims to help startups in decision making process to steer their path for success since the researchers attemps develop an automated market validation to validate your product/service concept using the Startup Company Business Concept Validation Methodology or SBCVM that will assess and validate your product or service concept on 4 dimensions indicated below:
+**Athena** is an ancient Greek goddess particularly associated with wisdom and handicraft. Just like this web-based application that aims to help startups in decision making process to steer their path for success since the researchers attempts develop an automated market validation to validate your product/service concept using the Startup Company Business Concept Validation Methodology or SBCVM that will assess and validate your product or service concept on 4 dimensions indicated below:
 
 
 ![alt text](http://ucarecdn.com/b9f193f3-26a8-4bdb-b83f-7128256e3693/about.jpg)
@@ -21,7 +21,7 @@
 
 You may try and visit our website and provide your feedback from using it!
 Link to the website: https://marketvalidation.github.io/RRLV2/index.html
-Link to your feedback survey: https://forms.gle/BtSn2rqw5L2oWB9Q9
+Link to your feedback survey: https://forms.gle/16UxgBTNyjoZCMfi9
 
 The website was developed in a SDLC process iteratively adding new improvements and bug fix along the way. <br> 
 <img src="https://ucarecdn.com/dab5682c-ff96-4f38-9ebb-53201e469acb/unnamed.png" width="200">
